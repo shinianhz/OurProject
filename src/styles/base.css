@@ -58,9 +58,7 @@ a {
 }
 
 textarea {
-    /* 边框清零 */
     border: none;
-    /* 轮廓线清零 */
     outline: none;
     /* 防止文本域被随意拖拽 */
     resize: none;
