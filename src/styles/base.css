@@ -63,7 +63,9 @@ textarea {
     resize: none;
 }
 
-i {
+i,
+em,
+b {
     /*文字样式*/
     font-style: normal;
 }
@@ -85,6 +87,18 @@ table {
     float: left;
 }
 
+.r {
+    float: right;
+}
+
 .tan {
     display: flex;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
