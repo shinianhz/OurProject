@@ -1,0 +1,195 @@
+.goods {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.goods .c-goodsArea {
+  position: relative;
+  width: 1090px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+}
+.goods .c-goodsArea .m-goods {
+  background-color: #fff;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.goods .c-goodsArea .m-goods .m-content {
+  overflow: hidden;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind {
+  padding-top: 30px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .header .title {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .header .title .name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .header .describe {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList {
+  margin-top: 25px;
+  margin-right: -10px;
+  overflow: hidden;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product {
+  width: 245px;
+  height: 361px;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  line-height: 1;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up {
+  background: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a {
+  color: #333333;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a img {
+  width: 245px;
+  height: 245px;
+  background: #f4f4f4;
+  transition: transform 1s;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .colorNum {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  padding: 0 4px;
+  background: #f4f0ea;
+  color: #a7936e;
+  border: 1px solid #b3a07d;
+  border-radius: 5px;
+  line-height: 18px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .shop-remind {
+  line-height: 34px;
+  text-align: left;
+  padding-left: 40px;
+  font-size: 14px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #999;
+  width: 100%;
+  height: 34px;
+  color: #fff;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind .empty {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind .empty .empty-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #fff;
+  border-color: #fff;
+  height: 26px;
+  line-height: 24px;
+  font-size: 14px;
+  width: 110px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .tags {
+  width: 200px;
+  height: 20px;
+  color: #fff;
+  overflow: hidden;
+  margin: 0 auto 3px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .tags .itemtag {
+  background: #e36844;
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 5px;
+  height: 20px;
+  font-size: 12px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .introduction {
+  padding: 0 10px;
+  margin-bottom: 4px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .introduction a {
+  color: #333;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .introduction a:hover {
+  color: #b4a078;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price {
+  color: #d4282d;
+  text-align: center;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price span {
+  display: inline-block;
+  height: 20px;
+  line-height: 22px;
+  overflow: hidden;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price span span {
+  display: inline;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price span .money {
+  letter-spacing: -4px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price .originalprice {
+  text-decoration: line-through;
+  margin-left: 6px;
+  color: #999999;
+  font-size: 12px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price .originalprice span {
+  display: inline;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .price .originalprice .money {
+  letter-spacing: -5px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down hr {
+  display: block;
+  width: 130px;
+  height: 1px;
+  margin: 6px auto 14px;
+  border: 0;
+  border-top: 1px solid #e8e8e8;
+  text-align: center;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .explain {
+  line-height: 18px;
+  padding: 0 10px;
+  text-align: center;
+  color: #999999;
+}
