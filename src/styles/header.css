@@ -1,0 +1,76 @@
+.header .header-top {
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  color: #ccc;
+  background-color: #333;
+  font-size: 12px;
+  z-index: 4;
+}
+.header .header-top .header-top-inner {
+  width: 1090px;
+  height: 36px;
+  margin: 0 auto;
+}
+.header .header-top .header-top-inner .left {
+  height: 36px;
+}
+.header .header-top .header-top-inner .left .tip > a:hover {
+  color: #fff;
+}
+.header .header-top .header-top-inner .left .inner-right {
+  height: 36px;
+  margin-left: 25px;
+}
+.header .header-top .header-top-inner .left .inner-right .img {
+  margin-top: 12px;
+}
+.header .header-top .header-top-inner .left .inner-right .box {
+  padding-left: 10px;
+  width: 300px;
+  position: relative;
+}
+.header .header-top .header-top-inner .left .inner-right .box ul {
+  position: absolute;
+}
+.header .header-top .header-top-inner .left .inner-right .box ul li {
+  height: 36px;
+}
+.header .header-top .header-top-inner .left .inner-right .box ul li a {
+  color: #b4a078;
+  text-decoration: underline;
+}
+.header .header-top .header-top-inner .left .inner-right .box ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.header .header-top .header-top-inner .right .right-box > ul {
+  height: 36px;
+}
+.header .header-top .header-top-inner .right .right-box > ul > li {
+  float: left;
+}
+.header .header-top .header-top-inner .right .right-box > ul > li > a {
+  padding: 0 12px;
+  border-right: 1px solid rgba(133, 129, 129, 0.575);
+}
+.header .header-top .header-top-inner .right .right-box > ul > li > a:hover {
+  color: #fff;
+}
+.header .header-top .header-top-inner .right .right-box > ul > li:first-child a,
+.header .header-top .header-top-inner .right .right-box > ul > li:last-child a {
+  border: none !important;
+}
+.header .header-top .header-top-inner .right .right-box > ul .position {
+  position: relative;
+}
+.header .header-top .header-top-inner .right .right-box > ul .position a .right-box-slide,
+.header .header-top .header-top-inner .right .right-box > ul .position a .right-box-img {
+  position: absolute;
+  top: 36px;
+}
+.header .header-top .header-top-inner .right .right-box > ul .position a:hover .right-box-slide,
+.header .header-top .header-top-inner .right .right-box > ul .position a:hover .right-box-img {
+  z-index: 5;
+  top: 0;
+}

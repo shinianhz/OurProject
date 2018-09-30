@@ -1,0 +1,90 @@
+.header{
+    .header-top{
+        position: relative;
+        height: 36px;
+        line-height: 36px;
+        color: #ccc;
+        background-color: #333;
+        font-size: 12px;
+        z-index: 4;
+        .header-top-inner{
+            width: 1090px;
+            height: 36px;
+            margin: 0 auto;
+            .left{
+                height: 36px;
+                .tip>a{
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+                .inner-right{
+                   height: 36px;
+                   margin-left: 25px;
+                    .img{
+                        margin-top: 12px;
+                    }
+                    .box{
+                        padding-left: 10px;
+                        width: 300px;
+                        position: relative;
+                        ul{
+                            position: absolute;
+                            li{
+                                height: 36px;
+                                a{
+                                    color:  #b4a078;
+                                    text-decoration: underline;
+                                    &:hover{
+                                        color: #fff;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                .right-box{
+                    &>ul{
+                        height: 36px;
+                        &>li{
+                            float: left;
+                            &>a{
+                                padding: 0 12px;
+                                border-right:  1px solid rgba(133, 129, 129, 0.575);
+                                &:hover{
+                                    color: #fff;
+                                }
+                                
+                            }
+                            &:first-child,&:last-child{
+                                a{
+                                    border: none !important;
+                                }
+                            }
+                        }
+                        .position{
+                            position: relative;
+                            a{
+                                .right-box-slide,.right-box-img{
+                                    position: absolute;
+                                    top: 36px;
+                                }
+                                &:hover{
+                                    .right-box-slide,.right-box-img{
+                                        z-index: 5;
+                                        top:0
+                                    }
+                                }
+                            }
+                        }
+                  
+                    }
+                }
+               
+            }
+        }
+    }
+}

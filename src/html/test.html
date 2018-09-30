@@ -5,11 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <title>测试PHP</title>
 </head>
 
 <body>
-    <div>Test123!</div>
+    <button class="btn">btn</button>
+    <script>
+        $(function() {
+            $('.btn').on('click', function() {
+                $.ajax({
+                    type: 'get',
+                    url: '../php/goods.php',
+                    success: function(data) {
+                        // data = JSON.stringify(data);
+                        console.log(data);
+                    }
+                });
+            });
+        })
+    </script>
 </body>
 
 </html>
