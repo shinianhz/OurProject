@@ -42,7 +42,7 @@
                         .item{
                             float: left;
                             margin-right: 10px;
-                            margin-bottom: 50px;
+                            margin-bottom: 50px;                 
                             .m-product{
                                 width: 245px;
                                 height: 361px;
@@ -105,14 +105,19 @@
                                                     line-height: 24px;
                                                     font-size: 14px;
                                                     width: 110px;
+                                                    border-radius: 2px;
+                                                    border: 1px solid #ccc;
+                                                }
+                                                .empty-btn:hover span{
+                                                    color: #a7936e;
                                                 }
                                             }
                                         }                                   
                                     }
-                                    a:hover img{
-                                        cursor: pointer;
-                                        transform: scale(1.05);                                        
-                                    }
+                                    // a:hover img{
+                                    //     cursor: pointer;
+                                    //     transform: scale(1.05);                                        
+                                    // }
                                 }
                                 .down{
                                     .tags{
@@ -188,9 +193,12 @@
                                         text-align: center;
                                         color: #999999;
                                     }
-                                }
-                               
+                                }                              
                             }
+                        }
+                        .item:hover img{
+                            cursor: pointer;
+                            transform: scale(1.05);   
                         }
                     }
                 }

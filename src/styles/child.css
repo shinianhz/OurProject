@@ -115,10 +115,11 @@
   line-height: 24px;
   font-size: 14px;
   width: 110px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }
-.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a:hover img {
-  cursor: pointer;
-  transform: scale(1.05);
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind .empty .empty-btn:hover span {
+  color: #a7936e;
 }
 .goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .down .tags {
   width: 200px;
@@ -192,4 +193,8 @@
   padding: 0 10px;
   text-align: center;
   color: #999999;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
 }
