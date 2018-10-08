@@ -1,0 +1,243 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 "Microsoft Yahei", "微软雅黑", verdana;
+  color: #333;
+}
+.base {
+  width: 1090px;
+  margin: 0 auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+  line-height: 36px;
+  background-color: yellow;
+}
+nav {
+  line-height: 204px;
+  background-color: pink;
+}
+.banner {
+  height: 420px;
+}
+.our {
+  background-color: #f5f5f5;
+  padding-bottom: 80px;
+  clear: both;
+}
+.our .goodArea {
+  padding: 0 40px;
+  position: relative;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.our .goodArea .m-sortbar {
+  margin-top: 10px;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+  font-size: 14px;
+}
+.our .goodArea .m-sortbar > div {
+  overflow: hidden;
+  border-top: 1px dashed #dedede;
+  line-height: 1;
+  padding-top: 20px;
+}
+.our .goodArea .m-sortbar > div .name {
+  font-size: 14px;
+  color: #999;
+  float: left;
+  margin-right: 28px;
+}
+.our .goodArea .m-sortbar > div .classfyGroup {
+  overflow: hidden;
+  float: left;
+  width: 930px;
+  margin-bottom: 4px;
+}
+.our .goodArea .m-sortbar > div .classfyGroup .active {
+  color: #b4a078;
+}
+.our .goodArea .m-sortbar > div .classfyGroup a {
+  color: #333;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.our .goodArea .m-sortbar .classfy {
+  padding-top: 20px;
+  border-top: 0;
+}
+.our .goodArea .m-sortbar .area .name {
+  margin-right: 0;
+}
+.our .goodArea .m-sortbar .sorts .classfyGroup .price .c {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.our .goodArea .m-sortbar .sorts .classfyGroup .price .c i:first-of-type {
+  display: block;
+  margin-bottom: 2px;
+  height: 5px;
+  width: 10px;
+  background: url('../images/icons1.png') 0 -1143px no-repeat;
+}
+.our .goodArea .m-sortbar .sorts .classfyGroup .price .c i:last-of-type {
+  display: block;
+  margin-top: 2px;
+  height: 5px;
+  width: 10px;
+  background: url('../images/icons1.png') 0 -655px no-repeat;
+}
+.our .goodArea .m-sortbar .sorts .classfyGroup .time i {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 9px;
+  margin-top: -2px;
+  background: url('../images/icons1.png') 0 -633px no-repeat;
+  height: 12px;
+  width: 9px;
+}
+.our .goodArea .m-content .m-level {
+  padding-top: 30px;
+}
+.our .goodArea .m-content .m-level .hd {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.our .goodArea .m-content .m-level .hd .title {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.our .goodArea .m-content .m-level .hd .title span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 44px;
+}
+.our .goodArea .m-content .m-level .hd .desc {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+}
+.our .goodArea .m-content .m-level .m-itemlist {
+  margin-top: 25px;
+  overflow: hidden;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product {
+  line-height: 1;
+  text-align: center;
+  font-size: 13px;
+  width: 245px;
+  height: 361px;
+  position: relative;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product span {
+  line-height: 1;
+  text-align: center;
+  font-size: 13px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .hd {
+  position: relative;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .hd a {
+  color: #333;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .hd a img {
+  width: 245px;
+  height: 245px;
+  background-color: #f4f4f4;
+  border: 1px solid transparent;
+  color: #f4f4f4;
+  display: block;
+  margin: 0 auto;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .hd a .colorNum {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  font-size: 12px;
+  color: #a7936e;
+  border: 1px solid #b3a07d;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .hd a .colorNum > span {
+  line-height: 18px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd {
+  line-height: 1;
+  text-align: center;
+  font-size: 13px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .prdTags {
+  height: 20px;
+  font-size: 0;
+  color: #fff;
+  width: 200px;
+  margin: 0 auto 3px;
+  overflow: hidden;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .prdTags .itemTag {
+  background-color: #b4a078;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .name a span {
+  margin-bottom: 4px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .price {
+  color: #d4282d;
+  text-align: center;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .price > span {
+  display: inline-block;
+  overflow: hidden;
+  height: 20px;
+  line-height: 22px;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .price > span span {
+  text-align: center;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .introu hr {
+  display: block;
+  width: 130px;
+  height: 1px;
+  padding: 0;
+  margin: 6px auto 14px;
+  border: 0;
+  border-top: 1px solid #e8e8e8;
+}
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .introu .desc {
+  width: 100%;
+  padding: 0 10px;
+  line-height: 18px;
+  color: #999;
+}
