@@ -1,0 +1,298 @@
+/*为你严选*/
+@charset "utf-8";
+/*bannerWraper*/ 
+.bannerWrapaer{
+    width: 100%;
+    height: 450px;
+    background: gray;
+}
+// 设置公共样式，定义变量
+.title(){
+    margin-bottom: 20px;
+    line-height: 48px;
+    h2{
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 400;
+    }
+    a{
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        color: #999;
+    }
+}
+
+//
+/*floor1-为你严选*/
+.floor1_box{
+    .floor1{
+        .title{
+            .title;
+        }
+        width: 1090px;
+        margin: 0 auto;
+        margin-top: 40px;
+        overflow: hidden;
+        .content{
+            .left{
+                margin-right: 20px;
+            }
+            .left,.right{
+                width: 535px;
+                height: 385px;
+                float: left;
+            }
+            a{
+                display: block;
+                div{
+                    overflow: hidden;
+                    img{
+                       transition: all 1s;
+                       &:hover{
+                        transform: scale(1.1);
+                       }
+                    }
+                }
+                h3{
+                    padding-top: 14px;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #333;
+                    &:hover{
+                        color: #b4a078;
+                    }
+                }
+                p{
+                    line-height: 26px;
+                    font-size: 14px;
+                    color: #999;
+                    span{
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*floor2-挑款师推荐*/ 
+.floor2_box{
+    .floor2{
+        .title{
+            .title
+        }
+        width: 1106px;
+        margin: 0 auto;
+        margin-top: 76px;
+        overflow: hidden;
+        .content{
+            height: 410px;
+            a{
+                &:hover{
+                   box-shadow:  0 0 16px 1px rgba(0,0,0,.1);
+                }
+                &>div{
+                    width: 260px;
+                    height: 260px;
+                    &>img{
+                        width: 258px;
+                        height: 100%;
+                    }
+                }
+                display: block;
+                float: left;
+                margin-right: 16px;
+                width: 260px;
+                height: 410px;
+                border: 1px solid #eaeaea;
+                font-size: 14px;
+                .content-text{
+                    padding: 0 18px;
+                    div{position: relative;
+                        height: 40px;
+                            i{
+                        display: block;
+                        padding: 8px;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        position: absolute;
+                        top: -20px;
+                        left: 0;
+                        background: #fff;
+                        img{
+                            border-radius: 50%;
+                        }
+                        }
+                        span{
+                            display: inline-block;
+                            padding: 12px 0 0 61px;
+                        }
+                    }
+                    h4{
+                        margin: 10px 0 6px 0;
+                        height: 24px;
+                        font-size: 16px;
+                    } 
+                    p{
+                        height: 40px;
+                        line-height: 20px;
+                        color: #999;
+                    }   
+                }
+            }
+        }
+    }
+}
+/*floor3-丁磊好货推荐*/ 
+.floor3_box{
+    .floor3{
+        width: 1090px;
+        margin: 76px auto;
+        overflow: hidden;    
+        .title{
+            .title
+        }
+        .content{
+            overflow: hidden;
+           &>div{
+               float: left;
+           }
+           .right{
+               width: 800px;height: 220px;
+               background: #f5f5f5;
+               padding-left: 40px;
+               a{
+                float: left;
+                margin: 0 10px;
+                width: 220px;
+                height: 258px;
+                padding-top: 30px;
+                div{
+                    background: #fff;
+                    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+                    overflow: hidden;
+                    img{
+                        transition: all 1s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                p{
+                    padding: 20px 0 4px;
+                    font-size: 14px;
+                    color: #333;
+                    text-align: center;
+                    line-height: 1;
+                }
+               }
+           }
+        }
+    }
+}
+/*floor4-口碑商品、特色系列*/ 
+.floor4_box{
+    background: #f5f5f5;
+    overflow: hidden;
+    .floor4{
+        width: 1090px;
+        margin: 0 auto;
+        overflow: hidden;  
+        padding: 80px 0;  
+        .title{
+            .title
+        }
+        .content{
+            background: #f5f5f5;
+            overflow: hidden;
+            a{
+                display: block;
+                float: left;
+                width: 350px;
+                height: 180px;
+                position: relative;
+                img{
+                    transition: all 1s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                } 
+                &:nth-child(1),&:nth-child(4),&:nth-child(2),&:nth-child(5){
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        right: -10px;
+                        top: 50px;
+                        width: 10px;
+                        height: 80px;
+                        border-right: 1px solid #eaeaea;
+                    }
+                }
+                &>div{
+                    float: left;
+                }
+                .right{
+                    width: 160px;
+                    padding-right: 10px;
+                    margin-top: 46px;
+                    h4{
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: #333;
+                        font-weight: 400;
+                        &:hover{
+                            color: #b4a078;
+                        }
+                    }
+                    p{
+                        padding-top: 12px;
+                        font-size: 14px;
+                        color: #999;
+                    }
+                }
+            }
+        }
+        .btm{
+            margin-top: 80px;
+            overflow: hidden;
+            .content{
+                overflow: hidden;
+                a{
+                    float: left;
+                    width: 535px;
+                    height: 260px;
+                    overflow: hidden;
+                    position: relative;
+                   &:first-child{
+                    margin-right: 20px;
+                   }
+                   &:hover img{
+                       transform: scale(1.1);
+                   }
+                   .text{
+                    width: 485px;
+                    height: 260px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding-top: 77px;
+                    h2{
+                        font-size: 24px;
+                        color: #333;
+                        line-height: 1;
+                        font-weight: 400;
+                    }
+                    p{
+                        color: #666;
+                        font-size: 18px;
+                        padding-top: 16px;
+                    }
+                   }
+                }
+            }
+        }
+    }
+}
+/*floor5-严选空间*/

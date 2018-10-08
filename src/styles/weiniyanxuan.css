@@ -1,0 +1,324 @@
+@charset "utf-8";
+/*为你严选*/
+/*bannerWraper*/
+.bannerWrapaer {
+  width: 100%;
+  height: 450px;
+  background: gray;
+}
+/*floor1-为你严选*/
+.floor1_box .floor1 {
+  width: 1090px;
+  margin: 0 auto;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.floor1_box .floor1 .title {
+  margin-bottom: 20px;
+  line-height: 48px;
+}
+.floor1_box .floor1 .title h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+}
+.floor1_box .floor1 .title a {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+.floor1_box .floor1 .content .left {
+  margin-right: 20px;
+}
+.floor1_box .floor1 .content .left,
+.floor1_box .floor1 .content .right {
+  width: 535px;
+  height: 385px;
+  float: left;
+}
+.floor1_box .floor1 .content a {
+  display: block;
+}
+.floor1_box .floor1 .content a div {
+  overflow: hidden;
+}
+.floor1_box .floor1 .content a div img {
+  transition: all 1s;
+}
+.floor1_box .floor1 .content a div img:hover {
+  transform: scale(1.1);
+}
+.floor1_box .floor1 .content a h3 {
+  padding-top: 14px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #333;
+}
+.floor1_box .floor1 .content a h3:hover {
+  color: #b4a078;
+}
+.floor1_box .floor1 .content a p {
+  line-height: 26px;
+  font-size: 14px;
+  color: #999;
+}
+.floor1_box .floor1 .content a p span {
+  margin: 5px;
+}
+/*floor2-挑款师推荐*/
+.floor2_box .floor2 {
+  width: 1106px;
+  margin: 0 auto;
+  margin-top: 76px;
+  overflow: hidden;
+}
+.floor2_box .floor2 .title {
+  margin-bottom: 20px;
+  line-height: 48px;
+}
+.floor2_box .floor2 .title h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+}
+.floor2_box .floor2 .title a {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+.floor2_box .floor2 .content {
+  height: 410px;
+}
+.floor2_box .floor2 .content a {
+  display: block;
+  float: left;
+  margin-right: 16px;
+  width: 260px;
+  height: 410px;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+}
+.floor2_box .floor2 .content a:hover {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+}
+.floor2_box .floor2 .content a > div {
+  width: 260px;
+  height: 260px;
+}
+.floor2_box .floor2 .content a > div > img {
+  width: 258px;
+  height: 100%;
+}
+.floor2_box .floor2 .content a .content-text {
+  padding: 0 18px;
+}
+.floor2_box .floor2 .content a .content-text div {
+  position: relative;
+  height: 40px;
+}
+.floor2_box .floor2 .content a .content-text div i {
+  display: block;
+  padding: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background: #fff;
+}
+.floor2_box .floor2 .content a .content-text div i img {
+  border-radius: 50%;
+}
+.floor2_box .floor2 .content a .content-text div span {
+  display: inline-block;
+  padding: 12px 0 0 61px;
+}
+.floor2_box .floor2 .content a .content-text h4 {
+  margin: 10px 0 6px 0;
+  height: 24px;
+  font-size: 16px;
+}
+.floor2_box .floor2 .content a .content-text p {
+  height: 40px;
+  line-height: 20px;
+  color: #999;
+}
+/*floor3-丁磊好货推荐*/
+.floor3_box .floor3 {
+  width: 1090px;
+  margin: 76px auto;
+  overflow: hidden;
+}
+.floor3_box .floor3 .title {
+  margin-bottom: 20px;
+  line-height: 48px;
+}
+.floor3_box .floor3 .title h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+}
+.floor3_box .floor3 .title a {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+.floor3_box .floor3 .content {
+  overflow: hidden;
+}
+.floor3_box .floor3 .content > div {
+  float: left;
+}
+.floor3_box .floor3 .content .right {
+  width: 800px;
+  height: 220px;
+  background: #f5f5f5;
+  padding-left: 40px;
+}
+.floor3_box .floor3 .content .right a {
+  float: left;
+  margin: 0 10px;
+  width: 220px;
+  height: 258px;
+  padding-top: 30px;
+}
+.floor3_box .floor3 .content .right a div {
+  background: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.floor3_box .floor3 .content .right a div img {
+  transition: all 1s;
+}
+.floor3_box .floor3 .content .right a div img:hover {
+  transform: scale(1.1);
+}
+.floor3_box .floor3 .content .right a p {
+  padding: 20px 0 4px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  line-height: 1;
+}
+/*floor4-口碑商品、特色系列*/
+.floor4_box {
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.floor4_box .floor4 {
+  width: 1090px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 80px 0;
+}
+.floor4_box .floor4 .title {
+  margin-bottom: 20px;
+  line-height: 48px;
+}
+.floor4_box .floor4 .title h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+}
+.floor4_box .floor4 .title a {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+.floor4_box .floor4 .content {
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.floor4_box .floor4 .content a {
+  display: block;
+  float: left;
+  width: 350px;
+  height: 180px;
+  position: relative;
+}
+.floor4_box .floor4 .content a img {
+  transition: all 1s;
+}
+.floor4_box .floor4 .content a img:hover {
+  transform: scale(1.1);
+}
+.floor4_box .floor4 .content a:nth-child(1)::after,
+.floor4_box .floor4 .content a:nth-child(4)::after,
+.floor4_box .floor4 .content a:nth-child(2)::after,
+.floor4_box .floor4 .content a:nth-child(5)::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50px;
+  width: 10px;
+  height: 80px;
+  border-right: 1px solid #eaeaea;
+}
+.floor4_box .floor4 .content a > div {
+  float: left;
+}
+.floor4_box .floor4 .content a .right {
+  width: 160px;
+  padding-right: 10px;
+  margin-top: 46px;
+}
+.floor4_box .floor4 .content a .right h4 {
+  font-size: 16px;
+  line-height: 26px;
+  color: #333;
+  font-weight: 400;
+}
+.floor4_box .floor4 .content a .right h4:hover {
+  color: #b4a078;
+}
+.floor4_box .floor4 .content a .right p {
+  padding-top: 12px;
+  font-size: 14px;
+  color: #999;
+}
+.floor4_box .floor4 .btm {
+  margin-top: 80px;
+  overflow: hidden;
+}
+.floor4_box .floor4 .btm .content {
+  overflow: hidden;
+}
+.floor4_box .floor4 .btm .content a {
+  float: left;
+  width: 535px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+.floor4_box .floor4 .btm .content a:first-child {
+  margin-right: 20px;
+}
+.floor4_box .floor4 .btm .content a:hover img {
+  transform: scale(1.1);
+}
+.floor4_box .floor4 .btm .content a .text {
+  width: 485px;
+  height: 260px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 77px;
+}
+.floor4_box .floor4 .btm .content a .text h2 {
+  font-size: 24px;
+  color: #333;
+  line-height: 1;
+  font-weight: 400;
+}
+.floor4_box .floor4 .btm .content a .text p {
+  color: #666;
+  font-size: 18px;
+  padding-top: 16px;
+}
+/*floor5-严选空间*/
