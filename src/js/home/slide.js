@@ -9,7 +9,7 @@
                 timeout = null,
                 elems = {
                     imgWidth: this.children('ul').children("li").height(), //li高度
-                    num: this.children('ul').children("li").length //记录图片个数
+                    num: this.children('ul').children("li").length //记录li个数
                 },
                 defaults = {
                     speed: 500,

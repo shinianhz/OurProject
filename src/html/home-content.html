@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/lunbo.js"></script>
+    <script src="../js/home/fn_lunbo.js"></script>
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
@@ -15,11 +16,17 @@
 
 <body>
     <!-- 页面顶部容器 -->
-    <div class="header"></div>
+    <div id="header"></div>
+    <div id="right-fixed"></div>
+
+    <!-- <script src="../js/home/slide.js"></script>
+    <script>
+        $('.box').slide();
+    </script> -->
     <div class="content">
         <div class="content-inner">
             <!-- 轮播图 -->
-            <div class=" lunbo-box">
+            <!-- <div class=" lunbo-box" style="background-color: #fff;">
                 <ul>
                     <li class="p1 ">
                         <a href="#">
@@ -79,9 +86,59 @@
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                 </div>
+            </div> -->
+            <div class=" lunbo-box" style="background-color: #fff;">
+                <ul>
+                    <a href="javascript:;" class="left">
+                        <i class="iconfont icon-xiangzuo"></i>
+                    </a>
+                    <a href="javascript:;" class="right">
+                        <i class="iconfont icon-you"></i>
+                    </a>
+                </ul>
+                <div class="button"></div>
             </div>
+            <!-- 动态创建 -->
+            <script>
+                $(function() {
+                    if (window.XMLHttpRequest) {
+                        $.ajax({
+                            type: 'get',
+                            url: '../php/goods.php',
+                            success: function(data) {
+                                data = JSON.parse(data);
+                                var elems = {};
+                                console.log(data);
+                                //如果拿到的数据不为空
+                                if (data.length) {
+                                    for (var i = 0; i < data.length; i++) {
+                                        //动态创建li
+                                        elems.li = $('<li/>');
+                                        elems.li.addClass('p' + i);
+                                        elems.a = $('<a/>');
+                                        elems.a.attr('href', data[i].goods_href);
+                                        elems.img = $('<img/>');
+                                        elems.img.attr('src', data[i].goods_img);
+                                        elems.a.append(elems.img);
+                                        elems.li.append(elems.a);
+                                        $('.lunbo-box>ul').append(elems.li);
+                                        elems.btns = $('<a/>');
+                                        elems.btns.attr('href', 'javascrpt:;');
+                                        $('.button').append(elems.btns);
+                                    }
+                                    $('.button>a').eq(0).addClass('color');
+                                } else {
+                                    alert('加载失败')
+                                }
+                            }
+                        });
+                    }
+                })
+            </script>
+            <script src="../js/home/lunbo.js"></script>
+
             <!-- 品牌制造商 -->
-            <div class="product">
+            <div class="product" style="background-color: #fff;">
                 <div class="brand-maker">
                     <div class="brand-top">
                         <div class="brand-top-left clear">
@@ -167,140 +224,140 @@
                     </div>
                     <!-- 写js实现滚动 -->
                     <div class="new-content clear">
-                        <a href="javascript:;" class="left">
-                            <i class="iconfont icon-xiangzuo"></i>
-                        </a>
-                        <a href="javascript:;" class="right">
-                            <i class="iconfont icon-you"></i>
-                        </a>
                         <div class="new-content-box clear">
-                            <div class="new-box-inner f">
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/146.png" alt="">
-                                        </div>
-                                        <!-- hover时候出现 -->
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/147.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
+                            <div class="new-c-innerbox">
+                                <div class="new-box-inner f">
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/146.png" alt="">
+                                            </div>
+                                            <!-- hover时候出现 -->
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/147.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/148.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/149.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/150.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/151.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/152.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/153.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/148.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/149.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/150.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/151.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/152.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/153.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
+                                <div class="new-box-inner f">
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/146.png" alt="">
+                                            </div>
+                                            <!-- hover时候出现 -->
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/147.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/148.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/149.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/150.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/151.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="n-b-inner-item">
+                                        <a href="#">
+                                            <div class="n-b-up">
+                                                <img src="../images/home/152.png" alt="">
+                                            </div>
+                                            <div class="n-b-bom">
+                                                <img src="../images/home/153.jpg" alt="">
+                                            </div>
+                                            <div class="n-b-tips">
+                                                <span>2色可选</span>
+                                                <p>男士中长款无缝羽绒服</p>
+                                                <small>￥899</small>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="new-box-inner f">
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/146.png" alt="">
-                                        </div>
-                                        <!-- hover时候出现 -->
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/147.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/148.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/149.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/150.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/151.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="n-b-inner-item">
-                                    <a href="#">
-                                        <div class="n-b-up">
-                                            <img src="../images/home/152.png" alt="">
-                                        </div>
-                                        <div class="n-b-bom">
-                                            <img src="../images/home/153.jpg" alt="">
-                                        </div>
-                                        <div class="n-b-tips">
-                                            <span>2色可选</span>
-                                            <p>男士中长款无缝羽绒服</p>
-                                            <small>￥899</small>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
+                        <script>
+                            $('.new-content-box').lunbo();
+                        </script>
                     </div>
 
                 </div>
@@ -312,19 +369,17 @@
                         <div class="brand-top">
                             <div class="brand-top-left clear" id="tabs">
                                 <h1 class="f"><a href="#">新品首发</a></h1>
-                                <span class="active"> <a href="javascript:;">编辑推荐</a> </span>
-                                <span> <a href="javascript:;">热销总榜</a> </span>
+                                <div class="tabs">
+                                    <span class="active"> <a href="javascript:;">编辑推荐</a> </span>
+                                    <span> <a href="javascript:;">热销总榜</a> </span>
+                                </div>
                             </div>
                             <div class="brand-top-right">
                                 <a href="#">更多新品&gt;</a>
                             </div>
                         </div>
                         <!-- 点击切换 -->
-                        <!-- <script>
-                            $('#tabs>span').on('click', function() {
-                                $('#tabs>span').siblings().removeClass('active').toggleClass('active');
-                            });
-                        </script> -->
+                        <script src="../js/home/tabs.js"></script>
                         <div class="recom-box">
                             <div class="recom-box-first show clear">
                                 <div class="r-box-f-left f ">
@@ -780,72 +835,73 @@
                     </div>
                 </div>
             </div>
+            <!-- 服装 -->
             <div class="clothing">
                 <div class="living">
                     <div class="living-inner">
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">服装</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">毛衫</a></span>
+                                    <span><b>/</b><a href="#">羽绒</a></span>
+                                    <span><b>/</b><a href="#">风衣毛呢</a></span>
+                                    <span><b>/</b><a href="#">牛仔裤</a></span>
+                                    <span><b>/</b><a href="#">男士T恤</a></span>
+                                    <span><b>/</b><a href="#">男士外套</a></span>
+                                    <span><b>/</b><a href="#">男士衬衫</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/cloth-1.png" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
-                                            <i>2色可选</i>
+                                            <a href="#"> <img src="../images/home/cloth-2.png" alt=""></a>
+                                            <i>今日特价</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  男式磨毛牛津纺长袖衬衫</a></h4>
+                                            <small>￥169</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cloth-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
-                                            <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
-                                            <small>￥31</small>
+                                            <span>断码清仓</span>
+                                            <h4><a href="javascript:;">  色织双层格子浴衣</a></h4>
+                                            <small>￥79</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cloth-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
-                                            <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <span>断码清仓</span>
+                                            <h4><a href="javascript:;">  Casual life 男式家居裤</a></h4>
+                                            <small>￥50</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cloth-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;">  男式弹力基础牛仔裤</a></h4>
+                                            <small>￥126</small>
                                         </div>
                                     </div>
                                 </div>
@@ -861,66 +917,64 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">电器</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">生活电器</a></span>
+                                    <span><b>/</b><a href="#">厨房电器</a></span>
+                                    <span><b>/</b><a href="#">个护健康</a></span>
+                                    <span><b>/</b><a href="#">数码</a></span>
+                                    <span><b>/</b><a href="#">影音娱乐</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/el-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/el-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
+                                            <h4><a href="javascript:;">  全净皓齿变速式声波电动牙刷</a></h4>
                                             <small>￥349</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/el-4.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
+                                            <h4><a href="javascript:;"> 网易智造电子体重秤</a></h4>
                                             <small>￥31</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/el-3.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
+                                            <h4><a href="javascript:;">   网易智造X1舒耳蓝牙耳机</a></h4>
                                             <small>￥34</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/el-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;">  破壁机/冷热双杯</a></h4>
+                                            <small>￥699</small>
                                         </div>
                                     </div>
                                 </div>
@@ -936,66 +990,66 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">洗护</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">纸品湿巾</a></span>
+                                    <span><b>/</b><a href="#">家庭清洁</a></span>
+                                    <span><b>/</b><a href="#">生理用品</a></span>
+                                    <span><b>/</b><a href="#">女性用品</a></span>
+                                    <span><b>/</b><a href="#">浴室用品</a></span>
+                                    <span><b>/</b><a href="#">毛巾浴巾</a></span>
+                                    <span><b>/</b><a href="#">美妆</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/clean-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/clean-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  小方管系列 哑光唇膏</a></h4>
+                                            <small>￥71.2</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/clean-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
-                                            <small>￥31</small>
+                                            <h4><a href="javascript:;"> 3包装 网易严选 云感 日用卫生巾</a></h4>
+                                            <small>￥39.9</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/clean-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;"> 俄罗斯制造 木瓜生物活性牙膏</a></h4>
+                                            <small>￥29</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/clean-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;"> 美国制造 除甲醛空气净化剂227g</a></h4>
+                                            <small>￥45</small>
                                         </div>
                                     </div>
                                 </div>
@@ -1011,66 +1065,66 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">饮食</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">饼干糕点</a></span>
+                                    <span><b>/</b><a href="#">小食糖巧</a></span>
+                                    <span><b>/</b><a href="#">坚果炒货</a></span>
+                                    <span><b>/</b><a href="#">肉类零食</a></span>
+                                    <span><b>/</b><a href="#">蜜饯果干</a></span>
+                                    <span><b>/</b><a href="#">冲调饮品</a></span>
+                                    <span><b>/</b><a href="#">茶包花茶</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/diet-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
-                                            <i>2色可选</i>
+                                            <a href="#"> <img src="../images/home/diet-2.png" alt=""></a>
+                                            <!-- <i>2色可选</i> -->
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  酸牛奶 200克*24盒</a></h4>
+                                            <small>￥85</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
-                                            <i>4色可选</i>
+                                            <a href="#"> <img src="../images/home/diet-3.png" alt=""></a>
+                                            <i>4个口味</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
-                                            <small>￥31</small>
+                                            <h4><a href="javascript:;">  雪麸蛋糕</a></h4>
+                                            <small>￥9.9</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
-                                            <i>3色可选</i>
+                                            <a href="#"> <img src="../images/home/diet-4.png" alt=""></a>
+                                            <i>3个口味</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;">  冻干银耳汤 15克*10包</a></h4>
+                                            <small>￥49</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
-                                            <i>2色可选</i>
+                                            <a href="#"> <img src="../images/home/diet-5.png" alt=""></a>
+                                            <i>2口味</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;"> 每日坚果</a></h4>
+                                            <small>￥29.9</small>
                                         </div>
                                     </div>
                                 </div>
@@ -1086,66 +1140,66 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">餐厨</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">水具壶杯</a></span>
+                                    <span><b>/</b><a href="#">餐具</a></span>
+                                    <span><b>/</b><a href="#">锅具</a></span>
+                                    <span><b>/</b><a href="#">清洁保鲜</a></span>
+                                    <span><b>/</b><a href="#">厨房配件</a></span>
+                                    <span><b>/</b><a href="#">刀剪砧板</a></span>
+                                    <span><b>/</b><a href="#">茶具咖啡具酒具</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/cooker-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cooker-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  海豚嬉 不锈钢刀具5件套</a></h4>
+                                            <small>￥299</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cooker-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
-                                            <small>￥31</small>
+                                            <h4><a href="javascript:;"> 双底面淘米洗菜篮</a></h4>
+                                            <small>￥29.9</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cooker-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;">  玻璃内胆保温壶</a></h4>
+                                            <small>￥119</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/cooker-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;">  新中式系列餐具</a></h4>
+                                            <small>￥31.2</small>
                                         </div>
                                     </div>
                                 </div>
@@ -1161,65 +1215,65 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">婴童</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">童鞋</a></span>
+                                    <span><b>/</b><a href="#">中大童服装</a></span>
+                                    <span><b>/</b><a href="#">小童服装</a></span>
+                                    <span><b>/</b><a href="#">新生儿服装</a></span>
+                                    <span><b>/</b><a href="#">婴童床品</a></span>
+                                    <span><b>/</b><a href="#">儿童家具收纳</a></span>
+                                    <span><b>/</b><a href="#">毛巾口水巾</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/baby-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/baby-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;"> 小海马儿童运动鞋</a></h4>
+                                            <small>￥129</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/baby-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
+                                            <h4><a href="javascript:;">  婴幼儿手口湿巾80片家庭装</a></h4>
                                             <small>￥31</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/baby-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;">  儿童安全加厚防撞条&防撞角</a></h4>
+                                            <small>￥19.9</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/baby-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
+                                            <h4><a href="javascript:;">  儿童24色铅笔</a></h4>
                                             <small>￥18</small>
                                         </div>
                                     </div>
@@ -1236,65 +1290,65 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">文体</a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">文具</a></span>
+                                    <span><b>/</b><a href="#">户外运动</a></span>
+                                    <span><b>/</b><a href="#">乐器唱片</a></span>
+                                    <span><b>/</b><a href="#">礼品卡</a></span>
+                                    <span><b>/</b><a href="#">云音乐周边</a></span>
+                                    <span><b>/</b><a href="#">游戏点卡</a></span>
+                                    <span><b>/</b><a href="#">暴雪周边</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/ly-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ly-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  自动铅笔组合 含笔芯 我的世界</a></h4>
+                                            <small>￥129</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ly-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
+                                            <h4><a href="javascript:;">  3支装 直杆三角中性笔</a></h4>
                                             <small>￥31</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ly-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;"> 健身瑜伽垫</a></h4>
+                                            <small>￥9.9</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ly-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
+                                            <h4><a href="javascript:;"> 网易云音乐经典红数据线</a></h4>
                                             <small>￥18</small>
                                         </div>
                                     </div>
@@ -1311,66 +1365,66 @@
                         <div class="living-inner-top">
                             <div class="brand-top">
                                 <div class="brand-top-left clear">
-                                    <h1 class="f"><a href="#">鞋包配饰</a></h1>
+                                    <h1 class="f"><a href="#">特色区    </a></h1>
                                 </div>
                                 <div class="brand-top-right">
-                                    <span><a href="#">行李箱</a></span>
-                                    <span><b>/</b><a href="#">女士包袋</a></span>
-                                    <span><b>/</b><a href="#">男士包袋</a></span>
-                                    <span><b>/</b><a href="#">钱包及小皮件</a></span>
-                                    <span><b>/</b><a href="#">女鞋</a></span>
-                                    <span><b>/</b><a href="#">男鞋</a></span>
-                                    <span><b>/</b><a href="#">拖鞋</a></span>
+                                    <span><a href="#">日本馆</a></span>
+                                    <span><b>/</b><a href="#">韩国馆</a></span>
+                                    <span><b>/</b><a href="#">东南亚馆</a></span>
+                                    <span><b>/</b><a href="#">欧美馆</a></span>
+                                    <span><b>/</b><a href="#">澳新馆</a></span>
+                                    <span><b>/</b><a href="#">智造馆</a></span>
+                                    <span><b>/</b><a href="#">春风馆</a></span>
                                     <a class="living-last" href="#">查看更多&gt;</a>
                                 </div>
                             </div>
                             <div class="living-content">
                                 <div class="living-c-top clear">
-                                    <a href="#"><img src="../images/home/shoes-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/home/ft-1.jpg" alt=""></a>
                                 </div>
                                 <div class="living-c-btm clear">
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-2.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ft-2.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  轻潮牛皮女士休闲滑板鞋</a></h4>
-                                            <small>￥349</small>
+                                            <h4><a href="javascript:;">  4色可选 泰国制造 乳胶颗粒颈枕U形枕</a></h4>
+                                            <small>￥79</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-both f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-3.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ft-3.png" alt=""></a>
                                             <i>4色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;"> 4双装 男式美丽诺羊毛混纺中筒袜</a></h4>
-                                            <small>￥31</small>
+                                            <h4><a href="javascript:;">  意大利制造 男女款100%超细美利奴毛衣</a></h4>
+                                            <small>￥899</small>
                                         </div>
                                     </div>
                                     <div class="living-box living-right f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-4.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ft-4.png" alt=""></a>
                                             <i>3色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  3双装 80D 经典百搭超柔连裤袜</a></h4>
-                                            <small>￥34</small>
+                                            <h4><a href="javascript:;">  网易智造智能感体按摩椅</a></h4>
+                                            <small>￥7199</small>
                                         </div>
                                     </div>
                                     <div class="living-box f">
                                         <div class="living-box-top clear">
-                                            <a href="#"> <img src="../images/home/shoes-5.png" alt=""></a>
+                                            <a href="#"> <img src="../images/home/ft-5.png" alt=""></a>
                                             <i>2色可选</i>
                                         </div>
                                         <div class="living-box-btm">
                                             <span>爆品</span>
-                                            <h4><a href="javascript:;">  2双装 银丝时尚中筒女袜</a></h4>
-                                            <small>￥18</small>
+                                            <h4><a href="javascript:;">  韩国制造 乳清蛋白代餐粉（可可味）60克</a></h4>
+                                            <small>￥29</small>
                                         </div>
                                     </div>
                                 </div>
@@ -1379,10 +1433,158 @@
                     </div>
                 </div>
             </div>
+            <!-- 甄选家 -->
+            <div class="selecting">
+                <div class="selecting-inner">
+                    <div class="select-top">
+                        <div class="brand-top">
+                            <div class="brand-top-left clear">
+                                <h1 class="f"><a href="#">甄选家</a></h1>
+                                <p>我们在寻找，对生活有态度的你</p>
+                            </div>
+                        </div>
+                        <div class="select-content clear">
+                            <div class="select-content-left f">
+                                <a href="#"><img src="../images/home/select-1.jpg" alt=""></a>
+                            </div>
+                            <div class="select-conetnt-right f">
+                                <div class="s-c-r-top">
+                                    <a href="#"><img src="../images/home/select-2.jpg" alt=""></a>
+                                </div>
+                                <div class="s-c-r-btm">
+                                    <a href="#"><img src="../images/home/select-3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="allsay">
+                <div class="allsay-inner">
+                    <div class="allsay-inner-top">
+                        <div class="brand-top">
+                            <div class="brand-top-left clear">
+                                <h1 class="f"><a href="#">大家都在说</a></h1>
+                                <p>生活，没有统一标准</p>
+                            </div>
+                        </div>
+                        <div class="allsay-imgbox clear">
+                            <div class="innerbox">
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l1.png " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span> <small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l2.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span><small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l3.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span> <small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l4.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span><small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l5.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span> <small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l6.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span><small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l8.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span><small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                                <div class="img f">
+                                    <div class="img-top">
+                                        <a href="#">
+                                            <img src="../images/home/l9.jpg " alt="">
+                                        </a>
+                                    </div>
+                                    <div class="img-btm">
+                                        <p>1*****9 2015-09-08 13:26</p>
+                                        <div class="img-tips"><span>金属色加厚垃圾袋</span><small>￥13.9</small> </div>
+                                        <span>垃圾袋很厚很结实，秒杀其他牌子</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="left">&lt;</span>
+                            <span class="right">&gt;</span>
+                        </div>
+                        <script>
+                            $('.allsay-imgbox').lunbo();
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 页面底部容器 -->
     <div class="footer"></div>
+    <script>
+        $("#header").load('home.html .header');
+        $("#right-fixed").load('home.html .right-fixed');
+        $(".footer").load('home.html #footer');
+    </script>
 </body>
 
 </html>

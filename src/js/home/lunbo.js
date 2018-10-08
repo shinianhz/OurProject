@@ -1,6 +1,6 @@
 $(function() {
     //添加鼠标移入时的按钮显示
-    var arr = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'];
+    var arr = ['p0', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7'];
     var index = 0,
         timer;
     //下一张
@@ -14,7 +14,7 @@ $(function() {
     $('.lunbo-box').hover(function() {
         stop();
     }, function() {
-        timer = setInterval(right, 3000);
+        timer = setInterval(right, 1000);
     });
     // 上一页函数；
     function left() {
