@@ -118,6 +118,9 @@
   border-radius: 2px;
   border: 1px solid #ccc;
 }
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind .empty .empty-btn .phone-remind {
+  font-size: 14px;
+}
 .goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .remind .empty .empty-btn:hover span {
   color: #a7936e;
 }
