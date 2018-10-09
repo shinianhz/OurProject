@@ -7,22 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <title>测试PHP</title>
+    <style>
+        .outbox {
+            height: 100px;
+            width: 100px;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
-    <button class="btn">btn</button>
+    <div id="box"></div>
     <script>
         $(function() {
-            $('.btn').on('click', function() {
+            if (window.XMLHttpRequest) {
                 $.ajax({
                     type: 'get',
                     url: '../php/goods.php',
                     success: function(data) {
-                        // data = JSON.stringify(data);
+                        data = JSON.parse(data);
+                        var elems = {};
                         console.log(data);
+                        if (data.length != 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                elems.box = $('<div/>');
+                                elems.box.addClass('outbox');
+                                elems.img = $('<img>');
+                                elems.img.attr('src', data[i].goods_img + '.png')
+                                elems.span = $('<span/>');
+                                elems.box.append(elems.img);
+                                elems.span.html(data[i].goods_price);
+                                elems.box.append(elems.span);
+                                $('#box').append(elems.box)
+                                console.log(data[i].goods_img + ".png")
+                            }
+                        } else {
+                            alert('加载失败')
+                        }
                     }
                 });
-            });
+            }
         })
     </script>
 </body>

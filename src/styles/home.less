@@ -8,6 +8,7 @@
         justify-content: space-between;
         align-items: center;
         h1{
+            font-size: 28px;
            a{
             color: black;
            } 
@@ -159,7 +160,7 @@
             }
         }
         .product{
-            margin-top: 40px;
+            padding-top: 40px;
             .brand-maker{
                 width: 1090px;
                 margin: 0 auto;
@@ -333,7 +334,7 @@
                 }
                 .new-content{
                     padding-top: 30px;
-                    position: relative;
+                    height: 345px;
                     //按钮
                     .left,.right{
                         padding: 10px ;
@@ -361,76 +362,86 @@
                     }
                     .new-content-box{
                         height: 345px;
-                        width: 10000px;
-                        .new-box-inner{
-                            width: 1090px;
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-                            .n-b-inner-item{
-                                height: 345px;
-                                width: 25%;
-                                position: relative;
-                                .n-b-up,.n-b-bom,.n-b-tips{
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    img{
-                                        padding: 0;
-                                        margin: 0;
-                                        display: block;
-                                    }
-                                }
-                                .n-b-up{
-                                    z-index: 10;
-                                    background-color: #fff;
-                                }
-                                .n-b-tips{
-                                    height: 100%;
-                                    width: 100%;
-                                    z-index: 9;
-                                    // text-align: center;
-                                    span{
-                                        border: 1px solid #b4a078;
-                                        border-radius: 5px;
+                       position: relative;
+                        .new-c-innerbox{
+                            height: 345px;
+                            width: 10000px;
+                            position: absolute;
+                            .new-box-inner{
+                                width: 1090px;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                .n-b-inner-item{
+                                    height: 345px;
+                                    width: 25%;
+                                    position: relative;
+                                    .n-b-up,.n-b-bom,.n-b-tips{
                                         position: absolute;
-                                        top: 10px;
-                                        left: 20px;
-                                        font-size: 12px;
-                                        background-color: #eee;
-                                        color: #b4a078;
-                                        padding: 3px 5px;
+                                        top: 0;
+                                        left: 0;
+                                        img{
+                                            padding: 0;
+                                            margin: 0 auto;
+                                            display: block;
+                                        }
                                     }
-                                    p{
-                                        width: 52%;
-                                        cursor: pointer;
-                                        font-size: 14px;
-                                        position: absolute;
-                                        bottom: 40px;
-                                        left: 50%;
-                                        transform: translate(-50%);
-                                    }
-                                    small{
-                                        color: red;
-                                        position: absolute;
-                                        bottom: 15px;
-                                        left: 50%;
-                                        transform: translate(-50%);
-                                    }
-                                }
-                                &:hover{
-                                    .n-b-bom{
+                                    .n-b-up{
                                         z-index: 10;
+                                        background-color: #fff;
                                     }
                                     .n-b-tips{
-                                        background-color: #eee;
-                                        p{
+                                        height: 100%;
+                                        width: 100%;
+                                        z-index: 9;
+                                        span{
+                                            border: 1px solid #b4a078;
+                                            border-radius: 5px;
+                                            position: absolute;
+                                            top: 10px;
+                                            left: 20px;
+                                            font-size: 12px;
+                                            background-color: #eee;
                                             color: #b4a078;
+                                            padding: 3px 5px;
+                                        }
+                                        p{
+                                            width: 52%;
+                                            cursor: pointer;
+                                            font-size: 14px;
+                                            position: absolute;
+                                            bottom: 40px;
+                                            left: 50%;
+                                            transform: translate(-50%);
+                                        }
+                                        small{
+                                            color: red;
+                                            position: absolute;
+                                            bottom: 15px;
+                                            left: 50%;
+                                            transform: translate(-50%);
+                                        }
+                                    }
+                                    &:hover{
+                                        .n-b-bom{
+                                            z-index: 10;
+                                            img{
+                                                display: block;
+                                                width: 265px;
+                                                z-index: 11;
+                                            }
+                                        }
+                                        .n-b-tips{
+                                            background-color: #eee;
+                                            p{
+                                                color: #b4a078;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+                     
                     }
                 }
             }
@@ -759,7 +770,7 @@
         }
         //居家
         .living{
-            padding: 50px 0;
+            padding: 30px 0;
             .living-inner{
                 width: 1090px;
                 margin: 0 auto;
@@ -837,6 +848,7 @@
                                 h4{
                                     font-size: 14px;
                                     line-height: 30px;
+                                    font-weight: normal;
                                     a{
                                         color: black;
                                     }
@@ -857,9 +869,125 @@
                 }
             }
         }
+        .selecting{
+            .selecting-inner{
+                width: 1090px;
+                margin: 0 auto;
+                .select-content{
+                   margin-top: 20px;
+                   .select-content-left{
+                       margin-right: 10px;
+                   }
+                   .s-c-r-top{
+                       margin-bottom: 10px;
+                   }
+                   img{
+                       display: block;
+                       cursor: pointer;
+                   }
+                }
+            }
+        }
+        .allsay{
+            margin-top: 30px;
+            padding: 50px 0;   
+            height: 660px;
+            background-color: #f4f0ea;
+            .allsay-inner{
+                width: 1090px;
+                height: 492px;
+                margin: 0 auto;
+                .allsay-inner-top{
+                    height: 100%;
+                    .allsay-imgbox{
+                        margin-top: 20px;
+                        position: relative;
+                        width: 1090px;
+                        height: 492px;
+                        .innerbox{
+                            position: absolute;
+                            width: 10000px;
+                            .img{
+                                position: relative;
+                                height: 492px;
+                                width: 367.5px;
+                                background-color: #fff;
+                                // margin-right: 12.5px;
+                                border-right: 12.5px solid #f4f0ea;
+                                .img-top{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    img{
+                                        display: block;
+                                        width: 355px;
+                                        height: 355px;
+                                    }
+                                }
+                                .img-btm{
+                                    width: 96%; 
+                                    margin-left:2% ; 
+                                    background-color: #fff;  
+                                    padding: 15px ;
+                                    position: absolute;
+                                    bottom: 90px;
+                                    left: 0;
+                                    p{
+                                        color: #686868;
+                                        font-size: 14px;
+                                    }
+                                    .img-tips{
+                                        width: 100%;
+                                        line-height: 30px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        span{
+                                            font-weight: 600;
+                                            color: black;
+                                            font-size: 16px
+                                        }
+                                        small{
+                                            color: #b4a078;
+                                        }
+                                    }
+                                    &>span{
+                                        display: inline-block;
+                                        margin-top: 30px;   
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+    
+                        }
+                        &>span{
+                            position: absolute;
+                            font-size: 30px;
+                            font-weight: 600;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: 500;
+                            background-color: rgba(32, 30, 30, 0.555);
+                            color: #fff;
+                            text-align: center;
+                            padding: 7px 10px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            line-height: 30px;
+                            &:hover{
+                                background-color: #b4a078;
+                            }
+                        }
+                        .left{
+                             left:0px; 
+                        }
+                        .right{
+                            right: 0;
+                        }
+                    }
+                }
+             
+                
+            }
+        }
     }
-}
-.footer{
-    height: 1000px;
-    background-color: #ccc;
 }

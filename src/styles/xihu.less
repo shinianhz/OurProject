@@ -1,0 +1,213 @@
+
+*{
+    box-sizing: border-box;
+}
+.g-bd-list{
+    padding-bottom: 80px;
+    background-color: #f5f5f5;
+    .g-row{
+        width:1090px;
+        margin:0 auto;
+        .m-goodsArea{
+            padding: 0 40px;
+            background-color: rgb(255, 255, 255);
+           // 纸品湿巾
+            .category{
+                padding-top: 30px;
+                // 标题
+                .hd{
+                    margin-bottom: 40px;
+                    text-align: center; 
+                    .title{
+                        span{
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 44px;
+                        }
+                    }
+                    .desc{
+                        font-size: 14px;
+                        color: #999;
+                        line-height: 1.5;
+                    }
+                }
+                // 主体
+                .m-itemList{
+                    margin-top: 25px;
+                    margin-right: -10px;
+                    overflow: hidden;
+                    .item{
+                        float: left;
+                        margin-right: 10px;
+                        margin-bottom: 50px;
+                        &:hover img{
+                            transform: scale(1.1);
+                        }
+                        .m-product{
+                            text-align: center;
+                            .hd{
+                                background-color: #f4f4f4;
+                                margin-bottom: 8px;
+                                position: relative;
+                                overflow: hidden;
+                                a{
+                                    display: block;
+                                    img{
+                                        transition: all 1s;
+                                        cursor: pointer;
+                                    }
+                                    // 日本制造
+                                    .colorNum{
+                                        position: absolute;
+                                        top:10px;
+                                        left: 10px;
+                                        height: 20px;
+                                        font-size: 12px;
+                                        color: #a7936e;
+                                        border: 1px solid #b3a07d;
+                                        border-radius: 5px;
+                                        padding: 0 4px;
+                                        line-height: 18px;
+                                        background-color: #f4f0ea;
+                                    }
+                                    //预告
+                                    .saleSoon{
+                                        background-color: #e8bf5b;
+                                        line-height: 34px;
+                                        height: 34px;
+                                        padding-left: 40px;
+                                        text-align:left;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        .empty-con{
+                                            position: relative;
+                                            width: 100%;
+                                            //即将上架
+                                            .soon{
+                                                color: #fff;
+                                            }
+                                            //上架提醒
+                                            button{
+                                                position: absolute;
+                                                top: 4px;
+                                                right: 4px;
+                                                height: 26px;
+                                                width: 110px;
+                                                background-color: #fff;
+                                                font-size: 14px;
+                                                border: 0;
+                                                cursor: pointer;
+                                                &:hover{
+                                                    color: #a79361;
+                                                }
+                                            }
+                                        
+                                        }
+                                    }
+                                    //已售罄
+                                    .soldOut{
+                                        background-color: #999;
+                                    }
+                                }
+                            }
+                            .bd{
+                                .prdtTags{
+                                  height: 20px;
+                                  color: #fff;
+                                  width: 200px;
+                                  margin: 0 auto 3px;  
+                                  span{
+                                      height: 20px;
+                                      background-color: #e36844;
+                                      font-size: 12px;
+                                      line-height: 20px;
+                                      display: inline-block;
+                                      padding: 0 5px;
+                                  }
+                                }
+                                // 爆款
+                                  .hot{
+                                    height: 20px;
+                                    color: #fff;
+                                    width: 200px;
+                                    margin: 0 auto 3px;  
+                                    span{
+                                        height: 20px;
+                                        background-color: #F28F2D;
+                                        font-size: 12px;
+                                        line-height: 20px;
+                                        display: inline-block;
+                                        padding: 0 5px;
+                                    }
+                                }
+                                // 新品
+                                .new{
+                                    height: 20px;
+                                    color: #fff;
+                                    width: 200px;
+                                    margin: 0 auto 3px;  
+                                    span{
+                                        height: 20px;
+                                        background-color: #b4a078;
+                                        font-size: 12px;
+                                        line-height: 20px;
+                                        display: inline-block;
+                                        padding: 0 5px;
+                                    }
+                                }
+                                h4{
+                                    padding: 0 10px;
+                                    margin-bottom: 4px;
+                                    width: 245px;
+                                    
+                                    
+                                    a{
+                                        color: #333;
+                                        display: block; 
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis; 
+                                        &:hover{
+                                            color: #a79361;
+                                        }
+                                    }
+                                  }
+                                .price{
+                                    color: #d4282d;
+                                    text-align: center;
+                                    .counterPrice{
+                                        color: #999;
+                                        text-decoration: line-through;
+                                        font-size: 12px;
+                                    }
+                                }
+                                .item-desc{
+                                    hr{
+                                        width: 130px;
+                                        display: block;
+                                        border: 0;
+                                        border-top: 1px solid #e8e8e8;
+                                    }
+                                    p{
+                                        width: 245px;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis; 
+                                        padding: 0 10px;
+                                        color: #999;
+                                        line-height: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+ 
