@@ -13,11 +13,7 @@
     {   
         array_push($res,$arr);        
     }
-    print_r($res);
-    // echo  $data;
-    // echo $res;
-    // $result=json_encode($res);
-    // echo $result; 
-    
-    // echo  $result;
+    // 将数据转换成json格式
+    $result=json_encode($res);
+    echo $result; 
 ?>

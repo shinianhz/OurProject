@@ -236,7 +236,7 @@
 .header .header-nav .nav-box > ul > li .out-box {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 55px;
 }
 .header .header-nav .nav-box > ul > li .out-box .box {
   display: flex;
@@ -285,6 +285,7 @@
 }
 .header .header-nav .nav-box > ul > li:hover .out-box {
   display: block;
+  z-index: 100;
 }
 .header .header-nav .nav-box > ul > li:nth-child(2) .out-box {
   left: -50px;
@@ -308,13 +309,19 @@
   left: 410px;
 }
 .header .header-nav .nav-box > ul > li:nth-child(9) .out-box {
-  left: 400px;
+  left: 250px;
 }
 .header .header-nav .nav-box > ul > li:nth-child(10) .out-box {
-  left: 410px;
+  left: 400px;
+}
+.header .header-nav .nav-box > ul > li:nth-child(10) .out-box .box .box-inner .box-inner-in ul > li > a img {
+  zoom: 1;
 }
 .header .header-nav .nav-box > ul > li:nth-child(11) .out-box {
   left: 550px;
+}
+.header .header-nav .nav-box > ul > li:nth-child(11) .out-box .box .box-inner .box-inner-in ul > li > a img {
+  zoom: 1;
 }
 .header .header-nav .nav-box > ul .chenge {
   border-bottom: 3px solid #b4a078;
@@ -327,6 +334,7 @@
   right: 0;
   top: 20px;
   background-color: #fff;
+  z-index: 101;
 }
 .right-fixed .inner-box ul li {
   text-align: center;
@@ -433,10 +441,6 @@
   font-size: 14px;
   padding: 5px 0;
   color: #666;
-}
-.content {
-  height: 1000px;
-  background-color: #ccc;
 }
 #footer .footer-inner .footer-inner-top {
   display: flex;

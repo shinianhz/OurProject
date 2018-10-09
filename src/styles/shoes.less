@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+.base{
+    width: 1090px;
+    margin:0 auto;  
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color:#c2a063!important;
+}
+//banner轮播
+.banner{
+    height: 420px;
+    // background-color: skyblue;
+}
+// 分类 配送地区 排序 
+.our{
+    background-color: #f5f5f5;
+    padding-bottom: 80px;
+    clear: both;
+    .goodArea{
+        padding: 0 40px;
+        position: relative;
+        background-color: #fff;
+        box-sizing: border-box;
+        .m-sortbar{
+            margin-top: 10px;
+            border-bottom: 1px solid #eaeaea;
+            overflow: hidden;
+            font-size: 14px;
+            &>div{
+                overflow: hidden;
+                border-top: 1px dashed #dedede;
+                line-height: 1;
+                padding-top: 20px;
+                .name{
+                    font-size: 14px;
+                    color: #999;
+                    float: left;
+                    margin-right: 28px;
+                }
+                .classfyGroup{
+                    overflow: hidden;
+                    float: left;
+                    width: 930px;
+                    margin-bottom: 4px;
+                    .active{
+                        color: #b4a078;
+                    }
+                   a{
+                       color: #333;
+                       float: left;
+                       margin-right: 30px;
+                       margin-bottom: 16px;
+                       font-size: 14px;
+                   }
+                }
+            }
+            .classfy{
+                padding-top: 20px;
+                border-top: 0;
+            }
+            .area{
+              .name{
+                   margin-right: 0;
+              }
+               
+            }
+            .sorts{
+                .classfyGroup{
+                    
+                    .price{
+                        .c{
+                            display: inline-block;
+                            margin-left: 10px;
+                            vertical-align: middle;
+                            margin-top: -2px;
+                            i:first-of-type{
+                                display: block;
+                                margin-bottom: 2px;
+                                height: 5px;
+                                width: 10px;
+                                background:url('../images/icons1.png') 0 -1143px no-repeat;
+                            }
+                            i:last-of-type{
+                                display: block;
+                                margin-top: 2px;
+                                height: 5px;
+                                width: 10px;
+                                background:url('../images/icons1.png') 0 -655px no-repeat;
+                            }
+                        }
+                    }
+                    .time{
+                        i{
+                            vertical-align: middle;
+                            display: inline-block;
+                            margin-left: 9px;
+                            margin-top: -2px;
+                           
+                            background:url('../images/icons1.png') 0 -633px no-repeat;
+                            height: 12px;
+                            width: 9px;
+                        }
+                    }
+                }
+                
+            }
+           
+        }
+        .m-content{
+            .m-level{
+                padding-top: 30px;
+                .hd{
+                    text-align: center;
+                    line-height: 1;
+                    margin-bottom: 40px;
+                    .title{
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        span{
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 44px;
+                        }
+                    }
+                    .desc{
+                        font-size: 14px;
+                        color: #999;
+                        line-height: 1.5;
+                    }
+                }
+                .m-itemlist{
+                    margin-top: 25px;
+                    margin-right: -10px;
+                    overflow: hidden;
+                    .item{
+                        float: left;
+                        margin-right: 10px;
+                        margin-bottom: 50px;
+                        .product{
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 13px;
+                            width: 245px;
+                            height: 361px;
+                            position: relative;
+                            span{
+                                line-height: 1;
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                            .hd{
+                                position: relative;
+                                margin-bottom: 8px;
+                                 overflow: hidden;
+                                background-color: #f4f4f4;
+                                                           
+                                a{
+                                    color:#333;
+                                    img{
+                                        width: 245px;
+                                        height: 245px;
+                                        background-color: #f4f4f4;
+                                        border: 1px solid transparent;
+                                        color: #f4f4f4;
+                                        display: block;
+                                        margin: 0 auto;
+                                        
+                                    }
+                                   
+                                    .colorNum{
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 10px;
+                                        height: 20px;
+                                        font-size: 12px;
+                                        color: #a7936e;
+                                        border: 1px solid #b3a07d;
+                                        border-radius: 5px;
+                                        padding: 0 4px;
+                                        line-height: 18px;
+                                        background-color: #f4f0ea;
+                                        &>span{
+                                            line-height:18px;
+                                        }
+                                    }
+                                   
+                                }
+                                &:hover img{
+                                    transform: scale(1.1); 
+                                    transition: all 1s;
+                                }
+                            }
+                            .bd{
+                                line-height: 1;
+                                text-align: center;
+                                font-size: 13px;
+                                .prdTags{
+                                    height: 20px;
+                                    font-size: 0;
+                                    color: #fff;
+                                    width: 200px;
+                                    margin: 0 auto 3px;
+                                    overflow: hidden;
+                                    .itemTag{
+                                        background-color: #b4a078;
+                                        display: inline-block;
+                                        line-height: 20px;
+                                        color: #fff;
+                                        padding: 0 5px;
+                                        font-size: 12px;
+                                    }
+                                }
+                                .name{
+                                    a{
+                                        span{
+                                            margin-bottom: 4px;
+                                            height: 20px;
+                                            line-height: 20px;
+                                            font-weight: bold;
+                                            padding:0 10px;
+                                            overflow: hidden;
+                                            white-space: nowrap;   
+                                        }
+                                    }
+                                }
+                                .price{
+                                    color: #d4282d;
+                                    text-align: center;
+                                    &>span{
+                                        display: inline-block;
+                                        overflow: hidden;
+                                        height: 20px;
+                                        line-height: 22px;
+                                        span{
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                .introu{
+                                    hr{
+                                        display: block;
+                                        width: 130px;
+                                        height: 1px;
+                                        padding: 0;
+                                        margin: 6px auto 14px;
+                                        border: 0;
+                                        border-top: 1px solid #e8e8e8;
+                                    }
+                                    .desc{
+                                        width: 100%;
+                                        padding: 0 10px;
+                                        line-height: 18px;
+                                        color: #999;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

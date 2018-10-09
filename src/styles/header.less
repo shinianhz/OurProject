@@ -267,7 +267,7 @@
                     .out-box{
                         display: none;
                         position: absolute;
-                        top: 50px;
+                        top: 55px;
                         .box{
                             display: flex;
                             justify-content: space-around;
@@ -314,6 +314,7 @@
                         .border-bom;
                         .out-box{
                             display: block;
+                            z-index: 100;
                         }
                     }
                     //调整位置
@@ -329,11 +330,13 @@
                     }
                     &:nth-child(4){
                         .out-box{
+
                             left:-160px;
                         }
                     }
                     &:nth-child(5){
                         .out-box{
+
                             left:220px;
                         }
                     }
@@ -354,17 +357,39 @@
                     }
                     &:nth-child(9){
                         .out-box{
-                            left:400px;
+                            left:250px;
                         }
                     }
                     &:nth-child(10){
                         .out-box{
-                            left:410px;
+                            left:400px;
+                            .box{
+                                .box-inner{
+                                    .box-inner-in{
+                                        ul>li>a{
+                                            img{
+                                                zoom: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     &:nth-child(11){
                         .out-box{
                             left:550px;
+                            .box{
+                                .box-inner{
+                                    .box-inner-in{
+                                        ul>li>a{
+                                            img{
+                                                zoom: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -382,6 +407,7 @@
     right: 0;
     top: 20px;
     background-color: #fff;
+    z-index: 101;
     .inner-box{
         ul{
             li{
@@ -514,10 +540,7 @@
     }
 }
 //主体内容
-.content{
-    height: 1000px;
-    background-color: #ccc;
-}
+
 //footer
 #footer{
     .footer-inner{

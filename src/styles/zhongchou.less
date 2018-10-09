@@ -1,0 +1,258 @@
+@charset "utf-8";
+/*banner*/
+.banner-box{
+    height: 420px;
+    background: #fff;
+    .banner{
+        max-width: 1920px;
+        height: 420px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        img{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-960px);
+        }
+    }
+}
+/*nav*/ 
+.nav-box{
+    height: 80px;
+    background: #fff;
+    nav{
+        width: 1090px;
+        margin: 0 auto;
+        padding: 8px 0;
+        text-align: center;
+        overflow: hidden;
+        div{
+            float: left;
+            width: 48px;
+            height: 64px;
+            font-size: 24px;
+            color: #B4A078;
+            line-height: 32px;
+            margin-right: 28px;
+        }
+        ul{
+            float: left;
+            width: 963px;
+            height: 60px;
+            font-size: 20px;
+            li{
+                float: left;
+                width: 240px;
+                height: 60px;
+                border-left: 1px solid #eaeaea;
+                line-height: 60px;
+                img{
+                    vertical-align: middle;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
+ /*goods*/ 
+  .goods-box{
+      padding-bottom: 20px;
+      background: #f4f4f4;
+       .goods{
+           width: 1090px;
+           margin: 0 auto;
+            //title
+            .title{
+                margin: 0 auto;
+               padding-top: 74px;
+                padding-bottom: 34px;
+                width: 461px;
+                height: 29px;
+                .line{
+                    background: #ccc;
+                    position: relative;
+                    height: 1px;
+                    div{
+                        width: 220px;
+                        height: 30px;
+                        text-align: center;
+                        font-size: 28px;
+                        color: #333;
+                        background: #f4f4f4;
+                        position: absolute;
+                        top: -15px;
+                        left: 50%;
+                        transform: translateX(-110px);
+                        line-height: 30px;
+                        img{
+                            vertical-align: -5px;
+                        }
+                    }
+                }
+            }
+            // content
+            .content{
+                width: 1090px;
+                height: 480px;
+                ul{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        width: 535px;
+                        height: 220px;
+                        background: #fff;
+                        margin-top: 20px;
+                        cursor: pointer;
+                        &:nth-of-type(odd){
+                            margin-right: 20px;
+                        }
+                        // left
+                        .left{
+                            float: left;
+                            width: 220px;
+                            height: 220px;
+                            overflow: hidden;
+                            img{
+                                transition: all .5s;
+                                &:hover{
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                        // right
+                        .right{
+                            float: left;
+                            width: 300px;
+                            padding-left: 15px;
+                            // info
+                            h3{
+                                font-size: 20px;
+                                color: #333;
+                                letter-spacing: 0;
+                                line-height: 30px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                margin-top: 24px;
+                                font-weight: 500;
+                                &:hover{
+                                    color: #B4A078;
+                                }
+                            }
+                            p{
+                                font-size: 14px;
+                                color: #999;
+                                letter-spacing: 0;
+                                line-height: 16px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                margin-top: 6px;
+                            }
+                            // progress
+                            .progress{
+                                margin-top: 38px;
+                                width: 220px;
+                                height: 2px;
+                                background-color: #F4F4F4;
+                                border-radius: 2px;
+                                position: relative;
+                                .bar{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    height: 2px;
+                                    background-color: #B4A078;
+                                    border-radius: 2px;
+                                    width: 100%;
+                                }
+                                .percent{
+                                    position: absolute;
+                                    color: #B4A078;
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    top: -7px;
+                                    left: 226px;
+                                    width: 50px;
+                                }
+                            }
+                            // detail
+                            dl{
+                                margin-top: 37px;
+                                width: 300px;
+                                height: 37px;
+                                dd{
+                                    float: left;
+                                    width: 95px;
+                                    text-align: center;
+                                    &:nth-child(2){
+                                        border-left: 1px solid #eaeaea;
+                                        border-right:  1px solid #eaeaea;
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                        color: #333;
+                                    }
+                                    h6{
+                                        margin-top: 10px;
+                                        color: #999;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //main
+            .main{
+                height: auto!important;
+                padding-bottom: 40px;
+               .content;
+               .list{
+                   .right{
+                       .detail{
+                        margin-top: 62px;
+                        width: 300px;
+                        height: 18px;
+                        line-height: 18px; 
+                        span{
+                            display: block;
+                            width: 75px;
+                            float: left;
+                            font-size: 18px;
+                            color: #2BAB52;
+                        }
+                        h6{
+                            width: 56px;
+                            float: right;
+                            color: #999;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                        p{
+                            margin-top: 0;
+                            width: 60px;
+                            margin-left: 8px;
+                            margin-right: 5px;
+                            float: right;
+                            span{
+                                &:first-child{
+                                    width: 10px;
+                                    margin-right: 4px;
+                                }
+                                color: #333;
+                                font-size: 14px;
+                                width: 30px;
+                                text-align: right;
+                            }
+                        }
+                       }
+                   }
+               }
+            }
+       }
+  }
