@@ -26,7 +26,7 @@
     <div class="our">
         <!-- title -->
         <div class="m-crumbs base">
-            <a href="#">首页</a>
+            <a href="javascript:;">首页</a>
             <span class="iconfont icon-you"></span>
             <span>电器</span>
         </div>
@@ -35,12 +35,12 @@
                 <!-- lunbo -->
                 <ul class="slider_list">
                     <li>
-                        <a href="#">
+                        <a href="javascript:;">
                             <img src="../images/image_ele/ele104.jpg" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="javascript:;">
                             <img src="../images/image_ele/ele105.jpg" alt="">
                         </a>
                     </li>
@@ -60,41 +60,41 @@
                 <div class="classfy">
                     <span class="name">分类：</span>
                     <div class="classfyGroup">
-                        <a href="#" class="active">全部</a>
-                        <a href="#">生活电器</a>
-                        <a href="#">厨房电器</a>
-                        <a href="#">个护健康</a>
-                        <a href="#">数码</a>
-                        <a href="#">影音娱乐</a>
+                        <a href="javascript:;" class="active">全部</a>
+                        <a href="javascript:;">生活电器</a>
+                        <a href="javascript:;">厨房电器</a>
+                        <a href="javascript:;">个护健康</a>
+                        <a href="javascript:;">数码</a>
+                        <a href="javascript:;">影音娱乐</a>
 
                     </div>
                 </div>
                 <div class="area">
                     <span class="name">配送地区：</span>
                     <div class="classfyGroup">
-                        <a href="#" class="active">全部</a>
-                        <a href="#">香港</a>
-                        <a href="#">澳门</a>
-                        <a href="#">台湾</a>
-                        <a href="#">日韩</a>
-                        <a href="#">亚洲</a>
-                        <a href="#">欧洲</a>
-                        <a href="#">美洲</a>
+                        <a href="javascript:;" class="active">全部</a>
+                        <a href="javascript:;">香港</a>
+                        <a href="javascript:;">澳门</a>
+                        <a href="javascript:;">台湾</a>
+                        <a href="javascript:;">日韩</a>
+                        <a href="javascript:;">亚洲</a>
+                        <a href="javascript:;">欧洲</a>
+                        <a href="javascript:;">美洲</a>
 
                     </div>
                 </div>
                 <div class="sorts">
                     <span class="name">排序：</span>
                     <div class="classfyGroup">
-                        <a href="#" class="active">默认</a>
-                        <a href="#" class="price">
+                        <a href="javascript:;" class="active">默认</a>
+                        <a href="javascript:;" class="price">
                             <span>价格</span>
                             <div class="c">
                                 <i></i>
                                 <i></i>
                             </div>
                         </a>
-                        <a href="#" class="time">
+                        <a href="javascript:;" class="time">
                             <span>上架时间</span>
                             <i class="icon"></i>
                         </a>
@@ -109,12 +109,12 @@
                         <p class="title"><span>生活电器</span></p>
                         <p class="desc">高性价比的智能小家电</p>
                     </div>
-                    <ul class="m-itemlist">
+                    <ul class="m-itemlist life">
                         <li class="item" id="d1">
                             <div class="product">
                                 <span></span>
                                 <div class="hd">
-                                    <a href="#">
+                                    <a href="javascript:;">
                                         <img src="../images/image_ele/ele106.jpg" alt="">
                                         <div>
                                             <span></span>
@@ -127,7 +127,7 @@
                                         <span class="itemTag">新品</span>
                                     </div>
                                     <div class="name">
-                                        <a href="#">
+                                        <a href="javascript:;">
                                             <span>网易制造即热马桶盖</span>
                                         </a>
                                     </div>
@@ -193,6 +193,7 @@
     </div>
     <!-- 页面底部容器 -->
     <div class="footer"></div>
+
     <script>
         $(function() {
             var a;
@@ -225,10 +226,77 @@
         })
     </script>
     <script>
+        $(function() {
+            if (window.XMLHttpRequest) {
+
+                $.ajax({
+                    type: "get",
+                    dataType: "json",
+                    url: "../php/ele.php",
+                    success: function(data) {
+
+                        var elem = {};
+                        if (data.length) {
+                            for (var i = 0; i < data.length; i++) {
+                                //创建img
+                                $('.sh>.life img').eq(i).attr('src', data[i].l_url);
+                                //创建颜色可选
+                                $('.sh>.life .hd div').eq(i).addClass("colorNum");
+                                if (data[i].l_colNum) {
+                                    $('.sh>.life .hd div').eq(i).children('span').first().html(data[i].l_colNum);
+                                    $('.sh>.life .hd div').eq(i).children('span').last().html("色可选");
+                                } else if (data[i].l_colNum == null) {
+                                    $('.sh>.life .hd div').eq(i).css("display", "none");
+                                }
+
+                                //判断商品售卖情况
+                                if (data[i].l_part) {
+                                    switch (Number(data[i].l_part)) {
+                                        case 1:
+                                            $('.sh .prdTags>span').eq(i).html('新品').addClass("itemTag");
+                                            break;
+                                        case 2:
+                                            $('.sh .prdTags>span').eq(i).html('限时').addClass("itemTag1");
+                                            break;
+                                        case 3:
+                                            $('.sh .prdTags>span').eq(i).html('爆品').addClass("itemTag2");
+                                            break;
+                                    }
+                                }
+
+                                // 商品名称
+                                $('.sh .life .name span').eq(i).html(data[i].l_name);
+                                $('.sh>.life .bd .price>span').eq(i).children('span').last().html(data[i].l_price);
+                                //判断是否有折扣
+                                if (data[i].l_oprice) {
+                                    elem.span_oldp = $('<del/>').html('¥' + data[i].l_oprice);
+                                    $('.sh .life .price').eq(i).append(elem.span_oldp);
+                                }
+                                //描述
+                                $('.sh .life .introu>.desc').eq(i).html(data[i].l_tips);
+
+                            }
+
+
+
+                        }
+
+                    },
+                    error: function(err) {
+                        console.log("失败");
+
+                    }
+                });
+            }
+
+        });
+    </script>
+    <script>
         $("#header").load('home.html .header');
         $("#right-fixed").load('home.html .right-fixed');
         $(".footer").load('home.html #footer');
     </script>
+
 </body>
 
 </html>
