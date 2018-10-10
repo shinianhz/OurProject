@@ -8,7 +8,7 @@
                 init = null,
                 timeout = null,
                 elems = {
-                    imgWidth: this.children('ul').children("li").height(), //li高度
+                    liH: this.children('ul').children("li").height(), //li高度
                     num: this.children('ul').children("li").length //记录li个数
                 },
                 defaults = {
@@ -32,7 +32,7 @@
             };
             //开始函数
             start = function() {
-                var hig = elems.imgWidth,
+                var hig = elems.liH,
                     t = '-=' + hig;
                 if (elems.num + 1 == elems._index) {
                     var divtop = _that.offset().top,
@@ -53,7 +53,7 @@
             main = function() {
                 init();
                 timeout = setInterval(function() {
-                    start(); //默认向右轮播参数为0；
+                    start();
                 }, options.delay + options.speed);
             }
             main();

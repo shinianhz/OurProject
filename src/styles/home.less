@@ -1,3 +1,114 @@
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    z-index: 100;
+    line-height: 35px;
+    padding: 0 !important ;
+    background-color: #fff;
+    &>ul{
+        padding-top:10px  !important;
+        width: 1090px !important;
+        margin: 0 auto;
+        height: 74px;
+        &>li{
+            padding: 0px !important;
+            a{
+                height: 45px !important;
+                padding-bottom: 0 !important;
+           }
+           .out-box{
+               top: 72px !important;
+           }
+       }
+    }
+ 
+}
+.hide{
+    display: none !important;
+}
+.showup{
+    display: block;
+    z-index: 100;
+}
+
+//testing 搜索功能
+.living-c-btm{
+    margin-top: 20px;
+    width: 1090px;
+    margin: 0 auto;
+    .living-both{
+        margin: 0 10px;
+    }
+    .living-right{
+        margin-right: 10px;
+    }
+    .living-box{
+        width: 265px;
+        height: 361px;
+        .living-box-top{
+            position: relative;
+            img{
+                transition: all 2s;
+                background-color: #f4f4f4;
+                border: 1px solid transparent;
+                color: #f4f4f4;
+                display: block;
+                margin: 0 auto;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            i{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding:3px 4px;
+                font-size: 12px;
+                color: #a7936e;
+                border: 1px solid #b3a07d;
+                border-radius: 6px;
+            }
+        }
+        .living-box-btm{
+            text-align: center;
+            padding: 10px 0;
+            span{
+                padding:3px ;
+                background-color: #F28F2D;
+                font-size: 12px;
+                color: #fff;
+            }
+            h4{
+                font-size: 14px;
+                line-height: 30px;
+                font-weight: normal;
+                a{
+                    color: black;
+                }
+                &:hover{
+                    a{
+                        color: #b4a078;
+                    }
+                }
+            }
+            small{
+                color: #d4282d;
+                font-size: 13px;
+            }
+        }
+
+    }
+}
+
+#header{
+    height: 270px;
+}
+
+
+
 //商品信息顶部信息导航
 .brand-top{
     display: flex;
@@ -67,6 +178,7 @@
         }
     }
 }
+
 .content{
     .content-inner{
         //轮播图
@@ -147,7 +259,7 @@
                     float: left;
                     width: 15px;
                     height: 15px;
-                    background-color: #ccc;
+                    background-color: rgba(70, 68, 68, 0.247);
                     margin-right: 15px;
                     border-radius: 50%;
                     &:last-child {
@@ -155,7 +267,7 @@
                     }
                 }
                 .color{
-                    background-color: #13e2e2;
+                    background-color: #1213139d;
                 }
             }
         }
@@ -801,71 +913,71 @@
                            }
                        }
                     } 
-                    .living-c-btm{
-                        margin-top: 20px;
-                        .living-both{
-                            margin: 0 10px;
-                        }
-                        .living-right{
-                            margin-right: 10px;
-                        }
-                        .living-box{
-                            width: 265px;
-                            height: 361px;
-                            .living-box-top{
-                                position: relative;
-                                img{
-                                    transition: all 2s;
-                                    background-color: #f4f4f4;
-                                    border: 1px solid transparent;
-                                    color: #f4f4f4;
-                                    display: block;
-                                    margin: 0 auto;
-                                    &:hover{
-                                        transform: scale(1.1);
-                                    }
-                                }
-                                i{
-                                    position: absolute;
-                                    top: 10px;
-                                    left: 10px;
-                                    padding:3px 4px;
-                                    font-size: 12px;
-                                    color: #a7936e;
-                                    border: 1px solid #b3a07d;
-                                    border-radius: 6px;
-                                }
-                            }
-                            .living-box-btm{
-                                text-align: center;
-                                padding: 10px 0;
-                                span{
-                                    padding:3px ;
-                                    background-color: #F28F2D;
-                                    font-size: 12px;
-                                    color: #fff;
-                                }
-                                h4{
-                                    font-size: 14px;
-                                    line-height: 30px;
-                                    font-weight: normal;
-                                    a{
-                                        color: black;
-                                    }
-                                    &:hover{
-                                        a{
-                                            color: #b4a078;
-                                        }
-                                    }
-                                }
-                                small{
-                                    color: #d4282d;
-                                    font-size: 13px;
-                                }
-                            }
+                    // .living-c-btm{
+                    //     margin-top: 20px;
+                    //     .living-both{
+                    //         margin: 0 10px;
+                    //     }
+                    //     .living-right{
+                    //         margin-right: 10px;
+                    //     }
+                    //     .living-box{
+                    //         width: 265px;
+                    //         height: 361px;
+                    //         .living-box-top{
+                    //             position: relative;
+                    //             img{
+                    //                 transition: all 2s;
+                    //                 background-color: #f4f4f4;
+                    //                 border: 1px solid transparent;
+                    //                 color: #f4f4f4;
+                    //                 display: block;
+                    //                 margin: 0 auto;
+                    //                 &:hover{
+                    //                     transform: scale(1.1);
+                    //                 }
+                    //             }
+                    //             i{
+                    //                 position: absolute;
+                    //                 top: 10px;
+                    //                 left: 10px;
+                    //                 padding:3px 4px;
+                    //                 font-size: 12px;
+                    //                 color: #a7936e;
+                    //                 border: 1px solid #b3a07d;
+                    //                 border-radius: 6px;
+                    //             }
+                    //         }
+                    //         .living-box-btm{
+                    //             text-align: center;
+                    //             padding: 10px 0;
+                    //             span{
+                    //                 padding:3px ;
+                    //                 background-color: #F28F2D;
+                    //                 font-size: 12px;
+                    //                 color: #fff;
+                    //             }
+                    //             h4{
+                    //                 font-size: 14px;
+                    //                 line-height: 30px;
+                    //                 font-weight: normal;
+                    //                 a{
+                    //                     color: black;
+                    //                 }
+                    //                 &:hover{
+                    //                     a{
+                    //                         color: #b4a078;
+                    //                     }
+                    //                 }
+                    //             }
+                    //             small{
+                    //                 color: #d4282d;
+                    //                 font-size: 13px;
+                    //             }
+                    //         }
 
-                        }
-                    }
+                    //     }
+                    // }
                 }
             }
         }

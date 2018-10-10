@@ -3,9 +3,10 @@
 }
 //li底部边框
 .border-bom{
-    border-bottom: 3px solid #b4a078;
     &>a{
         color: #b4a078;
+        border-bottom: 3px solid #b4a078;
+
     }
 }
 //三角形
@@ -17,6 +18,14 @@
     transform: translate(-50%);
 }
 
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.hide{
+    display: none;
+}
 //导航栏二级导航
 
 //***********************
@@ -206,16 +215,18 @@
         padding-top: 50px;
         .nav-box{
             width: 1090px;
+            height: 182px;
             box-sizing : content-box ;
             .mauto;
             .inp{
                 line-height: 94px;
+                // z-index: 10000;
                 input{
                     border-bottom: 1px solid #aaa;
                     width: 272px;
                 }
                 a{
-                    padding: 5px 10px;
+                    padding: 5px 10px ;
                     font-size: 20px;
                 }
                 .icon-gouwuche1{
@@ -244,159 +255,197 @@
                 }
 
             }
-            &>ul{
-                padding-top:20px; 
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
+            .bgbox{
                 position: relative;
-                .border{
-                    a{
-                        padding-left: 20px;
-                        border-left: 1px solid #aaa;
-                    }
-                }
-                &>li{
-                    float: left;
-                    margin: 0 22px;
-                    padding: 5px 0;
-                    &>a{
-                        font-weight: 600;
-                        color: black
-                    }
-                    .out-box{
-                        display: none;
-                        position: absolute;
-                        top: 55px;
-                        .box{
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: flex-start;
-                            background-color: #fff;
-                            border: 1px  solid #aaa;
-                            padding: 10px 20px 50px;
-                            .box-inner{
-                                padding: 0 20px;
-                                h4{
-                                    border-bottom: 1px solid #aaa;
-                                    padding: 10px 0;
-                                }
-                                .box-inner-in{
+                .ulbox{
+                    height: 74px;
+                    &>ul{
+                        position: relative;
+                        padding-top:20px; 
+                        display: flex;
+                        justify-content: space-around;
+                        width: 100%;
+                        &>li{
+                            float: left;
+                            padding: 0 22px;
+                            padding-bottom: 32px;
+                            height: 100%;
+                            &>a{
+                                display: block;
+                                // height: 100%;
+                                width: 100%;
+                                font-weight: 600;
+                                color: black;
+                                padding: 5px 0;
+                            }
+                            .out-box{
+                                display: none;
+                                position: absolute;
+                                top: 85px;
+                                .box{
                                     display: flex;
-                                    justify-content: space-between;
+                                    justify-content: space-around;
                                     align-items: flex-start;
-                                    box-sizing : content-box ;
-                                    ul{
-                                        padding: 10px 0;
-                                        li{
-                                            a{
-                                                display: flex;
-                                                justify-content: flex-start;
-                                                align-items: center;
-                                                font-size: 14px;
-                                                img{
-                                                    zoom:.5;
-                                                }
-                                                span{
-                                                    padding-left: 10px;
-                                                }
-                                                &:hover{
-                                                    color: #b4a078;
+                                    background-color: #fff;
+                                    border: 1px  solid #aaa;
+                                    padding: 10px 20px 50px;
+                                    .box-inner{
+                                        padding: 0 20px;
+                                        h4{
+                                            border-bottom: 1px solid #aaa;
+                                            padding: 10px 0;
+                                        }
+                                        .box-inner-in{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: flex-start;
+                                            box-sizing : content-box ;
+                                            ul{
+                                                padding: 10px 0;
+                                                li{
+                                                    a{
+                                                        display: flex;
+                                                        justify-content: flex-start;
+                                                        align-items: center;
+                                                        font-size: 14px;
+                                                        img{
+                                                            zoom:.5;
+                                                        }
+                                                        span{
+                                                            padding-left: 10px;
+                                                        }
+                                                        &:hover{
+                                                            color: #b4a078;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-                    &:hover{
-                        .border-bom;
-                        .out-box{
-                            display: block;
-                            z-index: 100;
-                        }
-                    }
-                    //调整位置
-                    &:nth-child(2){
-                        .out-box{
-                            left:-50px;
-                        }
-                    }
-                    &:nth-child(3){
-                        .out-box{
-                            left:0px;
-                        }
-                    }
-                    &:nth-child(4){
-                        .out-box{
-
-                            left:-160px;
-                        }
-                    }
-                    &:nth-child(5){
-                        .out-box{
-
-                            left:220px;
-                        }
-                    }
-                    &:nth-child(6){
-                        .out-box{
-                            left:220px;
-                        }
-                    }
-                    &:nth-child(7){
-                        .out-box{
-                            left:-60px;
-                        }
-                    }
-                    &:nth-child(8){
-                        .out-box{
-                            left:410px;
-                        }
-                    }
-                    &:nth-child(9){
-                        .out-box{
-                            left:250px;
-                        }
-                    }
-                    &:nth-child(10){
-                        .out-box{
-                            left:400px;
-                            .box{
-                                .box-inner{
-                                    .box-inner-in{
-                                        ul>li>a{
-                                            img{
-                                                zoom: 1;
+                            &:hover{
+                                .border-bom;
+                                .out-box{
+                                    display: block;
+                                    z-index: 100;
+                                }
+                            }
+                            #first{
+                                &>a{
+                                    img{
+                                        zoom: .5
+                                    }
+                                }
+                             
+                            }
+                            //调整位置
+                           
+                            &:nth-child(3){
+                                .out-box{
+                                    left:-50px;
+                                }
+                            }
+                            &:nth-child(4){
+                                .out-box{
+                                    left:0px;
+                                }
+                            }
+                            &:nth-child(5){
+                                .out-box{
+        
+                                    left:-170px;
+                                }
+                            }
+                            &:nth-child(6){
+                                .out-box{
+        
+                                    left:220px;
+                                }
+                            }
+                            &:nth-child(7){
+                                .out-box{
+                                    left:220px;
+                                }
+                            }
+                            &:nth-child(8){
+                                .out-box{
+                                    left:-80px;
+                                }
+                            }
+                            &:nth-child(9){
+                                .out-box{
+                                    left:410px;
+                                }
+                            }
+                            &:nth-child(10){
+                                .out-box{
+                                    left:260px;
+                                }
+                            }
+                            &:nth-child(11){
+                                .out-box{
+                                    left:400px;
+                                    .box{
+                                        .box-inner{
+                                            .box-inner-in{
+                                                ul>li>a{
+                                                    img{
+                                                        zoom: 1;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-                    &:nth-child(11){
-                        .out-box{
-                            left:550px;
-                            .box{
-                                .box-inner{
-                                    .box-inner-in{
-                                        ul>li>a{
-                                            img{
-                                                zoom: 1;
+                            &:nth-child(12){
+                                .out-box{
+                                    left:550px;
+                                    .box{
+                                        .box-inner{
+                                            .box-inner-in{
+                                                ul>li>a{
+                                                    img{
+                                                        zoom: 1;
+                                                    }
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
+                            &:last-child{
+                                .icon-gouwuche1{
+                                    font-weight: 900;
+                                    font-size: 25px;
+                                    position: relative;
+                                    a{
+                                        font-size: 20px;
+                                        color: #b4a078 !important;
+                                    }
+                                    i{
+                                        position: absolute;
+                                        top: 0;
+                                        right: -10px;
+                                        display: inline-block;
+                                        width: 18px;
+                                        line-height: 18px;
+                                        border-radius: 50%;
+                                        background-color: red;
+                                        color: #fff;
+                                        font-size: 14px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
                         }
+                        .chenge{
+                            .border-bom;
+                        }
+                      
                     }
                 }
-                .chenge{
-                    .border-bom;
-                }
-              
             }
         }
     }
@@ -407,7 +456,7 @@
     right: 0;
     top: 20px;
     background-color: #fff;
-    z-index: 101;
+    z-index: 1001;
     .inner-box{
         ul{
             li{

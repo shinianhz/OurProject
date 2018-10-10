@@ -14,7 +14,7 @@ $(function() {
     $('.lunbo-box').hover(function() {
         stop();
     }, function() {
-        timer = setInterval(right, 1000);
+        timer = setInterval(right, 2000);
     });
     // 上一页函数；
     function left() {
@@ -47,32 +47,31 @@ $(function() {
         show();
     }
     //底部按钮点击切换
-    $('.button a').each(function() {
-        $(this).on('click', function() {
-            var _thisindex = $(this).index();
-            var mindex = _thisindex - index;
-            if (mindex == 0) {
-                return;
-            } else if (mindex > 0) {
-                var newarr = arr.splice(0, mindex);
-                arr = $.merge(arr, newarr);
-                $('.lunbo-box li').each(function(i, e) {
-                    $(e).removeClass().addClass(arr[i]);
-                })
-                index = _thisindex;
-                show();
-            } else if (mindex < 0) {
-                arr.reverse();
-                var oldarr = arr.splice(0, -mindex);
-                arr = $.merge(arr, oldarr);
-                arr.reverse();
-                $('.lunbo-box li').each(function(i, e) {
-                    $(e).removeClass().addClass(arr[i]);
-                })
-                index = _thisindex;
-                show();
-            }
-        })
+    $('.button ').on('click', function(e) {
+        //用事件委托 ，因为ajax是后执行的，引入的js选不到，通过ajax请求得到数据创建的DOM元素
+        var _thisindex = $(e.target).index();
+        var mindex = _thisindex - index;
+        if (mindex == 0) {
+            return;
+        } else if (mindex > 0) {
+            var newarr = arr.splice(0, mindex);
+            arr = $.merge(arr, newarr);
+            $('.lunbo-box li').each(function(i, e) {
+                $(e).removeClass().addClass(arr[i]);
+            })
+            index = _thisindex;
+            show();
+        } else if (mindex < 0) {
+            arr.reverse();
+            var oldarr = arr.splice(0, -mindex);
+            arr = $.merge(arr, oldarr);
+            arr.reverse();
+            $('.lunbo-box li').each(function(i, e) {
+                $(e).removeClass().addClass(arr[i]);
+            })
+            index = _thisindex;
+            show();
+        }
     });
     //底部按钮高亮
     function show() {
