@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/zdljs/tab.js"></script>
     <script src="../js/zdljs/pwdMsg.js"></script>
     <script src="../js/zdljs/zengze.js"></script>
@@ -204,18 +204,24 @@
         $(function() {
             //注册
             $('#sign').click(function() {
+                // console.log(1);
                 $.ajax({
                     type: "post",
                     url: "../php/login.php",
                     data: {
-                        'tel': $('#tel_zc').val(),
-                        'password': $('#pwd_zc').val()
+                        "tel": $('#tel_zc').val(),
+                        "password": $('#pwd_zc').val()
                     },
-                    // dataType: "json",
                     success: function(response) {
-                        console.log(response);
-                        // var data = JSON.parse(response);
-                        // console.log(data);
+                        // console.log(response);
+                        // console.log(response.msg);
+                        var data = JSON.parse(response);
+                        $('.ferrorPho').html(data.msg);
+                        if ($('.ferrorPho').html() === '注册成功') {
+
+                            // $('.zhuce').addClass('log-none');
+                            // $('.denglu').addClass('log-show');
+                        }
                     }
                 })
             })
