@@ -1,14 +1,5 @@
 @charset "utf-8";
-*{
-    margin:0;
-    padding:0;
-    
-}
-body{
-    font: 12px/1.5 "Microsoft Yahei","微软雅黑",verdana;
-    color: #333;
 
-}
 .base{
     width: 1090px;
     margin:0 auto;  
@@ -19,15 +10,9 @@ li{
 a{
     text-decoration: none;
 }
-// 顶部
-header{
-    line-height: 36px;
-    background-color: yellow;
-}
-// 导航
-nav{
-    line-height: 204px;
-    background-color: pink;
+a:hover{
+    text-decoration: none;
+    color:#c2a063!important;
 }
 //banner轮播
 .banner{
@@ -153,6 +138,7 @@ nav{
                 }
                 .m-itemlist{
                     margin-top: 25px;
+                    margin-right: -10px;
                     overflow: hidden;
                     .item{
                         float: left;
@@ -175,6 +161,7 @@ nav{
                                 margin-bottom: 8px;
                                  overflow: hidden;
                                 background-color: #f4f4f4;
+                                                           
                                 a{
                                     color:#333;
                                     img{
@@ -185,7 +172,9 @@ nav{
                                         color: #f4f4f4;
                                         display: block;
                                         margin: 0 auto;
+                                        
                                     }
+                                   
                                     .colorNum{
                                         position: absolute;
                                         top: 10px;
@@ -194,10 +183,19 @@ nav{
                                         font-size: 12px;
                                         color: #a7936e;
                                         border: 1px solid #b3a07d;
+                                        border-radius: 5px;
+                                        padding: 0 4px;
+                                        line-height: 18px;
+                                        background-color: #f4f0ea;
                                         &>span{
                                             line-height:18px;
                                         }
                                     }
+                                   
+                                }
+                                &:hover img{
+                                    transform: scale(1.1); 
+                                    transition: all 1s;
                                 }
                             }
                             .bd{
@@ -213,8 +211,15 @@ nav{
                                     overflow: hidden;
                                     .itemTag{
                                         background-color: #b4a078;
+                                        display: inline-block;  
+                                        line-height: 20px;
+                                        color: #fff;
+                                        padding: 0 5px;
+                                        font-size: 12px;
+                                    }
+                                    .itemTag1{
+                                        background-color: red;
                                         display: inline-block;
-                                        height: 20px;
                                         line-height: 20px;
                                         color: #fff;
                                         padding: 0 5px;
@@ -222,11 +227,13 @@ nav{
                                     }
                                 }
                                 .name{
+                            
                                     a{
                                         span{
                                             margin-bottom: 4px;
                                             height: 20px;
                                             line-height: 20px;
+                                            font-weight: bold;
                                             padding:0 10px;
                                             overflow: hidden;
                                             white-space: nowrap;   
