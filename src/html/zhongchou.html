@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/zhongchou.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <script src="../js/home/slide.js"></script>
+    <script src="../js/public.js"></script>
 </head>
 
 <body>
     <!-- header -->
-    <header id="header"></header>
+    <header></header>
     <!-- banner -->
     <div class="banner-box">
         <div class="banner">
-            <a href="#"><img src="../images/zhongchou/085.jpg" alt=""></a>
+            <a href="#"><img src="http://yanxuan.nosdn.127.net/15175584364793457.jpg?imageView&quality=85&thumbnail=1920y420" alt=""></a>
         </div>
     </div>
     <!-- nav -->
@@ -252,23 +254,29 @@
             </div>
         </div>
     </div>
+    <!-- 左边固定信息栏 -->
+    <div class="bd-fixed"></div>
+    <!-- footer -->
+    <footer></footer>
     <!--  -->
     <script>
         $(function() {
-            $('#header').load('home.html .header');
+            $('header').load('home.html .header');
+            $('.bd-fixed').load('home.html .right-fixed');
+            $('footer').load('home.html #footer');
             //
 
-            var arr = [];
-            $.ajax({
-                type: "get",
-                url: "../php/sss.php",
-                // data: "data",
-                //dataType: "jsonp",
-                success: function(data) {
-                    arr = JSON.parse(data);
-                    console.log(arr);
-                }
-            });
+            // var arr = [];
+            // $.ajax({
+            //     type: "get",
+            //     url: "../php/sss.php",
+            //     // data: "data",
+            //     //dataType: "jsonp",
+            //     success: function(data) {
+            //         arr = JSON.parse(data);
+            //         console.log(arr);
+            //     }
+            // });
 
 
             //
@@ -281,6 +289,7 @@
             $('.list>li').removeAttr('id');
         });
     </script>
+
 </body>
 
 </html>
