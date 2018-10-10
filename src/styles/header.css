@@ -1,3 +1,10 @@
+.hide {
+  display: none !important;
+}
+.showup {
+  display: block;
+  z-index: 100;
+}
 .mauto {
   margin: 0 auto;
 }

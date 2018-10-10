@@ -35,7 +35,7 @@ body {
 
 fieldset,
 img {
-    /* border: none; */
+    border: none;
 }
 
 ul,
@@ -48,7 +48,7 @@ input,
 img {
     margin: 0;
     padding: 0;
-    /* border: 0 none; */
+    border: 0 none;
     outline-style: none;
 }
 
