@@ -1,37 +1,3 @@
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  width: 100%;
-  z-index: 100;
-  line-height: 35px;
-  padding: 0 !important ;
-  background-color: #fff;
-}
-.fixed > ul {
-  padding-top: 10px  !important;
-  width: 1090px !important;
-  margin: 0 auto;
-  height: 74px;
-}
-.fixed > ul > li {
-  padding: 0px !important;
-}
-.fixed > ul > li a {
-  height: 45px !important;
-  padding-bottom: 0 !important;
-}
-.fixed > ul > li .out-box {
-  top: 72px !important;
-}
-.hide {
-  display: none !important;
-}
-.showup {
-  display: block;
-  z-index: 100;
-}
 .living-c-btm {
   margin-top: 20px;
   width: 1090px;
