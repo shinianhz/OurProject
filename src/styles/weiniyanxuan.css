@@ -1,5 +1,9 @@
 @charset "utf-8";
 /*为你严选*/
+/*header*/
+header {
+  height: 270px;
+}
 /*bannerWraper*/
 .bannerWrapaer {
   width: 100%;
