@@ -1,0 +1,96 @@
+@charset "utf-8";
+ // title
+ .m-crumbs{
+    font-size: 12px;
+    color: #333;
+    line-height: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a{
+        color: #333;
+    }
+    span:first-of-type{
+        margin: 0 5px;
+        color: #999;
+        font-size: 12px;
+    }
+    span:last-of-type{
+        color: #999;
+    }
+}
+.m-focus{
+    margin-bottom: 30px!important;
+      // lunbo
+      .slider{
+          position: relative;
+          width: 1090px;
+          height: 310px;
+          overflow: hidden;
+          &:hover{
+              span{
+                  opacity: 0.7;
+              }
+          }
+          .slider_list{
+              width: 5000px;
+              position: absolute;
+              li{
+                  float: left;
+              display: none;
+              }
+              
+          }
+          span{
+              position: absolute;
+              font-size: 1.5em;
+              padding: 15px;
+              top: 140px;
+              left: 10px;
+              cursor: pointer;
+              border-radius: 50%;
+              color: #fff;
+              background-color: #b4a078;
+              opacity: 0;
+              &:hover{
+                  opacity: 1;
+              }
+          }
+          span:last-of-type{
+              left: 1026px;
+              &:hover{
+                  opacity: 1;
+              }
+          }
+          .point{
+              position: absolute;
+              z-index: 2;
+              overflow: hidden;
+              width: 200px;
+              line-height: 18px;
+              top:280px;
+              left: 500px;
+              li{
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background-color: #fff;
+                  margin: 0 10px;
+                  float: left;
+                  border: 1px solid rgb(190, 190, 190);
+                  position: relative;
+                  top:4px;
+              }
+          }
+      }
+      .active{
+          // width: 20px!important;
+          // height: 20px!important;
+          box-sizing: content-box;
+          top:0!important;
+          background-color: #a7936e!important;
+          border:4px solid #dfcead!important;
+      }
+      .show{
+          display: block!important;
+      }
+  }
