@@ -9,11 +9,12 @@
     <script src="../../node_modules//_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/zhongchou.css">
+    <link rel="stylesheet" href="../styles/header.css">
 </head>
 
 <body>
     <!-- header -->
-    <header></header>
+    <header id="header"></header>
     <!-- banner -->
     <div class="banner-box">
         <div class="banner">
@@ -253,6 +254,9 @@
     <!--  -->
     <script>
         $(function() {
+            $('#header').load('home.html .header');
+            //
+
             var arr = [];
             $.ajax({
                 type: "get",
@@ -261,18 +265,19 @@
                 //dataType: "jsonp",
                 success: function(data) {
                     arr = JSON.parse(data);
+                    console.log(arr);
                 }
             });
-            console.log(arr);
 
 
             //
-            // var a, b;
-            // for (var i = 0; i < 79; i++) {
-            //     a = $('#listchild').clone();
-            //     $('#list').append(a);
-            //     b = $('#list').html();
-            // }
+            var a;
+            for (var i = 0; i < 79; i++) {
+                a = $('#listchild').clone();
+                $('#list').append(a);
+                // b = $('#list').html();
+            }
+            $('.list>li').removeAttr('id');
         });
     </script>
 </body>

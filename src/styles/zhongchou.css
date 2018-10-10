@@ -1,4 +1,8 @@
 @charset "utf-8";
+/*header*/
+header {
+  height: 270px;
+}
 /*banner*/
 .banner-box {
   height: 420px;
