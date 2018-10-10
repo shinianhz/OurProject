@@ -78,6 +78,9 @@
   top: 10px;
   left: 10px;
   font-size: 12px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .colorNum .span-color {
+  display: inline-block;
   padding: 0 4px;
   background: #f4f0ea;
   color: #a7936e;
