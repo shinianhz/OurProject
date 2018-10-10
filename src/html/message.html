@@ -8,14 +8,18 @@
     <title>消息通知</title>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/message.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <script src="../js/home/slide.js"></script>
+    <script src="../js/public.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <header></header>
     <!-- content -->
-    <div class="box">
+    <div class="content-box">
         <div class="content">
             <!-- top-tips -->
             <div class="tips">
@@ -127,7 +131,7 @@
                         <p>当前无此类消息</p>
                     </div>
                 </div>
-                <!-- js -->
+                <!-- js选项卡 -->
                 <script>
                     $(function() {
                         var that;
@@ -144,8 +148,18 @@
             </div>
         </div>
     </div>
+    <!-- 左边固定信息栏 -->
+    <div class="bd-fixed"></div>
     <!-- footer -->
     <footer></footer>
+    <!-- ajax.load -->
+    <script>
+        $(function() {
+            $('header').load('home.html .header');
+            $('.bd-fixed').load('home.html .right-fixed');
+            $('footer').load('home.html #footer');
+        })
+    </script>
 </body>
 
 </html>

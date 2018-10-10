@@ -811,6 +811,7 @@
   height: 140px;
 }
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .lightBox {
+  display: none;
   margin: 10px 0;
   position: relative;
   padding: 50px 0;

@@ -1,6 +1,5 @@
 .goods {
   width: 100%;
-  height: 100%;
   background-color: #f5f5f5;
 }
 .goods .c-goodsArea {
@@ -15,6 +14,76 @@
   position: relative;
   padding: 0 40px;
   overflow: hidden;
+}
+.goods .c-goodsArea .m-goods .m-sortbar {
+  margin-top: 10px;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+  font-size: 14px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div {
+  overflow: hidden;
+  border-top: 1px dashed #dedede;
+  line-height: 1;
+  padding-top: 20px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div .name {
+  font-size: 14px;
+  color: #999;
+  float: left;
+  margin-right: 28px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div .classfyGroup {
+  overflow: hidden;
+  float: left;
+  width: 930px;
+  margin-bottom: 4px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div .classfyGroup .active {
+  color: #b4a078;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div .classfyGroup a {
+  color: #333;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .classfy {
+  padding-top: 20px;
+  border-top: 0;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .area .name {
+  margin-right: 0;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .sorts .classfyGroup .price .c {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .sorts .classfyGroup .price .c i:first-of-type {
+  display: block;
+  margin-bottom: 2px;
+  height: 5px;
+  width: 10px;
+  background: url('../images/icons1.png') 0 -1143px no-repeat;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .sorts .classfyGroup .price .c i:last-of-type {
+  display: block;
+  margin-top: 2px;
+  height: 5px;
+  width: 10px;
+  background: url('../images/icons1.png') 0 -655px no-repeat;
+}
+.goods .c-goodsArea .m-goods .m-sortbar .sorts .classfyGroup .time i {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 9px;
+  margin-top: -2px;
+  background: url('../images/icons1.png') 0 -633px no-repeat;
+  height: 12px;
+  width: 9px;
 }
 .goods .c-goodsArea .m-goods .m-content {
   overflow: hidden;
@@ -78,6 +147,9 @@
   top: 10px;
   left: 10px;
   font-size: 12px;
+}
+.goods .c-goodsArea .m-goods .m-content .m-LevelKind .m-itemList .item .m-product .up a .colorNum .span-color {
+  display: inline-block;
   padding: 0 4px;
   background: #f4f0ea;
   color: #a7936e;

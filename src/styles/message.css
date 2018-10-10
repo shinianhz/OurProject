@@ -4,14 +4,14 @@ header {
   height: 270px;
 }
 /*tips*/
-.box {
+.content-box {
   background: #fff;
 }
-.box .content {
+.content-box .content {
   width: 1090px;
   margin: 0 auto;
 }
-.box .content .tips {
+.content-box .content .tips {
   width: 1090px;
   height: 52px;
   font-size: 12px;
@@ -20,13 +20,13 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.box .content .tips .span-1 {
+.content-box .content .tips .span-1 {
   margin: 0 5px;
 }
-.box .content .tips .span-2 {
+.content-box .content .tips .span-2 {
   color: #999;
 }
-.box .content .sub {
+.content-box .content .sub {
   float: left;
   margin-bottom: 30px;
   border: 1px solid #eaeaea;
@@ -35,50 +35,50 @@ header {
   text-align: left;
   color: #333;
 }
-.box .content .sub .active {
+.content-box .content .sub .active {
   border-left: 2px solid #b4a078;
 }
-.box .content .sub .active a {
+.content-box .content .sub .active a {
   color: #b4a078;
 }
-.box .content .sub > dl {
+.content-box .content .sub > dl {
   margin-bottom: 40px;
 }
-.box .content .sub dt {
+.content-box .content .sub dt {
   padding-left: 43px;
   font-size: 16px;
   font-weight: 700;
   margin: 16px 0;
 }
-.box .content .sub dd {
+.content-box .content .sub dd {
   color: #666;
   font-size: 14px;
   margin: 16px 0;
   padding-left: 43px;
   border-left: 2px solid #fff;
 }
-.box .content .sub dd:hover a {
+.content-box .content .sub dd:hover a {
   color: #b4a078;
 }
-.box .content .main {
+.content-box .content .main {
   float: left;
   width: 890px;
   margin-left: 20px;
   min-height: 800px;
   background: #fff;
 }
-.box .content .main > div {
+.content-box .content .main > div {
   display: none;
 }
-.box .content .main .active {
+.content-box .content .main .active {
   display: block;
 }
-.box .content .main ul {
+.content-box .content .main ul {
   width: 890px;
   height: 40px;
   border-bottom: 2px solid #eaeaea;
 }
-.box .content .main ul li {
+.content-box .content .main ul li {
   width: 150px;
   padding: 10px 0;
   height: 40px;
@@ -89,56 +89,56 @@ header {
   text-align: center;
   cursor: pointer;
 }
-.box .content .main ul li a {
+.content-box .content .main ul li a {
   display: inline-block;
   height: 20px;
   width: 150px;
   color: #333;
   border-right: 1px solid #eaeaea;
 }
-.box .content .main ul li:last-child a {
+.content-box .content .main ul li:last-child a {
   border: none;
 }
-.box .content .main ul .active {
+.content-box .content .main ul .active {
   border-bottom: 2px solid #b4a078;
 }
-.box .content .main > div > div {
+.content-box .content .main > div > div {
   display: none;
 }
-.box .content .main .show {
+.content-box .content .main .show {
   display: block;
 }
-.box .content .main .exe {
+.content-box .content .main .exe {
   width: 890px;
   height: auto;
 }
-.box .content .main .exe > div {
+.content-box .content .main .exe > div {
   width: 890px;
   height: 290px;
   padding-bottom: 30px;
   color: #333;
   border-bottom: 1px dashed #ddd;
 }
-.box .content .main .exe > div .title {
+.content-box .content .main .exe > div .title {
   margin: 30px 0;
   font-size: 18px;
 }
-.box .content .main .exe > div .title span {
+.content-box .content .main .exe > div .title span {
   color: #666;
   font-size: 12px;
   margin-left: 10px;
 }
-.box .content .main .exe > div .bd {
+.content-box .content .main .exe > div .bd {
   width: 890px;
   height: 192px;
 }
-.box .content .main .exe > div .bd .pic {
+.content-box .content .main .exe > div .bd .pic {
   float: left;
   width: 504px;
   height: 100%;
   position: relative;
 }
-.box .content .main .exe > div .bd .pic .cover {
+.content-box .content .main .exe > div .bd .pic .cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -151,32 +151,32 @@ header {
   opacity: .7;
   color: #fff;
 }
-.box .content .main .exe > div .bd .info {
+.content-box .content .main .exe > div .bd .info {
   width: 386px;
   float: left;
   padding: 0 10px 0 20px;
   font-size: 14px;
   line-height: 20px;
 }
-.box .content .main .exe > div .bd .info p {
+.content-box .content .main .exe > div .bd .info p {
   margin-bottom: 10px;
 }
-.box .content .main .exe > div .bd .info a {
+.content-box .content .main .exe > div .bd .info a {
   color: #69c;
 }
-.box .content .main .empty {
+.content-box .content .main .empty {
   width: 890px;
   height: 204px;
   margin-top: 150px;
   text-align: center;
   line-height: 204px;
 }
-.box .content .main .notice {
+.content-box .content .main .notice {
   width: 890px;
   height: 124px;
   padding-top: 27px;
 }
-.box .content .main .notice .title {
+.content-box .content .main .notice .title {
   width: 890px;
   height: 16px;
   padding-left: 10px;
@@ -185,12 +185,12 @@ header {
   border-bottom: 1px solid #eaeaea;
   font-size: 16px;
 }
-.box .content .main .notice .title span {
+.content-box .content .main .notice .title span {
   color: #666;
   font-size: 12px;
   margin-left: 10px;
 }
-.box .content .main .notice .info {
+.content-box .content .main .notice .info {
   margin-top: 17px;
   width: 386px;
   float: left;
@@ -198,9 +198,9 @@ header {
   font-size: 14px;
   line-height: 20px;
 }
-.box .content .main .notice .info p {
+.content-box .content .main .notice .info p {
   margin-bottom: 10px;
 }
-.box .content .main .notice .info a {
+.content-box .content .main .notice .info a {
   color: #69c;
 }

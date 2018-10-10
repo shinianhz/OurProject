@@ -8,8 +8,12 @@
     <title>为你严选-网易严选</title>
     <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/weiniyanxuan.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <script src="../js/weiniyanxuan/tabs.js"></script>
+    <script src="../js/home/slide.js"></script>
+    <script src="../js/public.js"></script>
 </head>
 
 <body>
@@ -325,6 +329,18 @@
             </div>
         </div>
     </div>
+    <!-- 左边固定信息栏 -->
+    <div class="bd-fixed"></div>
+    <!-- footer -->
+    <footer></footer>
+    <!-- js -->
+    <script>
+        $(function() {
+            $('header').load('home.html .header');
+            $('.bd-fixed').load('home.html .right-fixed');
+            $('footer').load('home.html #footer');
+        })
+    </script>
 </body>
 
 </html>
