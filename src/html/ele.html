@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电器</title>
+    <link rel="stylesheet" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/ele.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 页面顶部容器 -->
+    <div id="header"></div>
+    <div id="right-fixed"></div>
+    <!-- 轮播 -->
+
+    <!-- 分类 配送地区 排序  区域 -->
+    <div class="our">
+        <div class="goodArea base">
+            <div class="m-sortbar">
+                <div class="classfy">
+                    <span class="name">分类：</span>
+                    <div class="classfyGroup">
+                        <a href="#" class="active">全部</a>
+                        <a href="#">生活电器</a>
+                        <a href="#">厨房电器</a>
+                        <a href="#">个护健康</a>
+                        <a href="#">数码</a>
+                        <a href="#">影音娱乐</a>
+
+                    </div>
+                </div>
+                <div class="area">
+                    <span class="name">配送地区：</span>
+                    <div class="classfyGroup">
+                        <a href="#" class="active">全部</a>
+                        <a href="#">香港</a>
+                        <a href="#">澳门</a>
+                        <a href="#">台湾</a>
+                        <a href="#">日韩</a>
+                        <a href="#">亚洲</a>
+                        <a href="#">欧洲</a>
+                        <a href="#">美洲</a>
+
+                    </div>
+                </div>
+                <div class="sorts">
+                    <span class="name">排序：</span>
+                    <div class="classfyGroup">
+                        <a href="#" class="active">默认</a>
+                        <a href="#" class="price">
+                            <span>价格</span>
+                            <div class="c">
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </a>
+                        <a href="#" class="time">
+                            <span>上架时间</span>
+                            <i class="icon"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="m-content">
+                <!-- 生活电器-->
+                <div class="m-level sh">
+                    <div class="hd">
+                        <p class="title"><span>生活电器</span></p>
+                        <p class="desc">高性价比的智能小家电</p>
+                    </div>
+                    <ul class="m-itemlist">
+                        <li class="item" id="d1">
+                            <div class="product">
+                                <span></span>
+                                <div class="hd">
+                                    <a href="#">
+                                        <img src="../images/image_ele/ele106.jpg" alt="">
+                                        <div>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="bd">
+                                    <div class="prdTags">
+                                        <span class="itemTag">新品</span>
+                                    </div>
+                                    <div class="name">
+                                        <a href="#">
+                                            <span>网易制造即热马桶盖</span>
+                                        </a>
+                                    </div>
+                                    <p class="price">
+                                        <span>
+                                            <span>￥</span>
+                                        <span>249</span>
+                                        </span>
+                                    </p>
+                                    <div class="introu">
+                                        <hr>
+                                        <p class="desc">一键加热 三档温度 抗菌座圈 无声缓降</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- 厨房电器-->
+                <div class="m-level cf">
+                    <div class="hd">
+                        <p class="title"><span>厨房电器</span></p>
+                        <p class="desc">厨房里的省心小电器</p>
+                    </div>
+                    <ul class="m-itemlist">
+
+                    </ul>
+                </div>
+                <!-- 个护健康-->
+                <div class="m-level gh">
+                    <div class="hd">
+                        <p class="title"><span>个护健康</span></p>
+                        <p class="desc">个人护理 省心生活</p>
+                    </div>
+                    <ul class="m-itemlist">
+
+                    </ul>
+                </div>
+                <!--数码-->
+                <div class="m-level sm">
+                    <div class="hd">
+                        <p class="title"><span>数码</span></p>
+                        <p class="desc">个人护理 省心生活</p>
+                    </div>
+                    <ul class="m-itemlist">
+
+                    </ul>
+                </div>
+                <!--影音娱乐-->
+                <div class="m-level yy">
+                    <div class="hd">
+                        <p class="title"><span>影音娱乐</span></p>
+                        <p class="desc">视听盛宴，共享欢乐</p>
+                    </div>
+                    <ul class="m-itemlist">
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部容器 -->
+    <div class="footer"></div>
+    <script>
+        $(function() {
+            var a;
+            //生活
+            for (var i = 1; i <= 42; i++) {
+                a = $('#d1').clone();
+                $('.sh>.m-itemlist').append(a);
+            }
+            //厨房
+            for (var i = 1; i <= 21; i++) {
+                a = $('#d1').clone();
+                $('.cf>.m-itemlist').append(a);
+            }
+            //个人护理
+            for (var i = 1; i <= 37; i++) {
+                a = $('#d1').clone();
+                $('.gh>.m-itemlist').append(a);
+            }
+            //数码
+            for (var i = 1; i <= 85; i++) {
+                a = $('#d1').clone();
+                $('.sm>.m-itemlist').append(a);
+            }
+            //影音娱乐
+            for (var i = 1; i <= 26; i++) {
+                a = $('#d1').clone();
+                $('.sm>.m-itemlist').append(a);
+            }
+            $('.item').removeAttr("id");
+        })
+    </script>
+    <script>
+        $("#header").load('home.html .header');
+        $("#right-fixed").load('home.html .right-fixed');
+        $(".footer").load('home.html #footer');
+    </script>
+</body>
+
+</html>
