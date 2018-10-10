@@ -12,7 +12,7 @@ $(function() {
         }
         $li.eq(count).addClass("show").siblings().removeClass("show");
         $(".point li").eq(count).addClass("active").siblings().removeClass('active');
-    }, 6000);
+    }, 3000);
     $('.slider').hover(function() {
             clearInterval(timeout);
         }, function() {

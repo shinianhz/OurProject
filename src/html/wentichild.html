@@ -137,7 +137,8 @@
         $(function() {
             var img = ['../images/wentichild/131.jpg', '../images/wentichild/132.jpg', '../images/wentichild/133.jpg', '../images/wentichild/134.jpg'];
             $('.picList .pic-item').on('click', function() {
-                // $('#view img').css('display', 'none');
+                $('.lightBox').css('display', 'block');
+                $('.slick').css('display', 'block');
                 var i = $('.picList .pic-item').index(this);
                 $('.slick').css({
                     'background': 'url(' + img[i] + ')',
@@ -717,7 +718,7 @@
                                                     <img src="../images/wentichild/134.jpg" alt="...">
                                                 </li>
                                             </ul>
-                                            <div class="lightBox" style="display: block;">
+                                            <div class="lightBox">
                                                 <div class="close"></div>
                                                 <div class="slick">
                                                     <button></button>

@@ -7,13 +7,108 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/child.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/pblb.css">
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.js"></script>
+    <script src="../js/shoes/load.js"></script>
+    <script src="../js/home/slide.js"></script>
 </head>
 
 <body>
+    <!-- 页面顶部容器 -->
+    <div id="header"></div>
+    <div id="right-fixed"></div>
+    <!-- 轮播 -->
+
+    <!-- 分类 配送地区 排序  区域 -->
+
     <div class="goods">
         <div class="c-goodsArea">
+            <div class="m-crumbs ">
+                <a href="#">首页</a>
+                <span class="iconfont icon-you"></span>
+                <span>特色区</span>
+            </div>
+            <div class="m-focus ">
+                <div class="slider">
+                    <!-- lunbo -->
+                    <ul class="slider_list">
+                        <li>
+                            <a href="#">
+                                <img src="../images/tese/070.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../images/tese/071.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="iconfont icon-xiangzuo prve"></span>
+                    <span class="iconfont icon-you next"></span>
+                    <ul class="point">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+
             <div class="m-goods">
+                <div class="m-sortbar">
+                    <div class="classfy">
+                        <span class="name">分类：</span>
+                        <div class="classfyGroup">
+                            <a href="#" class="active">全部</a>
+                            <a href="#">日本馆</a>
+                            <a href="#">韩国馆</a>
+                            <a href="#">东南亚馆</a>
+                            <a href="#">欧美馆</a>
+                            <a href="#">澳新馆</a>
+                            <a href="#">智造馆</a>
+                            <a href="#">春风馆</a>
+                            <a href="#">未央馆</a>
+                            <a href="#">Yessing馆</a>
+                            <a href="#">国风馆</a>
+                            <a href="#">严选推荐馆</a>
+                        </div>
+                    </div>
+                    <div class="area">
+                        <span class="name">配送地区：</span>
+                        <div class="classfyGroup">
+                            <a href="#" class="active">全部</a>
+                            <a href="#">香港</a>
+                            <a href="#">澳门</a>
+                            <a href="#">台湾</a>
+                            <a href="#">日韩</a>
+                            <a href="#">亚洲</a>
+                            <a href="#">欧洲</a>
+                            <a href="#">美洲</a>
+
+                        </div>
+                    </div>
+                    <div class="sorts">
+                        <span class="name">排序：</span>
+                        <div class="classfyGroup">
+                            <a href="#" class="active">默认</a>
+                            <a href="#" class="price">
+                                <span>价格</span>
+                                <div class="c">
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                            </a>
+                            <a href="#" class="time">
+                                <span>上架时间</span>
+                                <i class="icon"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="m-content">
                     <div class="m-LevelKind">
                         <div class="header">
@@ -6535,6 +6630,17 @@
             </div>
         </div>
     </div>
+
+    <!-- 页面底部容器 -->
+    <div class="footer"></div>
+    <script>
+        $(function() {
+            $("#header").load('home.html .header');
+            $("#right-fixed").load('home.html .right-fixed');
+            $(".footer").load('home.html #footer');
+
+        })
+    </script>
 </body>
 
 </html>
