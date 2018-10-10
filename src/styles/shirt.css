@@ -201,6 +201,14 @@ a:hover {
   padding: 0 5px;
   font-size: 12px;
 }
+.our .goodArea .m-content .m-level .m-itemlist .item .product .bd .prdTags .itemTag1 {
+  background-color: red;
+  display: inline-block;
+  line-height: 20px;
+  color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+}
 .our .goodArea .m-content .m-level .m-itemlist .item .product .bd .name a span {
   margin-bottom: 4px;
   height: 20px;
