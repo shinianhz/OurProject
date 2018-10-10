@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/iconfont11.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/wentichild.css">
-    <!-- <link rel="stylesheet" href="../styles/child.css"> -->
     <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
-    <!-- <script src="../js/wentichild.js"></script> -->
+    <!-- header商品图片展示，选项卡 -->
     <script>
         $(function() {
             var img = ['../images/wentichild/001.jpg', '../images/wentichild/002.jpg', '../images/wentichild/003.jpg', '../images/wentichild/004.jpg', '../images/wentichild/005.jpg'];
@@ -24,6 +24,7 @@
             })
         })
     </script>
+    <!-- 服务政策的详细信息 -->
     <script>
         $(function() {
             $('.close').on('click', function() {
@@ -37,6 +38,7 @@
             })
         })
     </script>
+    <!-- 购买商品，添加数量 -->
     <script>
         $.extend({
             min: 1,
@@ -88,6 +90,7 @@
             }
         });
     </script>
+    <!-- 商品数量少于1时，点击提示 -->
     <script>
         $(function() {
             setInterval(function() { //定时器 
@@ -102,6 +105,7 @@
             })
         })
     </script>
+    <!-- 详情 评论  常见问题选项卡-->
     <script>
         $.fn.extend({
             tabs: function(options) {
@@ -133,6 +137,7 @@
             $('.b-left').tabs()
         });
     </script>
+    <!-- 评论 图片展示选项卡 -->
     <script>
         $(function() {
             var img = ['../images/wentichild/131.jpg', '../images/wentichild/132.jpg', '../images/wentichild/133.jpg', '../images/wentichild/134.jpg'];
@@ -145,6 +150,12 @@
                     'background-size': '430px 430px'
                 })
             })
+        })
+    </script>
+    <!-- 点击收藏 -->
+    <script>
+        $(function() {
+            $('')
         })
     </script>
     <title>Document</title>
@@ -210,7 +221,7 @@
                         <div class="r-title">
                             <div class="r-name">
                                 <span>钢笔墨水礼盒</span>
-                                <a href="#">
+                                <a href="#good-com">
                                     <div class="r-comment">
                                         <span class="r-span1" style="color:#E36844;">96.8%</span>
                                         <br/>
@@ -321,7 +332,7 @@
                             </a>
                             <div class="r-collect" title="点击收藏">
                                 <div class="top">
-                                    <span></span>
+                                    <i class="icon iconfont icon-xingxing"></i>
                                 </div>
                                 <div class="bottom">
                                     <p class="bottom-1">收藏</p>
@@ -492,7 +503,7 @@
                                             <li class="list active">
                                                 <span>详情</span>
                                             </li>
-                                            <li class="list">
+                                            <li class="list" id="good-com">
                                                 <span>评价</span>
                                             </li>
                                             <li class="list">
@@ -644,7 +655,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="contentTab">
+                        <div class="contentTab " id="good-com">
                             <div class="c-detaileval">
                                 <ul class="c-detailList">
                                     <div class="m-goodRates f-left">
