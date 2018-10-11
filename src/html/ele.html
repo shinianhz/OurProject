@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!-- ------------------------------动态--------------------------------------------- -->
     <!-- 页面顶部容器 -->
     <div id="header"></div>
     <div id="right-fixed"></div>
@@ -104,88 +105,44 @@
             </div>
             <div class="m-content">
                 <!-- 生活电器-->
-                <div class="m-level sh">
+                <div class="m-level sh ">
                     <div class="hd">
                         <p class="title"><span>生活电器</span></p>
                         <p class="desc">高性价比的智能小家电</p>
                     </div>
-                    <ul class="m-itemlist life">
-                        <li class="item" id="d1">
-                            <div class="product">
-                                <span></span>
-                                <div class="hd">
-                                    <a href="javascript:;">
-                                        <img src="../images/image_ele/ele106.jpg" alt="">
-                                        <div>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="bd">
-                                    <div class="prdTags">
-                                        <span class="itemTag">新品</span>
-                                    </div>
-                                    <div class="name">
-                                        <a href="javascript:;">
-                                            <span>网易制造即热马桶盖</span>
-                                        </a>
-                                    </div>
-                                    <p class="price">
-                                        <span>
-                                            <span>￥</span>
-                                        <span>249</span>
-                                        </span>
-                                    </p>
-                                    <div class="introu">
-                                        <hr>
-                                        <p class="desc">一键加热 三档温度 抗菌座圈 无声缓降</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-                    </ul>
+                    <ul class="m-itemlist"></ul>
                 </div>
                 <!-- 厨房电器-->
-                <div class="m-level cf">
+                <div class="m-level m">
                     <div class="hd">
                         <p class="title"><span>厨房电器</span></p>
                         <p class="desc">厨房里的省心小电器</p>
                     </div>
-                    <ul class="m-itemlist">
 
-                    </ul>
                 </div>
                 <!-- 个护健康-->
-                <div class="m-level gh">
+                <div class="m-level m">
                     <div class="hd">
                         <p class="title"><span>个护健康</span></p>
                         <p class="desc">个人护理 省心生活</p>
                     </div>
-                    <ul class="m-itemlist">
 
-                    </ul>
                 </div>
                 <!--数码-->
-                <div class="m-level sm">
+                <div class="m-level m">
                     <div class="hd">
                         <p class="title"><span>数码</span></p>
                         <p class="desc">个人护理 省心生活</p>
                     </div>
-                    <ul class="m-itemlist">
 
-                    </ul>
                 </div>
                 <!--影音娱乐-->
-                <div class="m-level yy">
+                <div class="m-level m">
                     <div class="hd">
                         <p class="title"><span>影音娱乐</span></p>
                         <p class="desc">视听盛宴，共享欢乐</p>
                     </div>
-                    <ul class="m-itemlist">
 
-                    </ul>
                 </div>
 
             </div>
@@ -193,38 +150,6 @@
     </div>
     <!-- 页面底部容器 -->
     <div class="footer"></div>
-
-    <script>
-        $(function() {
-            var a;
-            //生活
-            for (var i = 1; i <= 42; i++) {
-                a = $('#d1').clone();
-                $('.sh>.m-itemlist').append(a);
-            }
-            //厨房
-            for (var i = 1; i <= 21; i++) {
-                a = $('#d1').clone();
-                $('.cf>.m-itemlist').append(a);
-            }
-            //个人护理
-            for (var i = 1; i <= 37; i++) {
-                a = $('#d1').clone();
-                $('.gh>.m-itemlist').append(a);
-            }
-            //数码
-            for (var i = 1; i <= 85; i++) {
-                a = $('#d1').clone();
-                $('.sm>.m-itemlist').append(a);
-            }
-            //影音娱乐
-            for (var i = 1; i <= 26; i++) {
-                a = $('#d1').clone();
-                $('.sm>.m-itemlist').append(a);
-            }
-            $('.item').removeAttr("id");
-        })
-    </script>
     <script>
         $(function() {
 
@@ -240,14 +165,14 @@
                             if (data.length) {
                                 for (var i = 0; i < data.length; i++) {
                                     //创建img
-                                    $('.sh>.life img').eq(i).attr('src', data[i].l_url);
+                                    $('.sh>ul img').eq(i).attr('src', data[i].l_url);
                                     //创建颜色可选
-                                    $('.sh>.life .hd div').eq(i).addClass("colorNum");
+                                    $('.sh>ul .hd div').eq(i).addClass("colorNum");
                                     if (data[i].l_colNum) {
-                                        $('.sh>.life .hd div').eq(i).children('span').first().html(data[i].l_colNum);
-                                        $('.sh>.life .hd div').eq(i).children('span').last().html("色可选");
+                                        $('.sh>ul .hd div').eq(i).children('span').first().html(data[i].l_colNum);
+                                        $('.sh>ul .hd div').eq(i).children('span').last().html("色可选");
                                     } else if (data[i].l_colNum == null) {
-                                        $('.sh>.life .hd div').eq(i).css("display", "none");
+                                        $('.sh>ul .hd div').eq(i).css("display", "none");
                                     }
 
                                     //判断商品售卖情况
@@ -266,15 +191,15 @@
                                     }
 
                                     // 商品名称
-                                    $('.sh .life .name span').eq(i).html(data[i].l_name);
-                                    $('.sh>.life .bd .price>span').eq(i).children('span').last().html(data[i].l_price);
+                                    $('.sh ul .name span').eq(i).html(data[i].l_name);
+                                    $('.sh>ul .bd .price>span').eq(i).children('span').last().html(data[i].l_price);
                                     //判断是否有折扣
                                     if (data[i].l_oprice) {
                                         elem.span_oldp = $('<del/>').html('¥' + data[i].l_oprice);
-                                        $('.sh .life .price').eq(i).append(elem.span_oldp);
+                                        $('.sh ul .price').eq(i).append(elem.span_oldp);
                                     }
                                     //描述
-                                    $('.sh .life .introu>.desc').eq(i).html(data[i].l_tips);
+                                    $('.sh ul .introu>.desc').eq(i).html(data[i].l_tips);
 
                                 }
 
@@ -347,56 +272,95 @@
                     });
                 });
 
+
                 $.ajax({
                     type: "get",
                     dataType: "json",
                     url: "../php/ele.php",
+                    async: false, //为了让懒加载在ajax请求之后执行
                     success: function(data) {
                         var elem = {};
                         if (data.length) {
                             for (var i = 0; i < data.length; i++) {
-                                //创建img
-                                $('.sh>.life img').eq(i).attr('src', data[i].l_url);
-                                //创建颜色可选
-                                $('.sh>.life .hd div').eq(i).addClass("colorNum");
-                                if (data[i].l_colNum) {
-                                    $('.sh>.life .hd div').eq(i).children('span').first().html(data[i].l_colNum);
-                                    $('.sh>.life .hd div').eq(i).children('span').last().html("色可选");
-                                } else if (data[i].l_colNum == null) {
-                                    $('.sh>.life .hd div').eq(i).css("display", "none");
-                                }
 
+                                elem.li = $('<li/>').addClass("item");
+                                elem.div_product = $('<div/>').addClass("product");
+                                elem.li.append(elem.div_product);
+                                //hd
+                                elem.div_hd = $('<div/>').addClass("hd");
+                                elem.div_product.append(elem.div_hd);
+                                //创建img src=" "
+                                elem.a1 = $('<a/>');
+                                elem.div_hd.append(elem.a1);
+                                elem.img = $('<img/>').attr('src', " ").attr('data-src', data[i].l_url);
+                                // src=" " data-src="../images/image_shoes/pic_090.png" alt=""
+                                elem.a1.append(elem.img)
+                                    //创建颜色可选
+                                elem.div_colorNum = $("<div/>").addClass("colorNum");
+                                elem.div_colorNum1 = $("<span/>").html(data[i].l_colNum);
+                                elem.div_colorNum2 = $("<span/>").html("色可选");
+                                elem.div_colorNum.append(elem.div_colorNum1);
+                                elem.div_colorNum.append(elem.div_colorNum2);
+                                elem.a1.append(elem.div_colorNum);
+                                //bd
+                                elem.div_bd = $("<div/>").addClass("bd");
+                                elem.div_product.append(elem.div_bd);
                                 //判断商品售卖情况
-                                if (data[i].l_part) {
-                                    switch (Number(data[i].l_part)) {
-                                        case 1:
-                                            $('.sh .prdTags>span').eq(i).html('新品').addClass("itemTag");
-                                            break;
-                                        case 2:
-                                            $('.sh .prdTags>span').eq(i).html('限时').addClass("itemTag1");
-                                            break;
-                                        case 3:
-                                            $('.sh .prdTags>span').eq(i).html('爆品').addClass("itemTag2");
-                                            break;
-                                    }
+                                elem.div_prdTags = $('<div/>').addClass("prdTags");
+                                elem.div_bd.append(elem.div_prdTags);
+                                switch (Number(data[i].l_part)) {
+                                    case 1:
+                                        elem.span_prd = $('<span/>').html('新品').addClass("itemTag");
+                                        elem.div_prdTags.append(elem.span_prd);
+                                        break;
+                                    case 2:
+                                        elem.span_prd = $('<span/>').html('限时购').addClass("itemTag1");
+                                        elem.div_prdTags.append(elem.span_prd);
+                                        break;
+                                    case 0:
+                                        elem.span_prd = $('<span/>').html('爆品').addClass("itemTag2");
+                                        elem.div_prdTags.append(elem.span_prd);
+                                        break;
                                 }
 
                                 // 商品名称
-                                $('.sh .life .name span').eq(i).html(data[i].l_name);
-                                $('.sh>.life .bd .price>span').eq(i).children('span').last().html(data[i].l_price);
+                                elem.divname = $("<div/>").addClass("name");
+                                elem.a2 = $('<a/>');
+                                elem.divspan = $("<span/>").html(data[i].l_name);
+                                elem.a2.append(elem.divspan);
+                                elem.divname.append(elem.a2);
+                                elem.div_bd.append(elem.divname);
+                                // 价格
+                                elem.p_price = $("<p/>").addClass("price");
+                                elem.span_newp = $('<span/>');
+                                elem.p_price.append(elem.span_newp);
+                                elem.span_rmb = $('<span/>').html("¥");
+                                elem.span_n = $('<span/>').html(data[i].l_price);
+                                elem.span_newp.append(elem.span_rmb);
+                                elem.span_newp.append(elem.span_n);
+                                elem.div_bd.append(elem.p_price);
                                 //判断是否有折扣
                                 if (data[i].l_oprice) {
                                     elem.span_oldp = $('<del/>').html('¥' + data[i].l_oprice);
-                                    $('.sh .life .price').eq(i).append(elem.span_oldp);
+                                    elem.p_price.append(elem.span_oldp);
                                 }
                                 //描述
-                                $('.sh .life .introu>.desc').eq(i).html(data[i].l_tips);
+                                elem.div_desc = $('<div/>').addClass("introu");
+                                elem.hr = $('<hr/>');
+                                elem.p_desc = $('<p/>').html(data[i].l_tips);
+                                elem.div_desc.append(elem.hr);
+                                elem.div_desc.append(elem.p_desc);
+                                elem.div_bd.append(elem.div_desc);
+                                //
+                                $('.sh>ul').append(elem.li);
 
                             }
-
-
+                            //克隆每个模块的ul
+                            var a = $('.sh>ul').clone();
+                            $('.m').append(a);
 
                         }
+
 
                     },
                     error: function(err) {
@@ -404,10 +368,12 @@
 
                     }
                 });
+
             }
 
         });
     </script>
+    <script src="../js/lazy.js"></script>
     <script>
         $("#header").load('home.html .header');
         $("#right-fixed").load('home.html .right-fixed');

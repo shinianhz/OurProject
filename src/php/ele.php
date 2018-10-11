@@ -13,9 +13,21 @@
     {   
         array_push($res,$arr);        
     }
-    // 将php数据转换成json格式
     $result=json_encode($res);  
     echo $result;
-    
+
+    // $q1="SELECT * from myele_kit ";//设置查询指令
+    // // $result=mysql_query($q);//执行查询
+    // $data1=mysql_query($q1);//执行sql语句
+    // $res1 = array();
+    // while($arr1=mysql_fetch_assoc($data1))  //循环读出每一条数据
+    // {   
+    //     array_push($res1,$arr1);        
+    // }
+       
+    // $result1=json_encode($res1);  
+    // // 将php数据转换成json格式
+    // $result1=json_encode($res1);  
+    // echo $result1;
 
 ?>

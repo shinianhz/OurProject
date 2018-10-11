@@ -18,6 +18,7 @@
   color: #999;
 }
 .m-focus {
+  height: 310px!important;
   margin-bottom: 30px!important;
 }
 .m-focus .slider {
