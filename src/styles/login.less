@@ -1,0 +1,620 @@
+.log-bg{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+      
+    .log{
+        width: 386px;
+        overflow: hidden;
+        // height: 445px;
+        background-color: #fff;
+        position: relative;
+        margin: 0 auto;
+        top:50%;
+        transform: translateY(-50%);
+        // 关闭
+        .close{
+            position: absolute;
+            color:#999;
+            font-size: 30px;
+            top:12px;
+            right:12px;
+            cursor: pointer;
+            &:hover{
+                color:#333;
+            }
+        }
+        //登录页面
+        .denglu{
+            display: none;
+            // 登录头部
+            .log-h{
+                padding:30px 45px 10px;
+                overflow: hidden;
+                line-height: 1.5;
+                color:#333;
+                font-size: 18px;
+                li:nth-of-type(1){
+                    padding: 0 50px 0 10px;
+                    border-right: 1px solid #999;
+                    float: left;
+                    color: #999;
+                    cursor: pointer;
+                    &:hover{
+                        color:#b4a078;
+                    }
+                }
+                li:nth-of-type(2){
+                    cursor: pointer;
+                    color: #999;
+                    padding-left: 55px;
+                    float: left;
+                    &:hover{
+                        color:#b4a078;
+                    }
+                }
+            }
+            //登录内容
+            .login{
+                width: 300px;
+                margin: 0 auto;
+                padding-top: 10px;
+                padding-bottom: 50px;
+                form{
+                    position: relative;
+                    // 使用手机登录
+                    .m-con-phone{
+                        display: none;
+                        //密码验证选项卡
+                        .pwd-log{
+                            padding-bottom: 20px;
+                            overflow: hidden;
+                            .tab0{
+                                line-height: 26px;
+                                float: right;
+                                color:#666;
+                                font-size: 12px;
+                                &:hover{
+                                    color:#b4a078;
+                                }
+                            }
+                        }
+                        //输入手机号
+                        .inpbox{
+                            width: 298px;
+                            height: 36px;
+                            border: 1px solid #d3d3d3;
+                            line-height: 36px;
+                            border-radius: 2px;
+                            font-size: 12px;
+                            overflow: hidden;
+                            //手机logo
+                            .logo{
+                                float: left;
+                                width: 29px;
+                                text-align: center;
+                                // padding: 7px 0 7px 7px;
+                                div{
+                                    color: #666;
+                                    text-align: center;
+                                    width: 29px;
+                                    line-height: 24px;
+                                    border-right: 1px solid #d3d3d3;
+                                    display: inline-block;
+                                }
+                            }
+                            //手机input
+                            .input{
+                                float: left;
+                                .inp{
+                                    height: 36px;
+                                    line-height: 36px;
+                                    padding-left: 8px;
+                                    width: 214px;
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                    color: #333;
+                                    border: 0;
+                                }
+                            }
+                        }
+                        //短信验证
+                        .msga{
+                            display: none;
+                            //滑动拼图
+                            .slidebox{
+                                position: relative;
+                                z-index: 19;
+                                margin-top: 16px;
+                                border: 1px solid #d3d3d3;
+                                width: 298px;
+                                height: 40px;
+                                text-align: center;
+                                .slide{
+                                    width: 40px;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    box-shadow: 0 0 3px rgba(0,0,0,.3);
+                                    // border:1px solid #d3d3d3;
+                                    background-color: #fff;
+                                    cursor: pointer;
+                                    height: 100%;
+                                    span{
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        margin-left: -7px;
+                                        margin-top: -7px;
+                                    }
+                                }
+                                .desc{
+                                    line-height: 40px;    
+                                    color: #45494c;
+                                    font-size: 14px;
+                                }
+                            }
+                            //短信验证码
+                            .validate{
+                                width: 298px;
+                                height: 36px;
+                                border: 1px solid #d3d3d3;
+                                line-height: 36px;
+                                border-radius: 2px;
+                                font-size: 12px;
+                                overflow: hidden;
+                                margin-top: 16px;
+                                input{
+                                    width: 150px;
+                                    line-height: 36px;
+                                    padding-left: 8px;
+                                    font-size: 14px;
+                                    float: left;
+                                }
+                                .btnbox{
+                                    float: right;
+                                    border: 1px solid #e8e8e8;
+                                    border-left: 0;
+                                    width: 88px;
+                                    height: 36px;
+                                    line-height: 36px;
+                                    background-color: #eee;
+                                    text-align: center;
+                                    font-size: 14px;
+                                    background: #e9edf0;
+                                    a{
+                                        color: #333;
+                                        &:hover{
+                                            color:#b4a078;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //密码验证
+                        .pwda{
+                            margin-top: 16px;
+                            display: none;
+                            .inpbox{
+                                width: 298px;
+                                height: 36px;
+                                border: 1px solid #d3d3d3;
+                                line-height: 36px;
+                                border-radius: 2px;
+                                font-size: 12px;
+                                overflow: hidden;
+                                margin-top: 15px;
+                                //短信密码logo
+                                .logo{
+                                    float: left;
+                                    width: 29px;
+                                    text-align: center;
+                                    // padding: 7px 0 7px 7px;
+                                    div{
+                                        color: #666;
+                                        text-align: center;
+                                        width: 29px;
+                                        line-height: 24px;
+                                        border-right: 1px solid #d3d3d3;
+                                        display: inline-block;
+                                    }
+                                }
+                                //短信密码input
+                                .input{
+                                    float: left;
+                                    .inp{
+                                        height: 36px;
+                                        line-height: 36px;
+                                        padding-left: 8px;
+                                        width: 214px;
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        color: #333;
+                                        border: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //使用邮箱登录
+                    .m-con-email{
+                        display: none;
+                        margin-top: 30px;
+                        .inpbox{
+                            width: 298px;
+                            height: 36px;
+                            border: 1px solid #d3d3d3;
+                            line-height: 36px;
+                            border-radius: 2px;
+                            font-size: 12px;
+                            overflow: hidden;
+                            margin-top: 15px;
+                            //邮箱logo
+                            .logo{
+                                float: left;
+                                width: 29px;
+                                text-align: center;
+                                // padding: 7px 0 7px 7px;
+                                div{
+                                    color: #666;
+                                    text-align: center;
+                                    width: 29px;
+                                    line-height: 24px;
+                                    border-right: 1px solid #d3d3d3;
+                                    display: inline-block;
+                                }
+                            }
+                            //邮箱input
+                            .input{
+                                float: left;
+                                .inp{
+                                    height: 36px;
+                                    line-height: 36px;
+                                    padding-left: 8px;
+                                    width: 214px;
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                    color: #333;
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                        //错误提示
+                        .error{
+                            margin-top: 10px;
+                            .ferrorhead{
+                                color: #d4282d;
+                                line-height: 20px;
+                                font-size: 12px;
+                                padding-left: 10px;
+                            }
+                            .ferrorPho{
+                                color: #d4282d;
+                                line-height: 20px;
+                                font-size: 12px;
+                                padding-left: 10px;
+                            }
+                        }
+                        //登录
+                        .logbox{
+                            margin-top: 32px;
+                            margin-bottom: 11px;
+                            a{
+                                display: block;
+                                width: 100%;
+                                height: 48px;
+                                cursor: pointer;
+                                text-align: center;
+                                color: #fff;
+                                background: #b4a078;
+                                font-size: 18px;
+                                line-height: 48px;
+                                border-radius: 2px;
+                            }
+                        }
+                    
+                    
+                }
+            }
+            //底部
+            .foot{
+                height: 60px;
+                background: #F5F3EF;
+                overflow: hidden;
+                width: 386px;
+                // bottom: -1px;
+                // left: -1px;
+                // position: absolute;
+                padding-right: 25px;
+                .olist{
+                    margin: 0 0 0 32px;
+                    // padding-top: 18px;
+                    height: 50px;
+                    text-align: left;
+                    float: left;
+                    a{
+                        color: #333;
+                        line-height: 1.5;
+                        font-size: 20px;
+                        margin-top: 17px;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        // position: relative;
+                        // top:50%;
+                        &:hover{
+                            color:#b4a078;
+                        }
+                    }
+                }
+                a{
+                    float: right;
+                    height: 12px;
+                    cursor: pointer;
+                    color: #999;
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-top: 25px;
+                    margin-left: 5px;
+                    &:hover{
+                        color:#b4a078;
+                    }
+                }
+            }
+        }
+        // 注册页面
+        .zhuce{
+            // display: none;
+            width: 300px;
+            margin: 0 auto;
+            //注册头部
+            .zc-h{
+                padding: 30px 0 10px;
+                span{
+                    font-size: 18px;
+                    color:#333;
+                    line-height: 18px;
+                }
+                a{
+                    font-size: 12px;
+                    float: right;
+                    margin-left: 30px;
+                    color: #333;
+                    line-height: 18px;
+                    &:hover{
+                        color:#b4a078;
+                    }
+                }
+            }
+            //注册内容
+            .zc-contain{
+                padding-top: 40px;
+                form{
+                    position: relative;     
+                    //输入手机号
+                    .inpbox{
+                        width: 298px;
+                        height: 36px;
+                        border: 1px solid #d3d3d3;
+                        line-height: 36px;
+                        border-radius: 2px;
+                        font-size: 12px;
+                        overflow: hidden;
+                        //手机logo
+                        .logo{
+                            float: left;
+                            width: 29px;
+                            text-align: center;
+                            // padding: 7px 0 7px 7px;
+                            div{
+                                color: #666;
+                                text-align: center;
+                                width: 29px;
+                                line-height: 24px;
+                                border-right: 1px solid #d3d3d3;
+                                display: inline-block;
+                            }
+                        }
+                        //手机input
+                        .input{
+                            float: left;
+                            .inp{
+                                height: 36px;
+                                line-height: 36px;
+                                padding-left: 8px;
+                                width: 214px;
+                                font-size: 14px;
+                                font-weight: normal;
+                                color: #333;
+                                border: 0;
+                            }
+                        }
+                    }
+                    //短信验证
+                    .msga{
+                        //滑动拼图
+                        .slidebox{
+                            position: relative;
+                            z-index: 19;
+                            margin-top: 16px;
+                            border: 1px solid #d3d3d3;
+                            width: 298px;
+                            height: 40px;
+                            text-align: center;
+                            .slide{
+                                width: 40px;
+                                border-radius: 2px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                box-shadow: 0 0 3px rgba(0,0,0,.3);
+                                // border:1px solid #d3d3d3;
+                                background-color: #fff;
+                                cursor: pointer;
+                                height: 100%;
+                                span{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    margin-left: -7px;
+                                    margin-top: -7px;
+                                }
+                            }
+                            .desc{
+                                line-height: 40px;    
+                                color: #45494c;
+                                font-size: 14px;
+                            }
+                        }
+                        //短信验证码
+                        .validate{
+                            width: 298px;
+                            height: 36px;
+                            border: 1px solid #d3d3d3;
+                            line-height: 36px;
+                            border-radius: 2px;
+                            font-size: 12px;
+                            overflow: hidden;
+                            margin-top: 16px;
+                            input{
+                                width: 150px;
+                                line-height: 36px;
+                                padding-left: 8px;
+                                font-size: 14px;
+                                float: left;
+                            }
+                            .btnbox{
+                                float: right;
+                                border: 1px solid #e8e8e8;
+                                border-left: 0;
+                                width: 88px;
+                                height: 36px;
+                                line-height: 36px;
+                                background-color: #eee;
+                                text-align: center;
+                                font-size: 14px;
+                                background: #e9edf0;
+                                a{
+                                    color: #333;
+                                    &:hover{
+                                        color:#b4a078;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //密码验证
+                    .pwda{
+                        margin-top: 16px;
+                        .inpbox{
+                            width: 298px;
+                            height: 36px;
+                            border: 1px solid #d3d3d3;
+                            line-height: 36px;
+                            border-radius: 2px;
+                            font-size: 12px;
+                            overflow: hidden;
+                            margin-top: 15px;
+                            //短信密码logo
+                            .logo{
+                                float: left;
+                                width: 29px;
+                                text-align: center;
+                                // padding: 7px 0 7px 7px;
+                                div{
+                                    color: #666;
+                                    text-align: center;
+                                    width: 29px;
+                                    line-height: 24px;
+                                    border-right: 1px solid #d3d3d3;
+                                    display: inline-block;
+                                }
+                            }
+                            //短信密码input
+                            .input{
+                                float: left;
+                                .inp{
+                                    height: 36px;
+                                    line-height: 36px;
+                                    padding-left: 8px;
+                                    width: 214px;
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                    color: #333;
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                      //错误提示
+                      .error{
+                        margin-top: 10px;
+                        .ferrorhead{
+                            color: #d4282d;
+                            line-height: 20px;
+                            font-size: 12px;
+                            padding-left: 10px;
+                        }
+                        .ferrorPho{
+                            color: #d4282d;
+                            line-height: 20px;
+                            font-size: 12px;
+                            padding-left: 10px;
+                        }
+                    }
+                    //注册
+                    .logbox{
+                        margin-top: 32px;
+                        margin-bottom: 11px;
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 48px;
+                            cursor: pointer;
+                            text-align: center;
+                            color: #fff;
+                            background: #b4a078;
+                            font-size: 18px;
+                            line-height: 48px;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+            // 注册底部
+            .zc-foot{
+                color: #999;
+                line-height: 20px;
+                font-size: 12px;
+                margin-bottom: 83px;
+                a{
+                    color: #999;
+                    line-height: 20px;
+                    &:hover{
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+// show
+.log-show{
+    display: block!important;
+}
+//选项卡选中状态
+.log-active{
+    font-size: 18px!important;
+    color: #000!important;
+}
+//消失
+.log-none{
+    display: none!important;
+}

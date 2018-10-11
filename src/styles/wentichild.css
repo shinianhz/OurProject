@@ -95,6 +95,9 @@
 .j-main .h-right .r-title .r-name .r-comment .r-span2 {
   font-size: 13px;
 }
+.j-main .h-right .r-title .r-name .r-comment .r-span2:hover {
+  color: #b4a078;
+}
 .j-main .h-right .r-title .r-desc {
   width: 300px;
   font-size: 14px;
@@ -371,10 +374,13 @@
   display: inline-block;
   margin-top: 6px;
   color: #999;
+<<<<<<< HEAD
   position: relative;
 }
 .j-main .h-right .btns .r-collect .top .icon-a {
   animation: sliderUp .8s;
+=======
+>>>>>>> 99d7b0fcc1d0ea5a5722e57c3a3ee3bd87ccc131
 }
 .j-main .h-right .btns .r-collect .bottom,
 .j-main .h-right .btns .r-collect .bottom-1 {
