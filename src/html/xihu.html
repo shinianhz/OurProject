@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/xihu.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/header.css">
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
+    <!-- 顶部 -->
+    <div id="header" style="height: 270px;"></div>
+    <!-- 侧边固定 -->
+    <div id="fixed"></div>
     <!-- 商城主体 -->
     <div class="g-bd-list">
         <div class="g-row">
@@ -38,7 +43,7 @@
                                         success: function(data) {
                                             data = JSON.parse(data);
                                             var elem = {};
-                                            // console.log(data);
+                                            console.log(data);
                                             if (data.length) {
                                                 for (var i = 0; i < data.length; i++) {
                                                     elem.li = $('<li/>');
@@ -8868,6 +8873,15 @@
             </div>
         </div>
     </div>
+    <!-- 底部 -->
+    <div class="footer"></div>
+    <script src="../js/public.js"></script>
+    <script src="../js/home/slide.js"></script>
+    <script>
+        $('#header').load("home.html .header");
+        $('#fixed').load("home.html .right-fixed");
+        $('.footer').load("home.html #footer");
+    </script>
 </body>
 
 </html>
