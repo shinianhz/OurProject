@@ -222,6 +222,16 @@
   color: #333;
   margin: -1px;
 }
+.j-main .h-right .param .b-param .cont .tab-con .tab-nav .icon-in_gouxuan {
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  color: #b4a078;
+  display: none;
+}
+.j-main .h-right .param .b-param .cont .tab-con .tab-nav .sel {
+  display: block;
+}
 .j-main .h-right .param .b-param .cont .tab-con .tab {
   border: 1px solid #ddd;
 }
@@ -356,6 +366,15 @@
   position: relative;
   overflow: hidden;
   height: 24px;
+}
+.j-main .h-right .btns .r-collect .top .icon-xingxing {
+  display: inline-block;
+  margin-top: 6px;
+  color: #999;
+  position: relative;
+}
+.j-main .h-right .btns .r-collect .top .icon-a {
+  animation: sliderUp .8s;
 }
 .j-main .h-right .btns .r-collect .bottom,
 .j-main .h-right .btns .r-collect .bottom-1 {
@@ -660,6 +679,20 @@
   line-height: 36px;
   margin-bottom: 8px;
 }
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-goodRates .starWrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 14px;
+  position: relative;
+  bottom: 1px;
+  margin-bottom: 10px;
+}
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-goodRates .starWrap .star-list {
+  float: left;
+  color: #b4a078;
+  font-size: 14px;
+}
 .j-main .d-body .b-left .c-detaileval .c-detailList .f-left {
   float: left;
 }
@@ -717,6 +750,9 @@
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-sortComment .sorts .sort-time {
   margin-right: 30px;
 }
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-sortComment .sorts .sort:hover {
+  color: #b4a078;
+}
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-item {
   padding: 27px 0 30px;
   margin-left: 30px;
@@ -757,6 +793,20 @@
   float: left;
   margin-left: 20px;
   width: 603px;
+}
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .starWrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 14px;
+  position: relative;
+  bottom: 1px;
+  margin-bottom: 10px;
+}
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .starWrap .star-list {
+  float: left;
+  color: #b4a078;
+  font-size: 14px;
 }
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .sInfo {
   color: #999;
@@ -818,9 +868,20 @@
   background-color: #f5f5f5;
   border-top: 1px solid #e8e8e8;
 }
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .lightBox .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .lightBox .close .icon-x {
+  font-size: 30px;
+  color: #ccc;
+}
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .lightBox .slick {
-  width: 603px;
+  width: 584px;
   height: 438px;
+  margin: 0 auto;
 }
 .j-main .d-body .b-left .c-detaileval .c-detailList .m-item .m-commentItem .createTime {
   line-height: 1;
@@ -1052,6 +1113,10 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+.service .f-pop .close .icon-x {
+  font-size: 30px;
+  color: #ccc;
 }
 .service .f-policy {
   width: 490px;
