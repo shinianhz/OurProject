@@ -45,7 +45,7 @@
                                         <div class="iconfont icon-tel"></div>
                                     </div>
                                     <div class="input">
-                                        <input type="tel" placeholder="请输入手机号" class="inp inpPho">
+                                        <input type="tel" placeholder="请输入手机号" class="inp inpPho" id="tel_dl">
                                     </div>
                                 </div>
                                 <!-- 使用短信验证 -->
@@ -75,7 +75,7 @@
                                             <div class="iconfont icon-sself"></div>
                                         </div>
                                         <div class="input">
-                                            <input type="pwd" placeholder="请输入密码" class="inp">
+                                            <input type="password" placeholder="请输入密码" class="inp" id="pwd_dl">
                                         </div>
                                     </div>
                                 </div>
@@ -204,26 +204,57 @@
         $(function() {
             //注册
             $('#sign').click(function() {
-                // console.log(1);
-                $.ajax({
-                    type: "post",
-                    url: "../php/login.php",
-                    data: {
-                        "tel": $('#tel_zc').val(),
-                        "password": $('#pwd_zc').val()
-                    },
-                    success: function(response) {
-                        // console.log(response);
-                        // console.log(response.msg);
-                        var data = JSON.parse(response);
-                        $('.ferrorPho').html(data.msg);
-                        if ($('.ferrorPho').html() === '注册成功') {
+                if (($('#tel_zc').val()) && ($('#pwd_zc').val())) {
+                    $.ajax({
+                        type: "post",
+                        url: "../php/login.php",
+                        data: {
+                            "tel": $('#tel_zc').val(),
+                            "password": $('#pwd_zc').val()
+                        },
+                        success: function(response) {
+                            // console.log(response);
+                            // console.log(response.msg);
+                            var data = JSON.parse(response);
+                            $('.ferrorPho').html(data.msg);
+                            if ($('.ferrorPho').html() === '注册成功') {
 
-                            // $('.zhuce').addClass('log-none');
-                            // $('.denglu').addClass('log-show');
+                                // $('.zhuce').addClass('log-none');
+                                // $('.denglu').addClass('log-show');
+                            }
                         }
-                    }
-                })
+                    })
+                } else {
+                    $('.ferrorPho').html('请将信息填写完整');
+                }
+            })
+        })
+    </script>
+    <script>
+        $(function() {
+            //登录
+            $('#log').click(function() {
+                if (($('#tel_dl').val()) && ($('#pwd_dl').val())) {
+
+                    $.ajax({
+                        type: "post",
+                        url: "../php/land.php",
+                        data: {
+                            "tel": $('#tel_dl').val(),
+                            "password": $('#pwd_dl').val()
+                        },
+                        success: function(response) {
+                            // console.log(response);
+                            var data = JSON.parse(response);
+                            $('.ferrorPho').html(data.msg);
+                            if ($('.ferrorPho').html() === '登录成功') {
+                                $('.log-bg').addClass('log-none');
+                            }
+                        }
+                    })
+                } else {
+                    $('.ferrorPho').html('请将信息填写完整');
+                }
             })
         })
     </script>
