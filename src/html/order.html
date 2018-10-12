@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="../styles/order.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/goods-public.css">
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <script src="../js/zdljs/tab.js"></script>
     <script src="../js/zdljs/pwdMsg.js"></script>
     <script src="../js/zdljs/zengze.js"></script>
+    <script src="../js/zdljs/ajax.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="bd">
+    <!-- 顶部 -->
+    <div id="header" style="height: 270px;"></div>
+    <!-- 侧边固定 -->
+    <div id="fixed"></div>
+    <!-- 主体 -->
+    <div class="bd" id="order">
         <div class="m-bd">
             <div class="g-row">
                 <div class="log">
@@ -43,7 +51,7 @@
                                                 <div class="iconfont icon-tel"></div>
                                             </div>
                                             <div class="input">
-                                                <input type="tel" placeholder="请输入手机号" class="inp inpPho">
+                                                <input type="tel" placeholder="请输入手机号" class="inp inpPho" id="tel_dl">
                                             </div>
                                         </div>
                                         <!-- 使用短信验证 -->
@@ -73,7 +81,7 @@
                                                     <div class="iconfont icon-sself"></div>
                                                 </div>
                                                 <div class="input">
-                                                    <input type="pwd" placeholder="请输入密码" class="inp">
+                                                    <input type="password" placeholder="请输入密码" class="inp" id="pwd_dl">
                                                 </div>
                                             </div>
                                         </div>
@@ -107,7 +115,7 @@
                                 </div>
                                 <!-- 登录 -->
                                 <div class="logbox ">
-                                    <a id="submit ">登 录</a>
+                                    <a id="log">登 录</a>
                                 </div>
 
                             </form>
@@ -133,6 +141,15 @@
     $(function() {
         $('.denglu').tabs();
     })
+</script>
+<!-- 底部 -->
+<div class="footer"></div>
+<script src="../js/public.js"></script>
+<script src="../js/home/slide.js"></script>
+<script>
+    $('#header').load("home.html .header");
+    $('#fixed').load("home.html .right-fixed");
+    $('.footer').load("home.html #footer");
 </script>
 
 </html>
