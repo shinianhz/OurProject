@@ -1,15 +1,22 @@
 {
-    "name": "ourproject",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-
-        "jquery": "^3.3.1"
-    }
+  "name": "ourproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinianhz/OurProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shinianhz/OurProject/issues"
+  },
+  "homepage": "https://github.com/shinianhz/OurProject#readme"
 }
