@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../styles/wentichild.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <title>详情页</title>
+
     <!-- <link rel="stylesheet" href="../styles/child.css"> -->
     <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <!-- <script src="../js/wentichild.js"></script> -->
@@ -149,7 +151,6 @@
             })
         })
     </script>
-    <title>Document</title>
 </head>
 
 <body>
@@ -1015,7 +1016,7 @@
                     elems.p = $('<p/>').append($('<span/>').html(newarr[i][0])).append($('<i/>').html('×' + G.sum));
                     elems.mdiv.append(elems.p);
 
-                    elems.rdiv = $('<div/>').addClass('C-right-box').append($('<span/>').html("￥" + G.price)).append($('<i/>').html('×'));
+                    elems.rdiv = $('<div/>').addClass('C-right-box').append($('<span/>').html('￥' + G.price)).append($('<i/>').html('×'));
 
                     elems.Cul = $('<li/>').append(elems.a).append(elems.mdiv).append(elems.rdiv)
 
@@ -1036,11 +1037,11 @@
         //     goodsCount = shopCart.getTotalCount(), //购物车中的商品数量
         //     TotalPrice = shopCart.getTotalPrice(); //商品总价格
         // console.log(t);
+        var goods = {},
+            elems = {};
         $('#addcart').on('click', function() {
             $('#H-cart .box-inner .box-inner-in>ul').empty(); //清空ul
 
-            var goods = {},
-                elems = {};
             goods.sum = Number($('#J_Amount').val()); //商品数量，并转换成number
             goods.price = parseInt($('#J-price').html()) //商品价格
             goods.color = $('#color').html(); //商品颜色
@@ -1084,9 +1085,11 @@
                 $('#H-cart .box-inner .box-inner-in>ul').append(elems.Cul);
                 console.log(arr[i])
             };
-            $('#H-cart .box-inner .box-inner-in>.jisuan').append()
-                // $('.icon-gouwuche1>i').html(goodsCount);
-                // console.log($('#H-cart .box-inner .box-inner-in>ul').html());
+            // $('#H-cart .box-inner .box-inner-in').append($('<div/>').addClass('jisuan').append($('<div/>').addClass('J-left').append($('<p/>').html('商品合计：')).append($('<span/>').html('￥' + TotalPrice))).append($('<div>').addClass('J-right').html('')));
+
+            $('.icon-gouwuche1>i').html(goodsCount);
+            $('.J-left>span').html('￥' + TotalPrice);
+            // console.log($('#H-cart .box-inner .box-inner-in>ul').html());
 
             // console.log(shopCart.getCookie(yanxuan_shop_cart))
 
@@ -1098,8 +1101,8 @@
         //     shopCart.emptyCart();
         //     console.log(1)
         // });
-
-        // console.log(inarr)
+        var arr = shopCart.findItem()
+        console.log(arr)
     </script>
 </body>
 

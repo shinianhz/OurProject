@@ -56,7 +56,7 @@ var shopCart = function(window) {
                         item.img = cItem[2] || '';
                         item.price = cItem[3] || '';
                         item.quantity = cItem[4] || '';
-                        // items.push(item);
+                        items.push(item);
                     };
                 };
 
