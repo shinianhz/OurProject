@@ -13,6 +13,7 @@
     <script src="../js/zdljs/tab.js"></script>
     <script src="../js/zdljs/pwdMsg.js"></script>
     <script src="../js/zdljs/zengze.js"></script>
+    <script src="../js/zdljs/ajax.js"></script>
 </head>
 
 <body>
@@ -200,64 +201,7 @@
             $('.denglu').tabs();
         })
     </script>
-    <script>
-        $(function() {
-            //注册
-            $('#sign').click(function() {
-                if (($('#tel_zc').val()) && ($('#pwd_zc').val())) {
-                    $.ajax({
-                        type: "post",
-                        url: "../php/login.php",
-                        data: {
-                            "tel": $('#tel_zc').val(),
-                            "password": $('#pwd_zc').val()
-                        },
-                        success: function(response) {
-                            // console.log(response);
-                            // console.log(response.msg);
-                            var data = JSON.parse(response);
-                            $('.ferrorPho').html(data.msg);
-                            if ($('.ferrorPho').html() === '注册成功') {
 
-                                // $('.zhuce').addClass('log-none');
-                                // $('.denglu').addClass('log-show');
-                            }
-                        }
-                    })
-                } else {
-                    $('.ferrorPho').html('请将信息填写完整');
-                }
-            })
-        })
-    </script>
-    <script>
-        $(function() {
-            //登录
-            $('#log').click(function() {
-                if (($('#tel_dl').val()) && ($('#pwd_dl').val())) {
-
-                    $.ajax({
-                        type: "post",
-                        url: "../php/land.php",
-                        data: {
-                            "tel": $('#tel_dl').val(),
-                            "password": $('#pwd_dl').val()
-                        },
-                        success: function(response) {
-                            // console.log(response);
-                            var data = JSON.parse(response);
-                            $('.ferrorPho').html(data.msg);
-                            if ($('.ferrorPho').html() === '登录成功') {
-                                $('.log-bg').addClass('log-none');
-                            }
-                        }
-                    })
-                } else {
-                    $('.ferrorPho').html('请将信息填写完整');
-                }
-            })
-        })
-    </script>
 </body>
 
 </html>
