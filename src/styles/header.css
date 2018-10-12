@@ -382,8 +382,73 @@
   border-radius: 50%;
   background-color: red;
   color: #fff;
-  font-size: 14px;
+  font-size: 8px;
   text-align: center;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart {
+  display: block;
+  left: 800px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul {
+  background-color: #fff;
+  border: 1px solid #b4a078;
+  height: 300px;
+  overflow-y: auto;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li {
+  height: 70px;
+  width: 300px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li img {
+  width: 70px;
+  height: 70px;
+  margin-top: -10px;
+  display: block;
+  cursor: pointer;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box {
+  width: 150px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box a {
+  font-size: 12px;
+  margin-top: -10px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box a:hover {
+  color: #b4a078;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box p {
+  margin-top: -20px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box p span {
+  font-size: 8px;
+  color: #666;
+  padding-right: 15px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-mid-box p i {
+  font-size: 8px;
+  color: #666;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-right-box {
+  margin-top: -20px;
+  margin-left: -30px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-right-box span {
+  font-size: 12px ;
+  color: darkred;
+  padding-right: 10px;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-right-box i {
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+.header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li .C-right-box i:hover {
+  background-color: #999;
+  color: red;
 }
 .header .header-nav .nav-box .bgbox .ulbox > ul .chenge > a {
   color: #b4a078;
