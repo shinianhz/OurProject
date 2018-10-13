@@ -1,11 +1,32 @@
+// $(function() {
+//     var img = ['../images/wentichild/001.jpg', '../images/wentichild/002.jpg', '../images/wentichild/003.jpg', '../images/wentichild/004.jpg', '../images/wentichild/005.jpg'];
+//     $('.ul img').hover(function() {
+//         $('#view img').css('display', 'none');
+//         var i = $('.ul img').index(this);
+//         $('#view').css({
+//             'background': 'url(' + img[i] + ')',
+//             'background-size': '430px 430px'
+//         })
+//     })
+// })
+
 $(function() {
-    var img = ['../images/wentichild/001.jpg', '../images/wentichild/002.jpg', '../images/wentichild/003.jpg', '../images/wentichild/004.jpg', '../images/wentichild/005.jpg'];
-    $('.ul img').hover(function() {
-        $('#view img').css('display', 'none');
-        var i = $('.ul img').index(this);
-        $('#view').css({
-            'background': 'url(' + img[i] + ')',
-            'background-size': '430px 430px'
+    $.ajax({
+        url: '../php/xihu.php/detail.php',
+        type: 'get',
+        data: {
+            gid: location.search.substring(1).split('=')[1]
+        },
+        dataType: 'json'
+    }).done(function(data) {
+        var img = [data[0].g_imgb, data[0].g_imgb1, data[0].g_imgb2, data[0].g_imgb3, data[0].g_imgb4];
+        $('.ul').on('mouseover', 'img', function() {
+            $('#view img').css('display', 'none');
+            var i = $('.ul img').index(this);
+            $('#view').css({
+                'background': 'url(' + img[i] + ')',
+                'background-size': '430px 430px'
+            })
         })
     })
 })
