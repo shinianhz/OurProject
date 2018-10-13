@@ -38,89 +38,167 @@
     <div class="j-app">
         <div class="j-main">
             <div class="m-top">
-                <span>
+                <!-- 动态创建首页>***>***>*** -->
+                <script>
+                    $(function() {
+                        $.ajax({
+                            url: '../php/xihu.php/detail.php',
+                            type: 'get',
+                            data: {
+                                gid: location.search.substring(1).split('=')[1]
+                            },
+                            dataType: 'json'
+                        }).done(function(data) {
+                            var $str = `<span>
                     <span>首页</span>
-                <i class="icon iconfont icon-you"></i>
+                <span>&gt;</span>
                 </span>
                 <span>
-                    <a href="#" class="m-top-a">文体</a>
-                    <i class="icon iconfont icon-you"></i>
+                    <a href="#">${data[0].g_classb}</a>
+                    <span>&gt;</span>
                 </span>
                 <span>
-                    <a href="#" class="m-top-b">文具</a>
-                    <i class="icon iconfont icon-you"></i>
+                    <a href="#">${data[0].g_class}</a>
+                    <span>&gt;</span>
                 </span>
                 <span>
-                    <span>钢笔墨水礼盒</span>
-                </span>
+                    <span>${data[0].g_title}</span>
+                </span>`;
+                            $('.m-top').html($str);
+                        })
+                    })
+                </script>
             </div>
             <div class="m-detail">
                 <div class="d-header">
                     <div class="h-left">
                         <div class="h-view" id="view">
-                            <img src="../images/wentichild/001.jpg" alt="yanxuan">
+                            <script>
+                                $(function() {
+                                    $.ajax({
+                                        url: '../php/xihu.php/detail.php',
+                                        type: 'get',
+                                        data: {
+                                            gid: location.search.substring(1).split('=')[1]
+                                        },
+                                        dataType: 'json'
+                                    }).done(function(data) {
+                                        var $str = ` <img src=${data[0].g_imgb} alt="yanxuan">`;
+                                        $('#view').html($str);
+                                    })
+                                })
+                            </script>
                         </div>
                         <div class="h-list" id="list">
                             <ul class="ul">
-                                <li>
+                                <!-- 动态获取商品展示右侧5张小图 -->
+                                <script>
+                                    $(function() {
+                                        $.ajax({
+                                            url: '../php/xihu.php/detail.php',
+                                            data: {
+                                                gid: location.search.substring(1).split('=')[1]
+                                            },
+                                            type: 'get',
+                                            dataType: 'json'
+                                        }).done(function(data) {
+                                            // console.log($(data[0].g_img1));
+                                            var $str = ` <li>
                                     <a href="#">
-                                        <img src="../images/wentichild/040.png" alt="yanxuan">
+                                        <img src=${data[0].g_img} alt="yanxuan">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="../images/wentichild/041.jpg" alt="yanxuan">
+                                        <img src=${data[0].g_img1} alt="yanxuan">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="../images/wentichild/042.jpg" alt="yanxuan">
+                                        <img src=${data[0].g_img2} alt="yanxuan">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="../images/wentichild/043.jpg" alt="yanxuan">
+                                        <img src=${data[0].g_img3} alt="yanxuan">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="../images/wentichild/044.jpg" alt="yanxuan">
+                                        <img src=${data[0].g_img4} alt="yanxuan">
                                     </a>
-                                </li>
+                                </li> `;
+                                            $('.ul').html($str);
+                                        })
+                                    })
+                                </script>
                             </ul>
                         </div>
                     </div>
                     <div class="h-right">
                         <div class="r-title">
-                            <div class="r-name">
-                                <span>钢笔墨水礼盒</span>
+                            <!-- 名称描述好评率 -->
+                            <script>
+                                $(function() {
+                                    $.ajax({
+                                        url: '../php/xihu.php/detail.php',
+                                        type: 'get',
+                                        data: {
+                                            gid: location.search.substring(1).split('=')[1]
+                                        },
+                                        dataType: 'json'
+                                    }).done(function(data) {
+                                        var $str = `<div class="r-name">
+                                <span>${data[0].g_title}</span>
                                 <a href="#good-com" class="goodcomment">
 
-                                    <!-- <a href="#good-com"> -->
+                                    <a href="#good-com">
 
-                                    <div class="r-comment">
-                                        <span class="r-span1" style="color:#E36844;">96.8%</span>
-                                        <br/>
-                                        <span class="r-span2">好评率</span>
-                                    </div>
-                                    <!-- </a> -->
-                                </a>
+                                        <div class="r-comment">
+                                            <span class="r-span1" style="color:#E36844;">${data[0].g_good}</span>
+                                            <br/>
+                                            <span class="r-span2">好评率</span>
+                                        </div>
+                                    </a>
                             </div>
-                            <div class="r-desc">钢笔1支，皮套1只，墨水40ml1瓶，诗词纸1张</div>
+                            <div class="r-desc">${data[0].g_tips}</div>`;
+                                        $('.r-title').html($str);
+                                    })
+                                })
+                            </script>
                         </div>
                         <div class="r-main">
                             <div>
-                                <div class="r-field r-box">
-                                    <span class="r-label label-1">价格</span>
-                                    <span class="r-money">
-                                        <span class="r-rmb">￥</span>
-                                    <span class="r-num">149</span>
-                                    </span>
-                                    <span class="o-money">
-                                        <span class="o-rmb">￥</span>
-                                    <span class="o-num">129</span>
-                                    </span>
-                                    <a href="#" class="proTag">今日特价</a>
+                                <div class="r-field r-box" id="prc">
+                                    <!-- 动态创建价格 原价 -->
+                                    <script>
+                                        $(function() {
+                                            $.ajax({
+                                                url: '../php/xihu.php/detail.php',
+                                                type: 'get',
+                                                data: {
+                                                    gid: location.search.substring(1).split('=')[1]
+                                                },
+                                                dataType: 'json'
+                                            }).done(function(data) {
+                                                // $('#prc').append($('span').addClass('r-money').append($('span').addClass('r-rmb').html('￥')).append($('span').addClass('r-num').html(data[0].g_price)));
+                                                // //判断是否有折扣
+                                                // if (data[0].g_oldprice) {
+                                                //     $('#prc').append($('span').addClass('o-money').append($('span').addClass('o-rmb').html('￥')).append($('span').addClass('o-num').html(data[0].g_oldprice)));
+                                                // }
+                                                var $str = ` <span class="r-label label-1">价格</span>
+                                                    <span class="r-money">
+                                                    <span class="r-rmb">￥</span>
+                                                    <span class="r-num">${data[0].g_price}</span>
+                                                    </span>
+                                                    <span class="o-money">
+                                                        <span class="o-rmb">￥</span>
+                                                    <span class="o-num">${data[0].g_oldprice}</span>
+                                                    </span>`;
+                                                $('#prc').html($str);
+                                            })
+                                        })
+                                    </script>
                                 </div>
                                 <div></div>
                             </div>
@@ -202,10 +280,24 @@
                                     <div class="cont">
                                         <ul class="tabs">
                                             <li class="tab-con">
-                                                <a href="#" class="tab-txt tab-sel tab-nav">
-                                                    <span class="span-sel">钢笔墨水礼盒</span>
-                                                    <div></div>
-                                                    <i class="icon iconfont icon-in_gouxuan sel"></i>
+                                                <a href="#" class="tab-txt tab-sel tab-nav" id="tab-txt">
+                                                    <script>
+                                                        $(function() {
+                                                            $.ajax({
+                                                                url: '../php/xihu.php/detail.php',
+                                                                method: 'get',
+                                                                data: {
+                                                                    gid: location.search.substring(1).split('=')[1]
+                                                                },
+                                                                dataType: 'json'
+                                                            }).done(function(data) {
+                                                                var $str = `<span class="span-sel">${data[0].g_title}</span>
+                                                                <div></div>
+                                                                <i class="icon iconfont icon-in_gouxuan sel"></i>`;
+                                                                $('#tab-txt').html($str);
+                                                            })
+                                                        })
+                                                    </script>
                                                 </a>
                                             </li>
                                         </ul>

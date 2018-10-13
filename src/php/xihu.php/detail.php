@@ -4,8 +4,10 @@
      $db = mysql_connect("localhost","root","4869"); //连接数据库   (地址 用户名 密码)
      mysql_select_db("xihu",$db); //选择数据库 数据库名称 连接
      mysql_query("set names utf8");//设置编码格式
-
-    $q="SELECT * from detail ";//设置查询指令
+     if(isset($_GET['gid'])){
+		$gid=$_GET['gid'];//获取前端传入的gid
+	}
+    $q="SELECT * FROM `detail` WHERE (`g_id`='$gid')";//设置查询指令
     // $result=mysql_query($q);//执行查询
     $data=mysql_query($q);//执行sql语句
     $res = array();

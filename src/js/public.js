@@ -23,11 +23,30 @@ $(function() {
         });
         //搜索功能
         $('#search').on('click', function() {
+<<<<<<< HEAD
+            var keyword;
+            //如果没有输入，则根据placeholder进行搜索
+            if ($('.inp > input ').val() == '') {
+                keyword = {
+                    "key": $('.inp>input').attr('placeholder')
+                };
+            } else {
+                keyword = {
+                    "key": $('.inp > input ').val()
+                };
+            }
+
+
+            // var keyword = {
+            //     "key": $('.inp > input ').val()
+            // };
+=======
             // console.log($('.inp>input').val());
             //如果没有输入，则根据placeholder进行搜索
             var keyword = {
                 "key": $('.inp > input ').val()
             };
+>>>>>>> b18b43ed9ef2c00a3b1120ae67b09380b3c4bb4d
 
             $.ajax({
                 type: 'get',
@@ -39,7 +58,7 @@ $(function() {
                     var elems = {};
                     //如果拿到的数据不为空
                     if (data.length) {
-                        console.log(data);
+                        // console.log(data);
                         var elems = {};
                         $('.content').empty();
                         elems.outbox = $('<div >');

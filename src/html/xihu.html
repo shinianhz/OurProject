@@ -114,12 +114,13 @@
                                     <p class="desc">和风设计，温和清洁</p>
                                 </div>
                                 <!-- 主体 -->
-                                <ul class="m-itemList paper">
+                                <ul class="m-itemList paper" style="height:1644px">
                                     <script>
                                         $(function() {
                                             $.ajax({
                                                 type: "get",
                                                 url: "../php/xihu.php/paper.php",
+                                                async: false,
                                                 success: function(data) {
                                                     data = JSON.parse(data);
                                                     var elem = {};
@@ -137,6 +138,7 @@
                                                             elem.div_product.append(elem.div_hd);
                                                             //创建img
                                                             elem.a1 = $('<a/>');
+                                                            elem.a1.attr('href', "detail1.html?gid=" + data[i].g_id)
                                                             elem.div_hd.append(elem.a1);
                                                             elem.img = $('<img/>');
                                                             elem.img.attr('src', data[i].g_img);
@@ -221,7 +223,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_076.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_076.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -269,7 +271,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_077.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_077.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -319,7 +321,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_078.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_078.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -369,7 +371,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_079.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_079.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -417,7 +419,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_080.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_080.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">美国制造</div>
                                                     <div>
@@ -465,7 +467,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_081.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_081.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -513,7 +515,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_082.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_082.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -560,7 +562,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_083.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_083.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -607,7 +609,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_084.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_084.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -655,7 +657,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_085.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_085.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -703,7 +705,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_086.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_086.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -750,7 +752,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_087.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_087.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -797,7 +799,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_088.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_088.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -844,7 +846,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_089.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_089.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -891,7 +893,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_090.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_090.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -938,7 +940,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_091.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_091.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -985,7 +987,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_092.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_092.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1032,7 +1034,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_093.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_093.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1079,7 +1081,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_094.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_094.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1126,7 +1128,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_095.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_095.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1173,7 +1175,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_096.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_096.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1220,7 +1222,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_097.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_097.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1267,7 +1269,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_098.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_098.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">2色可选</div>
                                                     <div>
@@ -1314,7 +1316,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_099.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_099.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">2色可选</div>
                                                     <div>
@@ -1361,7 +1363,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_100.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_100.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1408,7 +1410,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_101.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_101.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1455,7 +1457,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_102.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_102.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1502,7 +1504,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_103.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_103.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -1549,7 +1551,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_104.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_104.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -1596,7 +1598,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_105.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_105.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -1643,7 +1645,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_106.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_106.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -1690,7 +1692,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_107.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_107.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -1737,7 +1739,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_108.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_108.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <!-- saleSoon -->
@@ -1801,7 +1803,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_109.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_109.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -1849,7 +1851,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_110.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_110.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -1899,7 +1901,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_111.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_111.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -1949,7 +1951,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_112.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_112.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -1997,7 +1999,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_113.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_113.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">美国制造</div> -->
                                                     <div>
@@ -2045,7 +2047,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_114.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_114.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2093,7 +2095,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_115.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_115.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2140,7 +2142,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_116.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_116.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2187,7 +2189,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_117.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_117.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2235,7 +2237,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_118.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_118.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2283,7 +2285,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_119.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_119.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2330,7 +2332,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_120.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_120.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2377,7 +2379,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_121.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_121.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2424,7 +2426,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_122.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_122.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2471,7 +2473,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_123.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_123.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2518,7 +2520,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_124.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_124.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2565,7 +2567,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_125.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_125.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2612,7 +2614,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_126.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_126.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2659,7 +2661,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_127.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_127.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2706,7 +2708,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_128.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_128.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2753,7 +2755,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_129.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_129.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2800,7 +2802,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_130.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_130.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2847,7 +2849,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_131.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_131.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">2色可选</div> -->
                                                     <div>
@@ -2894,7 +2896,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_132.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_132.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">2色可选</div> -->
                                                     <div>
@@ -2941,7 +2943,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_133.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_133.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -2988,7 +2990,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_134.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_134.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3035,7 +3037,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_135.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_135.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3082,7 +3084,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_136.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_136.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3129,7 +3131,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_137.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_137.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -3176,7 +3178,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_138.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_138.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3223,7 +3225,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_139.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_139.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3270,7 +3272,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_140.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_140.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3330,7 +3332,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_160.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_160.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -3378,7 +3380,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_161.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_161.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3428,7 +3430,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_162.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_162.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">韩国制造</div> -->
                                                     <div>
@@ -3478,7 +3480,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_163.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_163.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3526,7 +3528,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_164.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_164.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">美国制造</div> -->
                                                     <div>
@@ -3574,7 +3576,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_165.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_165.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3633,7 +3635,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_166.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_166.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3681,7 +3683,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_167.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_167.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -3731,7 +3733,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_168.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_168.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3781,7 +3783,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_169.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_169.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">2色可选</div>
                                                     <div>
@@ -3827,7 +3829,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_170.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_170.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">3色可选</div>
                                                     <div>
@@ -3873,7 +3875,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_171.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_171.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">4色可选</div>
                                                     <div>
@@ -3921,7 +3923,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_172.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_172.png" alt="">
                                                     <!--  colorNum-->
                                                     <div></div>
                                                     <div>
@@ -3968,7 +3970,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_174.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_174.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -4015,7 +4017,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_175.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_175.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -4063,7 +4065,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_176.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_176.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div class="saleSoon">
@@ -4113,7 +4115,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_177.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_177.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div class="saleSoon soldOut">
@@ -4162,7 +4164,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_173.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_173.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">越南制造</div>
                                                     <div class="saleSoon soldOut">
@@ -4225,7 +4227,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_178.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_178.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">印度制造</div>
                                                     <div>
@@ -4273,7 +4275,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_179.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_179.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">印度制造</div>
                                                     <div>
@@ -4323,7 +4325,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_181.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_181.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">7色可选</div>
                                                     <div>
@@ -4373,7 +4375,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_182.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_182.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">11色可选</div>
                                                     <div>
@@ -4419,7 +4421,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_183.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_183.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">8色可选</div>
                                                     <div>
@@ -4465,7 +4467,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_184.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_184.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">4色可选</div> -->
                                                     <div>
@@ -4513,7 +4515,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_185.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_185.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">7色可选</div>
                                                     <div>
@@ -4560,7 +4562,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_186.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_186.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">11色可选</div>
                                                     <div>
@@ -4607,7 +4609,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_187.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_187.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">9色可选</div>
                                                     <div>
@@ -4655,7 +4657,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_188.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_188.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">2色可选</div>
                                                     <div>
@@ -4704,7 +4706,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_189.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_189.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -4753,7 +4755,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_190.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_190.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">越南制造</div> -->
                                                     <div class="saleSoon soldOut">
@@ -4802,7 +4804,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_180.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_180.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">越南制造</div> -->
                                                     <div class="saleSoon soldOut">
@@ -4863,7 +4865,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_191.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_191.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">印度制造</div> -->
                                                     <div>
@@ -4911,7 +4913,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_192.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_192.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">印度制造</div> -->
                                                     <div>
@@ -4959,7 +4961,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_193.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_193.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -5009,7 +5011,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_194.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_194.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">11色可选</div> -->
                                                     <div>
@@ -5055,7 +5057,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_195.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_195.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">7色可选</div>
                                                     <div>
@@ -5101,7 +5103,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_196.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_196.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">4色可选</div> -->
                                                     <div>
@@ -5149,7 +5151,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_197.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_197.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -5196,7 +5198,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_198.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_198.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">11色可选</div> -->
                                                     <div>
@@ -5243,7 +5245,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_199.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_199.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">9色可选</div> -->
                                                     <div>
@@ -5291,7 +5293,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_200.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_200.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">2色可选</div> -->
                                                     <div>
@@ -5340,7 +5342,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_201.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_201.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -5389,7 +5391,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_202.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_202.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -5438,7 +5440,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_203.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_203.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -5487,7 +5489,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_204.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_204.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">越南制造</div> -->
                                                     <div class="saleSoon soldOut">
@@ -5548,7 +5550,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_205.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_205.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">印度制造</div> -->
                                                     <div>
@@ -5596,7 +5598,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_206.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_206.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -5644,7 +5646,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_207.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_207.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">黑凤梨</div>
                                                     <div>
@@ -5694,7 +5696,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_208.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_208.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">11色可选</div> -->
                                                     <div>
@@ -5740,7 +5742,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_209.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_209.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -5786,7 +5788,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_210.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_210.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">4色可选</div> -->
                                                     <div>
@@ -5834,7 +5836,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_211.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_211.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -5881,7 +5883,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_212.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_212.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">11色可选</div> -->
                                                     <div>
@@ -5928,7 +5930,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_213.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_213.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -5976,7 +5978,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_214.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_214.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -6025,7 +6027,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_215.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_215.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6074,7 +6076,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_216.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_216.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -6123,7 +6125,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_217.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_217.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -6184,7 +6186,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_223.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_223.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -6232,7 +6234,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_224.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_224.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -6280,7 +6282,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_225.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_225.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">黑凤梨</div> -->
                                                     <div>
@@ -6330,7 +6332,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_226.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_226.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日用换新</div>
                                                     <div>
@@ -6376,7 +6378,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_227.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_227.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -6422,7 +6424,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_228.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_228.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">意大利制造</div>
                                                     <div>
@@ -6470,7 +6472,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_229.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_229.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -6517,7 +6519,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_230.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_230.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">俄罗斯制造</div>
                                                     <div>
@@ -6564,7 +6566,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_231.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_231.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6612,7 +6614,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_232.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_232.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6661,7 +6663,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_233.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_233.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6710,7 +6712,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_234.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_234.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6759,7 +6761,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_235.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_235.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6808,7 +6810,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_236.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_236.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6857,7 +6859,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_237.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_237.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -6906,7 +6908,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_238.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_238.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -6955,7 +6957,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_239.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_239.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">俄罗斯制造</div>
                                                     <div>
@@ -7004,7 +7006,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_240.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_240.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div class="saleSoon">
@@ -7053,7 +7055,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_241.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_241.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div class="saleSoon">
@@ -7102,7 +7104,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_242.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_242.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div class="saleSoon soldOut">
@@ -7163,7 +7165,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_243.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_243.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -7211,7 +7213,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_244.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_244.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -7259,7 +7261,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_245.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_245.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">黑凤梨</div> -->
                                                     <div>
@@ -7309,7 +7311,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_246.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_246.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日用换新</div>
                                                     <div>
@@ -7355,7 +7357,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_247.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_247.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -7401,7 +7403,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_248.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_248.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">意大利制造</div>
                                                     <div>
@@ -7449,7 +7451,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_249.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_249.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -7496,7 +7498,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_250.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_250.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">俄罗斯制造</div>
                                                     <div>
@@ -7543,7 +7545,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_251.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_251.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7591,7 +7593,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_252.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_252.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7640,7 +7642,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_253.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_253.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7689,7 +7691,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_254.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_254.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7738,7 +7740,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_255.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_255.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7787,7 +7789,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_256.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_256.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7836,7 +7838,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_257.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_257.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">日本制造</div> -->
                                                     <div>
@@ -7885,7 +7887,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_258.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_258.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">韩国制造</div>
                                                     <div>
@@ -7934,7 +7936,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_259.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_259.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">俄罗斯制造</div>
                                                     <div>
@@ -7995,7 +7997,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_261.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_261.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">印度制造</div> -->
                                                     <div>
@@ -8043,7 +8045,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_262.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_262.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">日本制造</div>
                                                     <div>
@@ -8091,7 +8093,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_263.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_263.png" alt="">
                                                     <!--  colorNum-->
                                                     <div class="colorNum">黑凤梨</div>
                                                     <div>
@@ -8141,7 +8143,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_264.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_264.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">11色可选</div> -->
                                                     <div>
@@ -8187,7 +8189,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_265.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_265.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">7色可选</div> -->
                                                     <div>
@@ -8233,7 +8235,7 @@
                                         <div class="m-product">
                                             <div class="hd">
                                                 <a href="#">
-                                                    <img src="../images/xihu/pic_266.png" alt="">
+                                                    <img src=" " data-src="../images/xihu/pic_266.png" alt="">
                                                     <!--  colorNum-->
                                                     <!-- <div class="colorNum">4色可选</div> -->
                                                     <div>
@@ -8277,53 +8279,6 @@
                                     </li>
 
 
-                                    <!-- <li class="item">
-                                            <div class="m-product">
-                                                <div class="hd">
-                                                    <a href="#">
-                                                        <img src="../timg/testimg.png" alt="">
-                                                        <div class="colorNum">日本制造</div>
-                                                        <div class="saleSoon">
-                                                            <div class="empty-con">
-                                                                <span class="soon">即将上架</span>
-                                                                <button>
-                                                                    <span>
-                                                                        <i class="iconfont icon-tel"></i>
-                                                                        <span>上架提醒</span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="bd">
-                                                    <div class="prdtTags">
-                                                        <span>满折</span>
-                                                    </div>
-                                                    <h4>
-                                                        <a href="#">
-                                                                湿厕纸
-                                                            </a>
-                                                    </h4>
-                                                    <p class="price">
-                                                        <span>
-                                                                <span>¥</span>
-                                                        <span>4.9</span>
-                                                        </span>
-                                                        <span class="counterPrice">
-                                                                <span>¥</span>
-                                                        <span>4.9</span>
-                                                        </span>
-                                                    </p>
-                                                    <div class="item-desc">
-                                                        <hr>
-                                                        <p>厕后洁净新体验，遇水即溶</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li> -->
-
-
 
                                 </ul>
                             </div>
@@ -8343,6 +8298,7 @@
         $('#fixed').load("home.html .right-fixed");
         $('.footer').load("home.html #footer");
     </script>
+    <script src="../js/lazy.js"></script>
 </body>
 
 </html>
