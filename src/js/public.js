@@ -1,6 +1,7 @@
 $(function() {
     setTimeout(function() {
-        $('.box').slide();
+        $('.txtScroll-top .box').slide();
+        // console.log($('.txtScroll-top .box'))
         $(window).scroll(function() {
             var h = $('.right-fixed').offset().top;
             if (h > 200) {
@@ -21,6 +22,7 @@ $(function() {
             }
         });
         $('#search').on('click', function() {
+<<<<<<< HEAD
             var keyword;
             //如果没有输入，则根据placeholder进行搜索
             if ($('.inp > input ').val() == '') {
@@ -37,6 +39,13 @@ $(function() {
             // var keyword = {
             //     "key": $('.inp > input ').val()
             // };
+=======
+            // console.log($('.inp>input').val());
+            //如果没有输入，则根据placeholder进行搜索
+            var keyword = {
+                "key": $('.inp > input ').val()
+            };
+>>>>>>> b18b43ed9ef2c00a3b1120ae67b09380b3c4bb4d
 
             $.ajax({
                 type: 'get',
@@ -79,6 +88,5 @@ $(function() {
                 }
             });
         })
-
-    }, 500)
+    }, 1000)
 })

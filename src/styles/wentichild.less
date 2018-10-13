@@ -8,7 +8,21 @@
         line-height: 1;
         color: #333333;
         padding: 20px 0;
+        a{
+            color: #333333;   
+        }
+        .m-top-a:hover{           
+            text-decoration: underline;           
+         }
+        .m-top-b:hover{           
+        text-decoration: underline;
+        }
+        .icon-you{
+            font-size: 12px;
+            color: #333;
+        }
     }
+    
     .d-header{
         overflow: hidden;
     }
@@ -132,17 +146,42 @@
                     margin: 13px 1px 0 0 ;
                     height: 30px;
                     float: left;
+                    font-weight: 400;
                     .r-rmb{
                         margin-left: 0;
                         line-height: 30px;
                         color: #d7282d;
                         font-size: 18px;
+                        letter-spacing: -5px;
                     }
                     .r-num{
                         font-size: 28px;
                         line-height: 30px;
                         margin-left: 2px;
                         color: #d7282d;
+                    }
+                }
+                .o-money{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 17px 1px 0 10px ;
+                    height: 30px;
+                    float: left;
+                    font-weight: 400;
+                    .o-rmb{
+                        font-weight: 400;
+                        margin-left: 0;
+                        line-height: 30px;
+                        color: #666;
+                        font-size: 15px;
+                        letter-spacing: -5px;
+                    }
+                    .o-num{
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 30px;                    
+                        color: #666;
+                        text-decoration: line-through;                       
                     }
                 }
                 .point-1{
@@ -370,7 +409,6 @@
                     .icon-xingxing{
                         display: inline-block;
                         margin-top: 6px; 
-<<<<<<< HEAD
                         color: #999;
                         position: relative; 
                     }
@@ -378,9 +416,6 @@
                         animation: sliderUp .8s;
                         // animation-fill-mode: forwards;
                         // background: #b4a078;
-=======
-                        color: #999; 
->>>>>>> 99d7b0fcc1d0ea5a5722e57c3a3ee3bd87ccc131
                     }
                 }
                 .bottom,.bottom-1{
@@ -418,148 +453,359 @@
                 display: inline-block;
             }           
         }
-       
-        .prom-body-1{
-            position: relative;
-            height: 311px;
-            .show{
-                display: inline-block;
-            }
-            .promItem{
-                position: absolute;
-                width: 100%;
-                left: -30000px;               
-            }
-           
+        .m-crumbs{
+            font-size: 12px;
+            color: #333;
+            line-height: 1;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            a{
+                color: #333;
+            }    
         }
-        .prom-body{
-            height: 311px;
-            .promItem{
-                top: 300px;
-            }
-            .active{
-                top: 0;
-                left: 0;
-            }
-        }
-        .m-slickWarp{
-            width: 1090px;
-        }
-        .slickContent{
-            overflow: hidden;
-            margin-top: 12px;
-            margin-left: 79px;
-            width: 930px;
-            height: 307px;          
-        }
-        .itemlist{
-            margin-right: -30px;
-            position: relative;
-            display: block;
-            .item{
-                float: left;
-                margin-right: 10px;
-                margin-bottom: 50px;                 
-                .m-product{
-                    width: 210px;
-                    height: 210px;
-                    font-size: 13px;
-                    text-align: center;
-                    position: relative;
-                    line-height: 1;
-                    .up{
-                        background: #fff; 
-                        position: relative;
-                        overflow: hidden;  
-                        a{
-                            color: #333333;
-                            text-decoration: none;
-                            img{
-                                width: 210px;
-                                height: 210px;
-                                background: #fff; 
-                                transition: transform 1s;
-                            }                                                                                                   
-                        }             
+        .m-focus{
+            height:310px!important;
+            margin-bottom: 30px!important;   
+             
+              .slider{
+                  position: relative;
+                  width: 1090px;
+                  height: 310px;
+                  overflow: hidden;
+                //   margin: 79px;                 
+                    .icon-xiangzuo:hover{
+                          opacity: 1;
+                      }
+                    .icon-you:hover{
+                        opacity: 1;  
+                      }                
+                  .s-wrap{
+                      width: 960px;
+                      height: 307px;
+                      padding-left: 85px;
+                      .slider_list{
+                        width: 5000px;
+                        position: absolute;                   
+                        .itemlist{
+                          margin-right: -30px;
+                          position: relative;
+                          display: none;
+                          height: 307px;              
+                          float: left; 
+                          .item{
+                              float: left;
+                              margin-right: 10px;
+                              margin-bottom: 50px;                 
+                              .m-product{
+                                  width: 210px;
+                                  height: 210px;
+                                  font-size: 13px;
+                                  text-align: center;
+                                  position: relative;
+                                  line-height: 1;
+                                  .up{
+                                      background: #fff; 
+                                      position: relative;
+                                      overflow: hidden;  
+                                      a{
+                                          color: #333333;
+                                          text-decoration: none;
+                                          img{
+                                              width: 210px;
+                                              height: 210px;
+                                              background: #fff; 
+                                              transition: transform 1s;
+                                          }                                                                                                   
+                                      }             
+                                  }
+                                  .down{
+                                      .tags{
+                                          width: 200px;
+                                          height: 20px;
+                                          color: #fff;
+                                          overflow: hidden;
+                                          margin: 0 auto 3px;
+                                          .itemtag{
+                                              background: #e36844;
+                                              display: inline-block;
+                                              line-height: 20px;
+                                              padding: 0 5px;
+                                              height: 20px;
+                                              font-size: 12px;
+                                          }
+                                      }
+                                      .introduction{
+                                          padding: 0 10px;
+                                          margin-bottom: 4px;
+                                          line-height: 20px;
+                                          height: 20px; 
+                                          overflow: hidden; 
+                                          white-space: nowrap; 
+                                          text-overflow: ellipsis;                                    
+                                          a{
+                                              color: #333;
+                                          }
+                                          a:hover{
+                                              color: #b4a078;
+                                          }
+                                      }
+                                      .price{
+                                          color: #d4282d;
+                                          text-align: center;
+                                          span{
+                                              display: inline-block;
+                                              height: 20px;
+                                              line-height: 22px;
+                                              overflow: hidden;
+                                              span{
+                                                  display: inline;
+                                              }
+                                              .money{
+                                                  letter-spacing: -4px; 
+                                              }                   
+                                          }
+                                          .f-pr{
+                                              display: inline-block;
+                                              width: 20px;
+                                              height: 20px;
+                                              line-height: 20px;
+                                              border-radius: 50%;
+                                              background: rgb(245, 241, 234);                 
+                                              .icon-gouwuche{
+                                                  color: #666;                                
+                                              }
+                                          }
+                                          .originalprice{
+                                             text-decoration: line-through;
+                                              margin-left: 6px;                        
+                                              color: #999999;  
+                                              font-size: 12px;
+                                              span{                                           
+                                                  display: inline;
+                                              }
+                                              .money{
+                                                  letter-spacing: -5px;
+                                              }                       
+                                          }
+                                      }                
+                                  }                              
+                              }
+                          }
+                          .item:hover img{
+                              cursor: pointer;
+                              transform: scale(1.05);   
+                            }
+                        }
+                        
                     }
-                    .down{
-                        .tags{
-                            width: 200px;
-                            height: 20px;
-                            color: #fff;
-                            overflow: hidden;
-                            margin: 0 auto 3px;
-                            .itemtag{
-                                background: #e36844;
-                                display: inline-block;
-                                line-height: 20px;
-                                padding: 0 5px;
-                                height: 20px;
-                                font-size: 12px;
-                            }
-                        }
-                        .introduction{
-                            padding: 0 10px;
-                            margin-bottom: 4px;
-                            line-height: 20px;
-                            height: 20px; 
-                            overflow: hidden; 
-                            white-space: nowrap; 
-                            text-overflow: ellipsis;                                    
-                            a{
-                                color: #333;
-                            }
-                            a:hover{
-                                color: #b4a078;
-                            }
-                        }
-                        .price{
-                            color: #d4282d;
-                            text-align: center;
-                            span{
-                                display: inline-block;
-                                height: 20px;
-                                line-height: 22px;
-                                overflow: hidden;
-                                span{
-                                    display: inline;
-                                }
-                                .money{
-                                    letter-spacing: -4px; 
-                                }                   
-                            }
-                            .f-pr{
-                                display: inline-block;
-                                width: 20px;
-                                height: 20px;
-                                line-height: 20px;
-                                border-radius: 50%;
-                                background: rgb(245, 241, 234);                 
-                                .icon-gouwuche{
-                                    color: #666;                                
-                                }
-                            }
-                            .originalprice{
-                               text-decoration: line-through;
-                                margin-left: 6px;                        
-                                color: #999999;  
-                                font-size: 12px;
-                                span{                                           
-                                    display: inline;
-                                }
-                                .money{
-                                    letter-spacing: -5px;
-                                }                       
-                            }
-                        }                
-                    }                              
+                  }          
+                  .icon-xiangzuo{
+                      position: absolute;
+                      font-size: 1em;
+                      padding: 15px;
+                      top: 140px;
+                      left: 10px;
+                      cursor: pointer;
+                      border-radius: 50%;
+                      color: #fff;
+                      background-color: #b4a078;
+                      opacity: 0.5;
+                  }
+                  .icon-you{
+                    position: absolute;
+                    font-size: 1em;
+                    padding: 15px;
+                    top: 140px;
+                    right:  10px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    color: #fff;
+                    background-color: #b4a078;
+                    opacity: 0.5;           
+                  }
                 }
-            }
-            .item:hover img{
-                cursor: pointer;
-                transform: scale(1.05);   
-            }
+                .show{
+                    display: block!important;
+                }
         }
+        // .prom-body-1{
+        //     position: relative;
+        //     height: 311px;
+        //     overflow: hidden; 
+        //     .show{
+        //         display: inline-block;
+        //     }
+        //     .promItem{
+        //         position: absolute;
+        //         width: 100%;
+        //         left: -30000px; 
+                            
+        //     }
+           
+        // }
+        // .prom-body{
+        //     height: 311px;
+        //     .promItem{
+        //         top: 300px;
+        //     }
+        //     .active{
+        //         top: 0;
+        //         left: 0;
+        //     }
+        // }
+        // .m-slickWarp{
+        //     width: 1090px;
+        //     position: relative;
+        //    height: 311px;
+        // }
+        
+        // .slickContent{
+        //     overflow: hidden;
+        //     margin-top: 12px;
+        //     margin-left: 79px;
+        //     width: 5000px;
+        //     // width: 930px;
+        //     height: 307px; 
+                   
+        // }
+        // .itemlist{
+        //     margin-right: -30px;
+        //     position: relative;
+        //     display: block;
+        //     height: 307px;
+        //     // overflow: hidden;
+        //     float: left; 
+        //     .item{
+        //         float: left;
+        //         margin-right: 10px;
+        //         margin-bottom: 50px;                 
+        //         .m-product{
+        //             width: 210px;
+        //             height: 210px;
+        //             font-size: 13px;
+        //             text-align: center;
+        //             position: relative;
+        //             line-height: 1;
+        //             .up{
+        //                 background: #fff; 
+        //                 position: relative;
+        //                 overflow: hidden;  
+        //                 a{
+        //                     color: #333333;
+        //                     text-decoration: none;
+        //                     img{
+        //                         width: 210px;
+        //                         height: 210px;
+        //                         background: #fff; 
+        //                         transition: transform 1s;
+        //                     }                                                                                                   
+        //                 }             
+        //             }
+        //             .down{
+        //                 .tags{
+        //                     width: 200px;
+        //                     height: 20px;
+        //                     color: #fff;
+        //                     overflow: hidden;
+        //                     margin: 0 auto 3px;
+        //                     .itemtag{
+        //                         background: #e36844;
+        //                         display: inline-block;
+        //                         line-height: 20px;
+        //                         padding: 0 5px;
+        //                         height: 20px;
+        //                         font-size: 12px;
+        //                     }
+        //                 }
+        //                 .introduction{
+        //                     padding: 0 10px;
+        //                     margin-bottom: 4px;
+        //                     line-height: 20px;
+        //                     height: 20px; 
+        //                     overflow: hidden; 
+        //                     white-space: nowrap; 
+        //                     text-overflow: ellipsis;                                    
+        //                     a{
+        //                         color: #333;
+        //                     }
+        //                     a:hover{
+        //                         color: #b4a078;
+        //                     }
+        //                 }
+        //                 .price{
+        //                     color: #d4282d;
+        //                     text-align: center;
+        //                     span{
+        //                         display: inline-block;
+        //                         height: 20px;
+        //                         line-height: 22px;
+        //                         overflow: hidden;
+        //                         span{
+        //                             display: inline;
+        //                         }
+        //                         .money{
+        //                             letter-spacing: -4px; 
+        //                         }                   
+        //                     }
+        //                     .f-pr{
+        //                         display: inline-block;
+        //                         width: 20px;
+        //                         height: 20px;
+        //                         line-height: 20px;
+        //                         border-radius: 50%;
+        //                         background: rgb(245, 241, 234);                 
+        //                         .icon-gouwuche{
+        //                             color: #666;                                
+        //                         }
+        //                     }
+        //                     .originalprice{
+        //                        text-decoration: line-through;
+        //                         margin-left: 6px;                        
+        //                         color: #999999;  
+        //                         font-size: 12px;
+        //                         span{                                           
+        //                             display: inline;
+        //                         }
+        //                         .money{
+        //                             letter-spacing: -5px;
+        //                         }                       
+        //                     }
+        //                 }                
+        //             }                              
+        //         }
+        //     }
+        //     .item:hover img{
+        //         cursor: pointer;
+        //         transform: scale(1.05);   
+        //     }
+        // }
+        // .icon-xiangzuo{
+        //     position: absolute;
+        //     font-size: 1.5em;
+        //     padding: 15px;
+        //     top: 140px;
+        //     left: 10px;
+        //     cursor: pointer;
+        //     border-radius: 50%;
+        //     color: #fff;
+        //     background-color: #b4a078;
+        //     opacity: 0;
+        // }
+        // .icon-you{
+        //     position: absolute;
+        //     font-size: 1.5em;
+        //     padding: 15px;
+        //     top: 140px;
+        //     right: 10px;
+        //     cursor: pointer;
+        //     border-radius: 50%;
+        //     color: #fff;
+        //     background-color: #b4a078;
+        //     opacity: 0;
+        // }
+       
+
+        
     } 
     .d-body{
         margin-top: 30px;
@@ -1074,8 +1320,9 @@
             }
         }
     }
-
 }
+
+
 
 .service{
     .s-overlay,.w-mask,.f-tab{
