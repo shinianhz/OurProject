@@ -1,6 +1,7 @@
 $(function() {
     setTimeout(function() {
-        $('.box').slide();
+        $('.txtScroll-top .box').slide();
+        // console.log($('.txtScroll-top .box'))
         $(window).scroll(function() {
             var h = $('.right-fixed').offset().top;
             if (h > 200) {
@@ -22,10 +23,6 @@ $(function() {
         });
         $('#search').on('click', function() {
             // console.log($('.inp>input').val());
-            if ($('.inp > input ').val() == '') {
-
-            }
-
             //如果没有输入，则根据placeholder进行搜索
             var keyword = {
                 "key": $('.inp > input ').val()
@@ -72,10 +69,5 @@ $(function() {
                 }
             });
         })
-
-<<<<<<< HEAD
-    }, 100)
-=======
-    }, 500)
->>>>>>> aa5cf973e1a64bf7a524b0a0dc9c8602d60b24da
+    }, 1000)
 })
