@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="../styles/iconfont1.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
-
     <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/iconfont11.css">
-
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <!-- <link rel="stylesheet" href="../styles/pblb.css"> -->
     <link rel="stylesheet" href="../styles/wentichild.css">
     <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
+    <script src="../js/shoes/load.js"></script>
+    <script src="../js/home/slide.js"></script>
+
     <!-- header商品图片展示，选项卡 -->
     <script>
         $(function() {
@@ -206,31 +209,70 @@
                 $('.good-cont').removeClass('show');
                 $('.good-cont1').addClass('show');
             })
-            console.log(1);
+
         })
     </script>
     <!--  -->
-    <!-- 点击收藏 -->
+    <!-- 点击收藏星星 -->
+    <script>
+        $(function() {
+            $('.bottom-1').click(function() {
+                $('.icon-xingxing').toggle(1000);
+            })
+        })
+    </script>
+    <!-- zhon -->
+    <script>
+        $(function() {
+            //初始化
+            var count = 0;
+            var $li = $(".slider>.s-wrap>.slider_list>ul");
+            $li.eq(0).addClass("show");
+
+            //向右按钮
+            $(".next").click(function() {
+                count++;
+                if (count == $li.length) {
+                    count = 0;
+                }
+                $li.eq(count).addClass("show").siblings().removeClass("show");
+                console.log(count);
+            });
+            //向左按钮
+            $(".prve").click(function() {
+                count--;
+                if (count == -1) {
+                    count = $li.length - 1;
+                }
+                console.log(count);
+                $li.eq(count).addClass("show").siblings().removeClass("show");
+            });
+        });
+    </script>
 
 
     <title>Document</title>
 </head>
 
 <body>
+    <!-- 页面顶部容器 -->
+    <div id="header"></div>
+    <div id="right-fixed"></div>
+    <!-- 轮播 -->
     <div class="j-app">
         <div class="j-main">
             <div class="m-top">
                 <span>
                     <span>首页</span>
-                <span>></span>
+                <i class="icon iconfont icon-you"></i>
                 </span>
                 <span>
-                    <a href="#">文体</a>
-                    <span>></span>
+                    <a href="#" class="m-top-a">文体</a>
+                    <i class="icon iconfont icon-you"></i>
                 </span>
                 <span>
-                    <a href="#">文具</a>
-                    <span>></span>
+                    <a href="#" class="m-top-b">文具</a>
+                    <i class="icon iconfont icon-you"></i>
                 </span>
                 <span>
                     <span>钢笔墨水礼盒</span>
@@ -278,14 +320,15 @@
                                 <span>钢笔墨水礼盒</span>
                                 <a href="#good-com" class="goodcomment">
 
-                                    <a href="#good-com">
+                                    <!-- <a href="#good-com"> -->
 
-                                        <div class="r-comment">
-                                            <span class="r-span1" style="color:#E36844;">96.8%</span>
-                                            <br/>
-                                            <span class="r-span2">好评率</span>
-                                        </div>
-                                    </a>
+                                    <div class="r-comment">
+                                        <span class="r-span1" style="color:#E36844;">96.8%</span>
+                                        <br/>
+                                        <span class="r-span2">好评率</span>
+                                    </div>
+                                    <!-- </a> -->
+                                </a>
                             </div>
                             <div class="r-desc">钢笔1支，皮套1只，墨水40ml1瓶，诗词纸1张</div>
                         </div>
@@ -296,6 +339,11 @@
                                     <span class="r-money">
                                         <span class="r-rmb">￥</span>
                                     <span class="r-num">149</span>
+                                    </span>
+
+                                    <span class="o-money">
+                                        <span class="o-rmb">￥</span>
+                                    <span class="o-num">129</span>
                                     </span>
                                 </div>
                                 <div></div>
@@ -391,7 +439,6 @@
                             <div class="r-collect" title="点击收藏">
                                 <div class="top">
                                     <i class="icon iconfont icon-xingxing"></i>
-                                    <<<<<<< HEAD=======>>>>>>> 99d7b0fcc1d0ea5a5722e57c3a3ee3bd87ccc131
                                 </div>
                                 <div class="bottom">
                                     <p class="bottom-1">收藏</p>
@@ -406,9 +453,287 @@
                             <span class="prom-title">优惠套装</span>
                             <span class="prom-title show active">大家都在看</span>
                         </div>
-                        <div class="prom-body prom-body-1">
-                            <div class="promItem"></div>
-                            <div class="promItem show active">
+                        <div class="m-focus ">
+                            <div class="slider">
+                                <div class="s-wrap">
+                                    <div class="slider_list">
+                                        <ul class="itemlist">
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" target="_blank">
+                                                            <img src="../images/wentichild/045.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/046.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/047.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/048.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags">
+                                                            <span class="itemtag">办公特惠</span>
+                                                        </div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="itemlist">
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" target="_blank">
+                                                            <img src="../images/wentichild/51.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/52.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/53.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags"></div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="m-product">
+                                                    <div class="up">
+                                                        <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <img src="../images/wentichild/54.png" alt="yanxuan" class="img">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="down">
+                                                        <div class="tags">
+                                                            <span class="itemtag">办公特惠</span>
+                                                        </div>
+                                                        <h4 class="introduction">
+                                                            <!-- introduction介绍 -->
+                                                            <a href="#">
+                                                                <span>4件装</span>
+                                                                <span>微孔头水性笔</span>
+                                                            </a>
+                                                        </h4>
+                                                        <p class="price" style="display:block">
+                                                            <span>
+                                                                        <span class="money">￥</span>
+                                                            <span>52</span>
+                                                            </span>
+                                                            <span class="f-pr" style="left:4px;">
+                                                                    <i class="icon iconfont icon-gouwuche"></i>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="iconfont icon-xiangzuo prve"></span>
+                                <span class="iconfont icon-you next"></span>
+                                <!-- <ul class="point">
+                                        <li></li>
+                                        <li></li>
+                                    </ul> -->
+                            </div>
+
+                        </div>
+                        <!-- <div class="prom-body prom-body-1">
+                            <div class="promItem">
                                 <div class="m-slickWarp ">
                                     <div class="m-slick ">
                                         <div class="slickContent">
@@ -427,7 +752,7 @@
                                                         <div class="down">
                                                             <div class="tags"></div>
                                                             <h4 class="introduction">
-                                                                <!-- introduction介绍 -->
+
                                                                 <a href="#">
                                                                     <span>4件装</span>
                                                                     <span>微孔头水性笔</span>
@@ -459,7 +784,7 @@
                                                         <div class="down">
                                                             <div class="tags"></div>
                                                             <h4 class="introduction">
-                                                                <!-- introduction介绍 -->
+
                                                                 <a href="#">
                                                                     <span>4件装</span>
                                                                     <span>微孔头水性笔</span>
@@ -491,7 +816,7 @@
                                                         <div class="down">
                                                             <div class="tags"></div>
                                                             <h4 class="introduction">
-                                                                <!-- introduction介绍 -->
+
                                                                 <a href="#">
                                                                     <span>4件装</span>
                                                                     <span>微孔头水性笔</span>
@@ -525,7 +850,139 @@
                                                                 <span class="itemtag">办公特惠</span>
                                                             </div>
                                                             <h4 class="introduction">
-                                                                <!-- introduction介绍 -->
+
+                                                                <a href="#">
+                                                                    <span>4件装</span>
+                                                                    <span>微孔头水性笔</span>
+                                                                </a>
+                                                            </h4>
+                                                            <p class="price" style="display:block">
+                                                                <span>
+                                                                            <span class="money">￥</span>
+                                                                <span>52</span>
+                                                                </span>
+                                                                <span class="f-pr" style="left:4px;">
+                                                                        <i class="icon iconfont icon-gouwuche"></i>
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="itemlist">
+                                                <li class="item">
+                                                    <div class="m-product">
+                                                        <div class="up">
+                                                            <a href="#" target="_blank">
+                                                                <img src="../images/wentichild/045.png" alt="yanxuan" class="img">
+                                                                <div>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="tags"></div>
+                                                            <h4 class="introduction">
+
+                                                                <a href="#">
+                                                                    <span>4件装</span>
+                                                                    <span>微孔头水性笔</span>
+                                                                </a>
+                                                            </h4>
+                                                            <p class="price" style="display:block">
+                                                                <span>
+                                                                            <span class="money">￥</span>
+                                                                <span>52</span>
+                                                                </span>
+                                                                <span class="f-pr" style="left:4px;">
+                                                                        <i class="icon iconfont icon-gouwuche"></i>
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="m-product">
+                                                        <div class="up">
+                                                            <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                                <img src="../images/wentichild/046.png" alt="yanxuan" class="img">
+                                                                <div>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="tags"></div>
+                                                            <h4 class="introduction">
+
+                                                                <a href="#">
+                                                                    <span>4件装</span>
+                                                                    <span>微孔头水性笔</span>
+                                                                </a>
+                                                            </h4>
+                                                            <p class="price" style="display:block">
+                                                                <span>
+                                                                            <span class="money">￥</span>
+                                                                <span>52</span>
+                                                                </span>
+                                                                <span class="f-pr" style="left:4px;">
+                                                                        <i class="icon iconfont icon-gouwuche"></i>
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="m-product">
+                                                        <div class="up">
+                                                            <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                                <img src="../images/wentichild/047.png" alt="yanxuan" class="img">
+                                                                <div>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="tags"></div>
+                                                            <h4 class="introduction">
+
+                                                                <a href="#">
+                                                                    <span>4件装</span>
+                                                                    <span>微孔头水性笔</span>
+                                                                </a>
+                                                            </h4>
+                                                            <p class="price" style="display:block">
+                                                                <span>
+                                                                            <span class="money">￥</span>
+                                                                <span>52</span>
+                                                                </span>
+                                                                <span class="f-pr" style="left:4px;">
+                                                                        <i class="icon iconfont icon-gouwuche"></i>
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="m-product">
+                                                        <div class="up">
+                                                            <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                                <img src="../images/wentichild/048.png" alt="yanxuan" class="img">
+                                                                <div>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="tags">
+                                                                <span class="itemtag">办公特惠</span>
+                                                            </div>
+                                                            <h4 class="introduction">
+
                                                                 <a href="#">
                                                                     <span>4件装</span>
                                                                     <span>微孔头水性笔</span>
@@ -545,11 +1002,16 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        <span class="iconfont icon-xiangzuo prve"></span>
+                                        <span class="iconfont icon-you next"></span>
+                                        <ul class="point">
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="d-body">
@@ -562,7 +1024,7 @@
                                             <li class="list">
                                                 <span>详情</span>
                                             </li>
-                                            <li class="list" id="good-com">
+                                            <li class="list">
                                                 <span>评价</span>
                                             </li>
                                             <li class="list">
@@ -1206,6 +1668,17 @@
 
         </div>
     </div>
+
+    <!-- 页面底部容器 -->
+    <div class="footer"></div>
+    <script>
+        $(function() {
+            $("#header").load('home.html .header');
+            $("#right-fixed").load('home.html .right-fixed');
+            $(".footer").load('home.html #footer');
+
+        })
+    </script>
 </body>
 
 </html>
