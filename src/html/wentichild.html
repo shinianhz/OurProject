@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../styles/iconfont.css">
+
+    <link rel="stylesheet" href="../styles/iconfont1.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
+
+    <link rel="stylesheet" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/iconfont11.css">
+
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/wentichild.css">
-    <!-- <link rel="stylesheet" href="../styles/child.css"> -->
     <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
-    <!-- <script src="../js/wentichild.js"></script> -->
+    <!-- header商品图片展示，选项卡 -->
     <script>
         $(function() {
             var img = ['../images/wentichild/001.jpg', '../images/wentichild/002.jpg', '../images/wentichild/003.jpg', '../images/wentichild/004.jpg', '../images/wentichild/005.jpg'];
@@ -24,6 +29,7 @@
             })
         })
     </script>
+    <!-- 服务政策的详细信息 -->
     <script>
         $(function() {
             $('.close').on('click', function() {
@@ -37,6 +43,7 @@
             })
         })
     </script>
+    <!-- 购买商品，添加数量 -->
     <script>
         $.extend({
             min: 1,
@@ -88,6 +95,7 @@
             }
         });
     </script>
+    <!-- 商品数量少于1时，点击提示 -->
     <script>
         $(function() {
             setInterval(function() { //定时器 
@@ -102,6 +110,7 @@
             })
         })
     </script>
+    <!-- 详情 评论  常见问题选项卡-->
     <script>
         $.fn.extend({
             tabs: function(options) {
@@ -133,19 +142,77 @@
             $('.b-left').tabs()
         });
     </script>
+    <!-- 评论 图片展示选项卡 -->
     <script>
         $(function() {
-            var img = ['../images/wentichild/131.jpg', '../images/wentichild/132.jpg', '../images/wentichild/133.jpg', '../images/wentichild/134.jpg'];
+            var img = ['../images/wentichild/135.jpg', '../images/wentichild/136.jpg', '../images/wentichild/137.jpg', '../images/wentichild/138.jpg'];
             $('.picList .pic-item').on('click', function() {
-                // $('#view img').css('display', 'none');
+                $('.lightBox').css('display', 'block');
+                $('.slick').css('display', 'block');
                 var i = $('.picList .pic-item').index(this);
                 $('.slick').css({
                     'background': 'url(' + img[i] + ')',
-                    'background-size': '430px 430px'
+                    'background-size': '584px 438px'
                 })
             })
         })
     </script>
+
+    <!-- 评论图片展示关闭按钮 -->
+    <script>
+        $(function() {
+            $('.close-x').on('click', function() {
+                $('.lightBox').css('display', 'none');
+            })
+        })
+    </script>
+    <!-- 点击收藏 -->
+    <script>
+        $(function() {
+            $('.bottom').on('click', function() {
+                if ($('.bottom-1').html() == '收藏') {
+                    $('.bottom-1').html("已收藏");
+                    $('.top').animate('sliderUp', 500);
+                } else if ($('.bottom-1').html() == '已收藏') {
+                    $('.bottom-1').html("收藏");
+                }
+            })
+        })
+    </script>
+    <!-- 点击勾选 -->
+    <script>
+        $(function() {
+            $('.tab-txt').on('click', function() {
+                if ($('.tab-txt').hasClass('tab-sel')) {
+                    $('.tab-con a').removeClass("tab-sel");
+                    $('.tab-con a').attr('style', '');
+                } else {
+                    $('.tab-con a').addClass("tab-sel");
+                };
+                if ($('.icon-in_gouxuan').hasClass('sel')) {
+                    $('.tab-txt i').removeClass('sel');
+                } else {
+                    $('.tab-txt i').addClass("sel");
+                };
+            })
+        })
+    </script>
+    <!-- 点击好评锚点跳转 -->
+    <script>
+        $(function() {
+            $('.goodcomment').on('click', function() {
+                $('.Tablist li:eq(0)').removeClass('active');
+                $('.Tablist li:eq(1)').addClass('active');
+                $('.good-cont').removeClass('show');
+                $('.good-cont1').addClass('show');
+            })
+            console.log(1);
+        })
+    </script>
+    <!--  -->
+    <!-- 点击收藏 -->
+
+
     <title>Document</title>
 </head>
 
@@ -209,13 +276,16 @@
                         <div class="r-title">
                             <div class="r-name">
                                 <span>钢笔墨水礼盒</span>
-                                <a href="#">
-                                    <div class="r-comment">
-                                        <span class="r-span1" style="color:#E36844;">96.8%</span>
-                                        <br/>
-                                        <span class="r-span2">好评率</span>
-                                    </div>
-                                </a>
+                                <a href="#good-com" class="goodcomment">
+
+                                    <a href="#good-com">
+
+                                        <div class="r-comment">
+                                            <span class="r-span1" style="color:#E36844;">96.8%</span>
+                                            <br/>
+                                            <span class="r-span2">好评率</span>
+                                        </div>
+                                    </a>
                             </div>
                             <div class="r-desc">钢笔1支，皮套1只，墨水40ml1瓶，诗词纸1张</div>
                         </div>
@@ -284,9 +354,9 @@
                                         <ul class="tabs">
                                             <li class="tab-con">
                                                 <a href="#" class="tab-txt tab-sel tab-nav">
-                                                    <span>钢笔墨水礼盒</span>
+                                                    <span class="span-sel">钢笔墨水礼盒</span>
                                                     <div></div>
-                                                    <i></i>
+                                                    <i class="icon iconfont icon-in_gouxuan sel"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -320,7 +390,8 @@
                             </a>
                             <div class="r-collect" title="点击收藏">
                                 <div class="top">
-                                    <span></span>
+                                    <i class="icon iconfont icon-xingxing"></i>
+                                    <<<<<<< HEAD=======>>>>>>> 99d7b0fcc1d0ea5a5722e57c3a3ee3bd87ccc131
                                 </div>
                                 <div class="bottom">
                                     <p class="bottom-1">收藏</p>
@@ -345,7 +416,7 @@
                                                 <li class="item">
                                                     <div class="m-product">
                                                         <div class="up">
-                                                            <a href="#" title="儿童卡通便携式电动牙刷" target="_blank">
+                                                            <a href="#" target="_blank">
                                                                 <img src="../images/wentichild/045.png" alt="yanxuan" class="img">
                                                                 <div>
                                                                     <span></span>
@@ -488,10 +559,10 @@
                                 <div class="topTabitem">
                                     <div class="Tabitem item-1">
                                         <ul class="Tablist">
-                                            <li class="list active">
+                                            <li class="list">
                                                 <span>详情</span>
                                             </li>
-                                            <li class="list">
+                                            <li class="list" id="good-com">
                                                 <span>评价</span>
                                             </li>
                                             <li class="list">
@@ -502,7 +573,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contentTab c-detail">
+                        <div class="contentTab c-detail good-cont">
                             <ul class="c-attrList" style="visibility: visible;">
                                 <li class="c-item" style="width: 100%;">
                                     <span class="c-name">分类</span>
@@ -643,18 +714,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="contentTab">
+                        <div class="contentTab good-cont1" id="good-com">
                             <div class="c-detaileval">
                                 <ul class="c-detailList">
                                     <div class="m-goodRates f-left">
                                         <div class="label">好评率</div>
                                         <div class="goodRate">96.9%</div>
                                         <div class="starWrap">
-                                            <div>
-                                                <span>
-                                                    <i class="icon iconfont icon-shuaxin"></i>
-                                                </span>
-                                            </div>
+                                            <ul class="star-ul">
+                                                <li class="star-list">☆</li>
+                                                <li class="star-list">☆</li>
+                                                <li class="star-list">☆</li>
+                                                <li class="star-list">☆</li>
+                                                <li class="star-list">☆</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <li>
@@ -692,7 +765,15 @@
                                             </div>
                                         </div>
                                         <div class="m-commentItem">
-                                            <div class="starWrap"></div>
+                                            <div class="starWrap">
+                                                <ul class="star-ul">
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                </ul>
+                                            </div>
                                             <div class="sInfo">
                                                 <span>名称:仲秋拾月</span>
                                             </div>
@@ -717,18 +798,166 @@
                                                     <img src="../images/wentichild/134.jpg" alt="...">
                                                 </li>
                                             </ul>
-                                            <div class="lightBox" style="display: block;">
-                                                <div class="close"></div>
+                                            <div class="lightBox">
+                                                <div class="close close-x">
+                                                    <i class="icon iconfont icon-x"></i>
+                                                </div>
                                                 <div class="slick">
-                                                    <button></button>
+                                                    <!-- <button></button> -->
                                                     <!-- <img src="../images/wentichild/131.jpg" alt=".."> -->
-                                                    <button></button>
+                                                    <!-- <button></button> -->
                                                 </div>
                                             </div>
                                             <div class="createTime">2018-09-17 23:50</div>
                                             <div class="reply">
                                                 <span>小选回复：</span>
                                                 <span class="content">感谢您对我们的支持，祝您每天都能拥有阳光般的好心情~</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-item">
+                                        <div class="m-commentUser">
+                                            <div class="m-pic">
+                                                <img src="../images/wentichild/140.jpg" alt="1****0">
+                                            </div>
+                                            <div class="m-name">
+                                                <div class="username">1****0</div>
+                                            </div>
+                                        </div>
+                                        <div class="m-commentItem">
+                                            <div class="starWrap">
+                                                <ul class="star-ul">
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                </ul>
+                                            </div>
+                                            <div class="sInfo">
+                                                <span>名称:仲秋拾月</span>
+                                            </div>
+                                            <div class="content f-breakall">
+                                                文艺个性且小众，笔不挂纸，出墨峰顺便，不错
+                                            </div>
+                                            <ul class="picList">
+                                                <li class="pic-item">
+                                                    <div class="before"></div>
+                                                    <img src="../images/wentichild/141.jpg" alt="...">
+                                                </li>
+
+                                            </ul>
+                                            <div class="lightBox">
+                                                <div class="close close-x">
+                                                    <i class="icon iconfont icon-x"></i>
+                                                </div>
+                                                <div class="slick">
+                                                    <!-- <button></button> -->
+                                                    <!-- <img src="../images/wentichild/131.jpg" alt=".."> -->
+                                                    <!-- <button></button> -->
+                                                </div>
+                                            </div>
+                                            <div class="createTime">
+                                                2018-09-18 00:33</div>
+                                            <div class="reply">
+                                                <span>小选回复：</span>
+                                                <span class="content">感谢您对我们的支持，祝您每天都能拥有阳光般的好心情~</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-item">
+                                        <div class="m-commentUser">
+                                            <div class="m-pic">
+                                                <img src="../images/wentichild/142.jpg" alt="
+                                                h****g">
+                                            </div>
+                                            <div class="m-name">
+                                                <div class="username">h****g</div>
+                                            </div>
+                                        </div>
+                                        <div class="m-commentItem">
+                                            <div class="starWrap">
+                                                <ul class="star-ul">
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                </ul>
+                                            </div>
+                                            <div class="sInfo">
+                                                <span>名称:仲秋拾月</span>
+                                            </div>
+                                            <div class="content f-breakall">
+                                                书写很流畅，包装也很有设计感，适合送礼，但是我买来自己用的😂
+                                            </div>
+                                            <ul class="picList">
+                                                <li class="pic-item">
+                                                    <div class="before"></div>
+                                                    <img src="../images/wentichild/143.jpg" alt="...">
+                                                </li>
+
+                                            </ul>
+                                            <div class="lightBox">
+                                                <div class="close close-x">
+                                                    <i class="icon iconfont icon-x"></i>
+                                                </div>
+                                                <div class="slick">
+                                                    <!-- <button></button> -->
+                                                    <!-- <img src="../images/wentichild/131.jpg" alt=".."> -->
+                                                    <!-- <button></button> -->
+                                                </div>
+                                            </div>
+                                            <div class="createTime">
+                                                2018-09-29 20:42</div>
+                                            <div class="reply">
+                                                <span>小选回复：</span>
+                                                <span class="content">感谢您对我们的支持，祝您每天都能拥有阳光般的好心情~</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-item">
+                                        <div class="m-commentUser">
+                                            <div class="m-pic">
+                                                <img src="../images/wentichild/144.jpg" alt="
+                                                h****g">
+                                            </div>
+                                            <div class="m-name">
+                                                <div class="username">h****g</div>
+                                            </div>
+                                        </div>
+                                        <div class="m-commentItem">
+                                            <div class="starWrap">
+                                                <ul class="star-ul">
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                    <li class="star-list">☆</li>
+                                                </ul>
+                                            </div>
+                                            <div class="sInfo">
+                                                <span>名称:仲秋拾月</span>
+                                            </div>
+                                            <div class="content f-breakall">
+                                                钢笔买了两套，自己用一支，送朋友一支，手感很好，喜欢
+                                            </div>
+
+                                            <div class="lightBox">
+                                                <div class="close close-x">
+                                                    <i class="icon iconfont icon-x"></i>
+                                                </div>
+                                                <div class="slick">
+                                                    <!-- <button></button> -->
+                                                    <!-- <img src="../images/wentichild/131.jpg" alt=".."> -->
+                                                    <!-- <button></button> -->
+                                                </div>
+                                            </div>
+                                            <div class="createTime">
+                                                2018-10-05 09:08</div>
+                                            <div class="reply">
+                                                <span>小选回复：</span>
+                                                <span class="content">您能满意，是对小选最大的支持和鼓励，希望我们小小的努力能给您带来幸福，相信我们会做的更好哦，感谢您的支持，祝您友谊地久天长！</span>
                                             </div>
                                         </div>
                                     </li>
@@ -916,7 +1145,9 @@
                 <div class="f-pop f-tab f-scroll-y f-content f-policy" style="display: block">
                     <div class="f-body" style="left: 476px; top: 100.5px;">
                         <div class="j-w-dialog-head">
-                            <div class="close j-close-pop">*</div>
+                            <div class="close j-close-pop">
+                                <i class="icon iconfont icon-x"></i>
+                            </div>
                         </div>
                         <div class="popwin-bd j-w-dialog-content">
                             <div class="policyBd">

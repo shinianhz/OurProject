@@ -386,7 +386,7 @@
   text-align: center;
 }
 .header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart {
-  left: 800px;
+  right: 0;
   background-color: #fff;
   border: 1px solid #b4a078;
 }

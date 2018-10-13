@@ -8,7 +8,116 @@ header {
 .bannerWrapaer {
   width: 100%;
   height: 450px;
-  background: gray;
+  overflow: hidden;
+}
+.bannerWrapaer:hover .lunbo-box > a {
+  display: block;
+}
+.bannerWrapaer .lunbo-box {
+  margin: 0 auto;
+  width: 1090px;
+  height: 450px;
+  position: relative;
+}
+.bannerWrapaer .lunbo-box > a {
+  display: none;
+  width: 51px;
+  height: 48px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  color: #fff;
+  background-color: #333;
+  opacity: .4;
+}
+.bannerWrapaer .lunbo-box > a i {
+  font-size: 26px;
+  color: #fff;
+  margin-right: 5px;
+}
+.bannerWrapaer .lunbo-box .left {
+  left: 40px;
+}
+.bannerWrapaer .lunbo-box .right {
+  right: 40px;
+}
+.bannerWrapaer .lunbo-box ul {
+  width: 6540px;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: -1090px;
+}
+.bannerWrapaer .lunbo-box ul li {
+  width: 1090px;
+  height: 450px;
+  float: left;
+  position: relative;
+}
+.bannerWrapaer .lunbo-box ul li .litext {
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  left: 45px;
+  bottom: 40px;
+  padding-top: 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+.bannerWrapaer .lunbo-box ul li .litext h2 {
+  font-size: 30px;
+  color: #333;
+  line-height: 40px;
+  font-weight: 400;
+}
+.bannerWrapaer .lunbo-box ul li .litext h3 {
+  font-size: 20px;
+  color: #666;
+  line-height: 30px;
+  font-weight: 400;
+}
+.bannerWrapaer .lunbo-box .dots {
+  width: 1090px;
+  height: 28px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  padding: 0 500px;
+}
+.bannerWrapaer .lunbo-box .dots dd {
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin: 0 8px 10px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid #cecece;
+  border-radius: 50%;
+  background: #fff;
+}
+.bannerWrapaer .lunbo-box .dots .dd-show {
+  box-shadow: 0 0 0 4px #dfcead;
+  background: #a7936e;
+}
+.bannerWrapaer .lunbo-box .bg-left,
+.bannerWrapaer .lunbo-box .bg-right {
+  position: absolute;
+  top: 0;
+  width: 1000px;
+  height: 450px;
+  background: #fff;
+  opacity: .8;
+  z-index: 99;
+}
+.bannerWrapaer .lunbo-box .bg-left {
+  left: -1000px;
+}
+.bannerWrapaer .lunbo-box .bg-right {
+  right: -1000px;
 }
 /*floor1-为你严选*/
 .floor1_box .floor1 {
@@ -484,12 +593,16 @@ header {
   width: 280px;
   height: 168px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .floor5_box .floor5 .first .content .tabs-box .side .sidebody a p {
   padding: 10px 0;
   color: #333;
   font-size: 14px;
   line-height: 1;
+}
+.floor5_box .floor5 .first .content .tabs-box .side .sidebody a p:hover {
+  color: #B4A078;
 }
 .floor5_box .floor5 .second {
   padding-top: 80px;
@@ -521,7 +634,7 @@ header {
   height: 416px;
   background: #999;
 }
-.floor5_box .floor5 .second .content .left video {
+.floor5_box .floor5 .second .content .left img {
   width: 100%;
   height: 100%;
 }
@@ -548,10 +661,8 @@ header {
   display: block;
 }
 .floor5_box .floor5 .second .content .right ul {
-  transition: all .4s;
-  transform: translateY(-62px);
   position: absolute;
-  top: 0;
+  top: -62px;
   left: 0;
 }
 .floor5_box .floor5 .second .content .right ul > li {

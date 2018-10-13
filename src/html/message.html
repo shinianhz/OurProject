@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>消息通知</title>
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules//_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/iconfont.css">
     <link rel="stylesheet" href="../styles/message.css">
@@ -25,48 +25,49 @@
             <div class="tips">
                 <a href="#">首页</a>
                 <span class="span-1">&gt;</span>
-                <span class="span-2">消息通知</span>
+                <span class="span-2">订单管理</span>
             </div>
             <!-- sub-nav -->
             <div class="sub">
                 <dl class="sub-1">
                     <dt>账号管理</dt>
-                    <dd><a href="#">个人中心</a></dd>
-                    <dd class="active"><a href="#">消息通知</a></dd>
-                    <dd><a href="#">账号信息</a></dd>
-                    <dd><a href="#">地址管理</a></dd>
-                    <dd><a href="#">账号安全</a></dd>
-                    <dd><a href="#">我的积分</a></dd>
-                    <dd><a href="#">我的收藏</a></dd>
-                    <dd><a href="#">我的足迹</a></dd>
-                    <dd><a href="#">我的甄选家</a></dd>
+                    <dd><a href="javascript:;">个人中心</a></dd>
+                    <dd><a href="javascript:;">消息通知</a></dd>
+                    <dd><a href="javascript:;">账号信息</a></dd>
+                    <dd><a href="javascript:;">地址管理</a></dd>
+                    <dd><a href="javascript:;">账号安全</a></dd>
+                    <dd><a href="javascript:;">我的积分</a></dd>
+                    <dd><a href="javascript:;">我的收藏</a></dd>
+                    <dd><a href="javascript:;">我的足迹</a></dd>
+                    <dd><a href="javascript:;">我的甄选家</a></dd>
                 </dl>
                 <dl class="sub-2">
                     <dt>交易管理</dt>
-                    <dd><a href="#">订单管理</a></dd>
-                    <dd><a href="#">我的红包</a></dd>
-                    <dd><a href="#">优惠卷（0）</a></dd>
-                    <dd><a href="#">礼品卡</a></dd>
-                    <dd><a href="#">优先购</a></dd>
-                    <dd><a href="#">我的众筹</a></dd>
+                    <dd class="active"><a href="javascript:;">订单管理</a></dd>
+                    <dd><a href="javascript:;">我的红包</a></dd>
+                    <dd><a href="javascript:;">优惠卷（0）</a></dd>
+                    <dd><a href="javascript:;">礼品卡</a></dd>
+                    <dd><a href="javascript:;">优先购</a></dd>
+                    <dd><a href="javascript:;">我的众筹</a></dd>
                 </dl>
                 <dl class="sub-3">
                     <dt>服务中心</dt>
-                    <dd><a href="#">售后记录</a></dd>
-                    <dd><a href="#">价格保护</a></dd>
-                    <dd><a href="#">帮助中心</a></dd>
+                    <dd><a href="javascript:;">售后记录</a></dd>
+                    <dd><a href="javascript:;">价格保护</a></dd>
+                    <dd><a href="javascript:;">帮助中心</a></dd>
                 </dl>
             </div>
             <!-- main-content -->
             <div class="main">
+                <!-- 只写‘消息通知’与‘订单管理’两个 -->
                 <!-- 消息通知 -->
-                <div class="active">
+                <div class="">
                     <ul class="tabs">
-                        <li class="active"><a href="#">严选活动</a></li>
-                        <li><a href="#">我的资产</a></li>
-                        <li><a href="#">通知消息</a></li>
-                        <li><a href="#">物流助手</a></li>
-                        <li><a href="#">互动消息</a></li>
+                        <li class="active"><a href="javascript:;">严选活动</a></li>
+                        <li><a href="javascript:;">我的资产</a></li>
+                        <li><a href="javascript:;">通知消息</a></li>
+                        <li><a href="javascript:;">物流助手</a></li>
+                        <li><a href="javascript:;">互动消息</a></li>
                     </ul>
                     <!-- 严选活动 -->
                     <div class="exe show">
@@ -131,12 +132,62 @@
                         <p>当前无此类消息</p>
                     </div>
                 </div>
+                <!-- 订单管理 -->
+                <div class="active">
+                    <ul class="tabs">
+                        <li class="active"><a href="javascript:;">全部订单</a></li>
+                        <li><a href="javascript:;">待付款</a></li>
+                        <li><a href="javascript:;">待发货</a></li>
+                        <li><a href="javascript:;">已发货</a></li>
+                        <li><a href="javascript:;">已评价</a></li>
+                    </ul>
+                    <!-- 全部订单 -->
+                    <div class="empty show">
+                        <p>还没有任何订单呢<a href="#" style="color:#69c">去挑选好物&gt;&gt;</a>
+                        </p>
+                    </div>
+                    <!-- 待付款 -->
+                    <div class="empty">
+                        <p>当前无待付款订单</p>
+                    </div>
+                    <!-- 待发货 -->
+                    <div class="empty">
+                        <p>当前无待发货订单</p>
+                    </div>
+                    <!-- 已发货 -->
+                    <div class="empty">
+                        <p>当前已发货订单</p>
+                    </div>
+                    <!-- 已评价 -->
+                    <div class="empty">
+                        <p>当前待评价订单</p>
+                    </div>
+                </div>
+
+                <!--  -->
                 <!-- js选项卡 -->
                 <script>
+                    //只写‘消息通知’与‘订单管理’两个
                     $(function() {
+                        //左侧导航栏选项卡
+                        $('.sub-1 dd:eq(1)').click(function() {
+                            $(this).removeClass('active').addClass('active');
+                            $('.sub-2 dd:eq(0)').removeClass('active'); //添加当前删除其他active
+                            $('.main>div:eq(0)').addClass('active').siblings().removeClass('active'); //右边显示对应‘消息通知’与‘订单管理’
+                            $('.tips>.span-2').html('消息通知'); //更改上方角标路径信息
+                        });
+                        $('.sub-2 dd:eq(0)').click(function() {
+                            $(this).removeClass('active').addClass('active');
+                            $('.sub-1 dd:eq(1)').removeClass('active');
+                            $('.main>div:eq(1)').addClass('active').siblings().removeClass('active');
+                            $('.tips>.span-2').html('订单管理');
+                        });
+                        //选择后右侧选项卡
                         var that;
-                        var oDiv = $('.active>div');
-                        $('.tabs>li').click(function() {
+                        var oDiv;
+                        //事件委托
+                        $('.tabs').on('click', 'li', function() {
+                            oDiv = $('.active>div'); //每次点击重新获取元素，解决动态添加之后获取不到dom元素
                             that = $(this).index();
                             $(this).addClass('active').siblings().removeClass('active');
                             oDiv.eq(that).addClass('show').siblings().removeClass('show');

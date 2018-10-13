@@ -2,7 +2,7 @@ $(function() {
     if (window.XMLHttpRequest) {
         $.ajax({
             type: 'get',
-            url: '../php/goods.php',
+            url: '../php/sss.php',
             success: function(data) {
                 data = JSON.parse(data);
                 var elems = {};

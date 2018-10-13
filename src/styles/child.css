@@ -9,6 +9,9 @@
   margin-left: auto;
   height: 100%;
 }
+.goods .c-goodsArea .m-crumbs a:hover {
+  text-decoration: underline;
+}
 .goods .c-goodsArea .m-goods {
   background-color: #fff;
   position: relative;
@@ -48,6 +51,9 @@
   margin-right: 30px;
   margin-bottom: 16px;
   font-size: 14px;
+}
+.goods .c-goodsArea .m-goods .m-sortbar > div .classfyGroup a:hover {
+  color: #b4a078;
 }
 .goods .c-goodsArea .m-goods .m-sortbar .classfy {
   padding-top: 20px;

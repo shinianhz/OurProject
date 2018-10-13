@@ -12,12 +12,13 @@
     overflow: hidden;
 }
 
-.header .logo {
+
+/* .header .logo {
     width: 270px;
     padding-left: 5px;
     position: relative;
     float: left;
-}
+} */
 
 .header .logo .link1 {
     display: block;
@@ -469,7 +470,7 @@
     color: #666;
     margin: 0;
     background: #fff;
-    float: left;
+    /* float: left; */
 }
 
 .quantity-form .quantity-down {
@@ -569,13 +570,14 @@
     width: 220px;
 }
 
-.price-sum span {
+
+/* .price-sum span {
     display: inline-block;
     width: 110px;
     height: 20px;
     float: left;
     text-align: left;
-}
+} */
 
 .price-sum .txt {
     text-align: right;

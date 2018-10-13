@@ -8,7 +8,116 @@ header{
 .bannerWrapaer{
     width: 100%;
     height: 450px;
-    background: gray;
+    overflow: hidden;
+    &:hover .lunbo-box>a{
+        display: block;
+    }
+    .lunbo-box{
+        margin: 0 auto;
+        width:1090px;
+        height: 450px;
+        position: relative;
+        &>a{  
+            display: none;
+            width: 51px;
+            height: 48px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            color: #fff;
+            background-color: #333;
+            opacity: .4;
+            i{
+                font-size: 26px;
+                color: #fff;
+                margin-right: 5px;
+            }
+        }
+        .left{
+            left: 40px;
+        }
+        .right{
+            right: 40px;
+        }
+        ul{
+           width: 6540px;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            left:-1090px;
+            li{
+                width: 1090px;
+                height: 450px;
+                float: left;
+                position: relative;
+                .litext{
+                   // display: none;
+                    position: absolute;
+                    width: 1000px;
+                    height: 100px;
+                    left: 45px;
+                    bottom: 40px;
+                    padding-top: 15px;
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.7);
+                    h2{
+                        font-size: 30px;
+                        color: #333;
+                        line-height: 40px;
+                        font-weight: 400;
+                    }
+                    h3{
+                        font-size: 20px;
+                        color: #666;
+                        line-height: 30px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .dots{
+            width: 1090px;
+            height: 28px;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            padding: 0 500px;
+            dd{
+                float: left;
+                width: 8px;
+                height: 8px;
+                margin: 0 8px 10px;
+                padding: 0;
+                cursor: pointer;
+                border: 1px solid #cecece;
+                border-radius: 50%;
+                background: #fff;
+            }
+            .dd-show{
+                box-shadow: 0 0 0 4px #dfcead;
+                background: #a7936e;
+            }
+        }
+        .bg-left,.bg-right{
+            position: absolute;
+            top: 0;
+            width: 1000px;
+            height: 450px;
+            background: #fff;
+            opacity: .8;
+            z-index: 99;
+        }
+        .bg-left{
+            left: -1000px;
+        }
+        .bg-right{
+            right: -1000px;
+        }
+    }
 }
 // 设置公共样式，定义变量
 .title(){
@@ -442,11 +551,15 @@ header{
                                 width: 280px;
                                 height: 168px;
                                 margin-bottom: 20px;
+                                cursor: pointer;
                                 p{
                                     padding: 10px 0;
                                     color: #333;
                                     font-size: 14px;
                                     line-height: 1;
+                                    &:hover{
+                                        color: #B4A078;
+                                    }
                                 }
                             }
                         }
@@ -469,7 +582,7 @@ header{
                     width: 740px;
                     height: 416px;
                     background: #999;
-                    video{
+                    img{
                         width: 100%;
                         height: 100%;
                     }
@@ -496,10 +609,10 @@ header{
                          display: block;
                     }
                     ul{
-                        transition: all .4s;
-                        transform: translateY(-62px);
+                        // transition: all .4s;
+                        // transform: translateY(-62px);
                         position:absolute;
-                        top:0;
+                        top:-62px;
                         left: 0;
                     }
                     ul>li{
