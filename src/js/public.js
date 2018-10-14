@@ -23,31 +23,20 @@ $(function() {
         });
         //搜索功能
         $('#search').on('click', function() {
-<<<<<<< HEAD
             var keyword;
             //如果没有输入，则根据placeholder进行搜索
-            if ($('.inp > input ').val() == '') {
-                keyword = {
-                    "key": $('.inp>input').attr('placeholder')
-                };
-            } else {
-                keyword = {
-                    "key": $('.inp > input ').val()
-                };
-            }
-
-
-            // var keyword = {
-            //     "key": $('.inp > input ').val()
+            // if ($('.inp > input ').val() == '') {
+            //     keyword = {
+            //         "key": $('.inp>input').attr('placeholder')
+            //     };
+            // } else {
+            //     keyword = {
+            //         "key": $('.inp > input ').val()
+            //     };
             // };
-=======
-            // console.log($('.inp>input').val());
-            //如果没有输入，则根据placeholder进行搜索
-            var keyword = {
-                "key": $('.inp > input ').val()
+            keyword = {
+                "key": $('.inp>input').attr('placeholder')
             };
->>>>>>> b18b43ed9ef2c00a3b1120ae67b09380b3c4bb4d
-
             $.ajax({
                 type: 'get',
                 url: '../php/foods.php',
