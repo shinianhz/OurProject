@@ -25,18 +25,16 @@ $(function() {
         $('#search').on('click', function() {
             var keyword;
             //如果没有输入，则根据placeholder进行搜索
-            // if ($('.inp > input ').val() == '') {
-            //     keyword = {
-            //         "key": $('.inp>input').attr('placeholder')
-            //     };
-            // } else {
-            //     keyword = {
-            //         "key": $('.inp > input ').val()
-            //     };
-            // };
-            keyword = {
-                "key": $('.inp>input').attr('placeholder')
+            if ($('.inp > input ').val() == '') {
+                keyword = {
+                    "key": $('.inp>input').attr('placeholder')
+                };
+            } else {
+                keyword = {
+                    "key": $('.inp > input ').val()
+                };
             };
+
             $.ajax({
                 type: 'get',
                 url: '../php/foods.php',

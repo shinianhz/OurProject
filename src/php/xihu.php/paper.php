@@ -1,8 +1,8 @@
 <?php
     header("Content-type:text/html;charset=utf-8");
      error_reporting(E_ALL ^ E_DEPRECATED);
-     $db = mysql_connect("localhost","root","4869"); //连接数据库   (地址 用户名 密码)
-     mysql_select_db("xihu",$db); //选择数据库 数据库名称 连接
+     $db = mysql_connect("localhost","root","1292"); //连接数据库   (地址 用户名 密码)
+     mysql_select_db("yanxuan",$db); //选择数据库 数据库名称 连接
      mysql_query("set names utf8");//设置编码格式
 
     $q="SELECT * from goods ";//设置查询指令
