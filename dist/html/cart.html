@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 页面顶部容器 -->
+    <div id="header"></div>
+    <!-- 右侧固定盒子 -->
+    <div id="right-fixed"></div>
+    <!--main-->
+    <div id="container" class="cart">
+        <div class="w">
+            <!--购物车为空时显示的盒子-->
+
+            <!--全部商品哪一行-->
+            <div class="cart-top" style="display: block;">
+                <div class="cart-top-left">
+                    <a href=""><em>全部商品</em></a>
+                </div>
+                <div class="cart-top-right">
+                    <span>配送至：</span>
+                    <div class="jdarea">
+                        <div class="areawrap">
+                            <div class="areatext">北京朝阳区三环到四环之间</div>
+                            <b></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="footline">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <!--包裹购物车-->
+            <div class="cart-wrap" style="display: block;">
+                <div class="w">
+                    <div id="jd-cart">
+                        <div class="cartmain">
+                            <div class="cart-thead">
+                                <div class="cart-col t-checkbox">
+                                    <div class="cart-checkbox">
+                                        <input type="checkbox" checked="" name="" id="" class="allsel" value="" /> 全选
+                                    </div>
+                                </div>
+                                <div class="cart-col t-goods">商品</div>
+                                <div class="cart-col t-props"></div>
+                                <div class="cart-col t-prices">单价(元)</div>
+                                <div class="cart-col t-quantity">数量</div>
+                                <div class="cart-col t-sum">小计(元)</div>
+                                <div class="cart-col t-action">操作</div>
+                            </div>
+                            <div id="cart-list">
+                                <div class="cart-item-list">
+                                    <div class="cart-tbody">
+                                        <div class="item-list">
+                                            <div class="item-head">
+                                                <div class="header-left">
+                                                    <a class="header-left-p1" href="">
+                                                        <span>
+                                                            换购
+                                                            <b></b>
+                                                        </span> 活动商品已购满999.00元，可加价换购商品10件&gt;
+                                                    </a>
+                                                    <a class="header-left-p2" href="">换购商品</a>
+                                                    <a href="">去凑单 &gt;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="shop-list">
+                                            <div class="empty-cart">
+                                                <div class="empty-cart-msg">
+                                                    购物车空空的哦~，去看看心仪的商品吧~
+                                                    <a href="">去购物&gt;</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cart-floatbar">
+                        <div class="select-all">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" checked="" name="" id="" class="allsel" value="" />已选
+                                <i>( 0 )</i>
+                            </div>
+                        </div>
+                        <div class="operation">
+                            <a href="javascript:void(0)">批量删除</a><a href="javascript:void(0)">清空失效商品</a>
+                        </div>
+                        <div class="toolbar-right">
+                            <div class="price-sum">
+                                <div class="price-sum-l">
+                                    <p class="txt heji">商品合计 ：<i class="Countprice">￥0.00</i></p>
+                                    <p class="txt">活动优惠 ： <i class="youhui">￥0.00</i></p>
+                                </div>
+                                <div class="price-sum-r">
+                                    <p class="totalprice"> 应付金额：<i>￥0.00</i> </p>
+                                    <a href="http://you.163.com/cart/itemPool?promotionId=0&priceRangeId=0" target="_black" class="totalsave">已满足免邮条件 &gt;</a>
+                                </div>
+                                <div class="btn-area">
+                                    <a href="">下单</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部容器 -->
+    <div class="footer"></div>
+    <!-- <script src="../js/home/jquery.cookie.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/home/slide.js"></script>
+    <script src="../js/public.js"></script>
+    <script>
+        $("#header").load('home.html .header');
+        $("#right-fixed").load('home.html .right-fixed');
+        $(".footer").load('home.html #footer');
+    </script>
+    <script>
+        console.log($('.shop .shopbox').length)
+        var str = shopCart.getCookie('yanxuan_shop_cart');
+        if (str) { //如果cookie中存有数据
+            var arr = str.split('&');
+            var inarr, newarr = [];
+            var G = {},
+                elems = {};
+            for (var i = 0; i < arr.length; i++) {
+                var inarr = arr[i].split('|');
+                newarr.push(inarr);
+            }
+            // console.log(newarr);
+            var totalprice = 0; //所有商品总价格
+            for (var i = 0; i < newarr.length; i++) { //有几个商品
+                G.price = Number(newarr[i][newarr[i].length - 2]); //商品价格
+                G.sum = Number(newarr[i][newarr[i].length - 1]); //商品数量
+                var Countprice = 0; //单个商品总价格
+                // 在购物车中动态显示
+                var $str = `  
+                            <div class="shop" >
+                                <div class="cart-checkbox shop-checkbox">
+                                    <input type="checkbox" checked="" name="" id="" value="" />
+                                </div>
+                                <div class="shop-info">
+                                    <img src=${newarr[i][2]} alt="">
+                                    <div class="shop-info-right">
+                                        <div class="s-info-r-left">
+                                            <p><a href="javascript:;">${newarr[i][1]}</a> </p>
+                                            <a href="javascript:;">${newarr[i][0]}</a>
+                                        </div>
+                                        <div class="s-info-r-mid">
+                                            <span>${G.price}</span> <i>X${G.sum}</i>
+                                        </div>
+                                        <div class="s-info-r-right">
+                                            <p><a href="javascript:;">移入收藏夹</a></p>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                </div>
+                            </div>
+                `;
+                $('.shop-list').append($('<div/>').addClass('shopbox').html($str));
+                Countprice = G.price * G.sum;
+                totalprice += Countprice;
+            };
+            $('.totalprice>i').html('￥' + totalprice);
+            $('.heji>i').html('￥' + totalprice)
+                //判断购物车中是否有商品
+
+            setTimeout(() => {
+                $('.icon-gouwuche1 i').text(newarr.length);
+                if ($('.shop ').length > 0) {
+                    $('.empty-cart').attr('style', 'display:none')
+                } else {
+                    $('.empty-cart').removeAttr('style');
+                };
+            }, 1);
+
+        }
+    </script>
+
+</body>
+
+</html>

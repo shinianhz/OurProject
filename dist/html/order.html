@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/order.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/iconfont.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/goods-public.css">
+    <script src="../../node_modules/_jquery@3.3.1@jquery/dist/jquery.min.js"></script>
+    <script src="../js/zdljs/tab.js"></script>
+    <script src="../js/zdljs/pwdMsg.js"></script>
+    <script src="../js/zdljs/zengze.js"></script>
+    <script src="../js/zdljs/ajax.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/public.js"></script>
+    <title>登陆</title>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div id="header" style="height: 270px;"></div>
+    <!-- 侧边固定 -->
+    <div id="fixed"></div>
+    <!-- 主体 -->
+    <div class="bd" id="order">
+        <div class="m-bd">
+            <div class="g-row">
+                <div class="log">
+                    <!-- 登录页面 -->
+                    <div class="denglu">
+                        <ul class="log-h clk">
+                            <li>手机号登录</li>
+                            <li>邮箱登录</li>
+                        </ul>
+                        <!-- 登陆 -->
+                        <div class="login">
+                            <form id="login-form">
+                                <!-- 选项卡区1 -->
+                                <div class="tab1">
+                                    <!-- 手机登录 -->
+                                    <div class="m-con-phone" id="phone">
+                                        <!-- 密码验证选项卡 -->
+                                        <div class="pwd-log clk">
+                                            <a href="#" class="tab0"></a>
+                                        </div>
+                                        <!-- 使用手机验证码登录 -->
+                                        <div class="inpbox">
+                                            <div class="logo">
+                                                <div class="iconfont icon-tel"></div>
+                                            </div>
+                                            <div class="input">
+                                                <input type="tel" placeholder="请输入手机号" class="inp inpPho" id="tel_dl">
+                                            </div>
+                                        </div>
+                                        <!-- 使用短信验证 -->
+                                        <div class="msga">
+                                            <!-- 滑动拼图 -->
+                                            <div class="slidebox">
+                                                <div class="slide">
+                                                    <span class="iconfont icon-you"></span>
+                                                </div>
+                                                <span class="desc">向右滑动滑块填充拼图</span>
+                                            </div>
+                                            <!-- 短信验证码 -->
+                                            <div class="validate">
+                                                <div class="v-input">
+                                                    <input type="tel" placeholder="请输入短信验证码">
+                                                </div>
+                                                <div class="btnbox">
+                                                    <a href="#">获取验证码</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- 使用密码验证 -->
+                                        <div class="pwda">
+                                            <div class="inpbox">
+                                                <div class="logo">
+                                                    <div class="iconfont icon-sself"></div>
+                                                </div>
+                                                <div class="input">
+                                                    <input type="password" placeholder="请输入密码" class="inp" id="pwd_dl">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 邮箱登录 -->
+                                    <div class="m-con-email" id="email">
+                                        <!-- 邮箱账号 -->
+                                        <div class="inpbox">
+                                            <div class="logo">
+                                                <div class="iconfont icon-sself"></div>
+                                            </div>
+                                            <div class="input">
+                                                <input type="text" placeholder="邮箱账号 " class="inp inpMail">
+                                            </div>
+                                        </div>
+                                        <!-- 密码 -->
+                                        <div class="inpbox ">
+                                            <div class="logo ">
+                                                <div class="iconfont icon-sself "></div>
+                                            </div>
+                                            <div class="input ">
+                                                <input type="password" placeholder="密码" class="inp inpPwd">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 错误提示 -->
+                                <div class="error ">
+                                    <div class="ferrorhead "></div>
+                                    <div class="ferrorPho"></div>
+                                </div>
+                                <!-- 登录 -->
+                                <div class="logbox ">
+                                    <a id="log">登 录</a>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- 底部 -->
+                        <div class="foot ">
+                            <div class="olist ">
+                                <a href="# " class="iconfont icon-weixin "></a>
+                                <a href="# " class="iconfont icon-logo-weibo "></a>
+                                <a href="# " class="iconfont icon-wangyi "></a>
+                            </div>
+                            <a href="# ">遇到问题？</a>
+                            <a href="# ">手机快捷注册</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer"></div>
+</body>
+<script>
+    $(function() {
+        $('.denglu').tabs();
+    })
+</script>
+
+<script src="../js/public.js"></script>
+<script src="../js/home/slide.js"></script>
+<script>
+    $('#header').load("home.html .header");
+    $('#fixed').load("home.html .right-fixed");
+    $('.footer').load("home.html #footer");
+</script>
+
+</html>

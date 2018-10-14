@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/shinianhz/OurProject/issues"
   },
-  "homepage": "https://github.com/shinianhz/OurProject#readme"
+  "homepage": "https://github.com/shinianhz/OurProject#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  }
 }
