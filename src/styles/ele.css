@@ -126,6 +126,7 @@ a:hover {
 }
 .our .goodArea .m-content .m-level .m-itemlist .item {
   float: left;
+  height: 361px;
   margin-right: 10px;
   margin-bottom: 50px;
 }

@@ -285,7 +285,7 @@ $(function() {
         if ($(this).val() == "") return;
         $("#input_area option").remove();
         var code = $(this).find("option:selected").attr("exid");
-        code = code.substring(0, 4);
+        if (code) code = code.substring(0, 4);
         var html = "<option value=''>== 请选择 ==</option>";
         $.each(pdata, function(idx, item) {
             if (parseInt(item.level) == 2 && code == item.code.substring(0, 4)) {

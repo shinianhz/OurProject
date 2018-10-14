@@ -12,14 +12,12 @@ $(function() {
                     "password": $('#pwd_zc').val()
                 },
                 success: function(response) {
-                    // console.log(response);
-                    // console.log(response.msg);
                     var data = JSON.parse(response);
                     $('.ferrorPho').html(data.msg);
                     if ($('.ferrorPho').html() === '注册成功') {
+                        window.sessionStorage.setItem("name", $('#tel_zc').val())
+                        location.href = 'http://10.31.157.65:8080/OurProject/src/html/home-content.html';
 
-                        // $('.zhuce').addClass('log-none');
-                        // $('.denglu').addClass('log-show');
                     }
                 }
             })
@@ -28,11 +26,10 @@ $(function() {
         }
     })
 
-
     //登录
     $('#log').click(function() {
         if (($('#tel_dl').val()) && ($('#pwd_dl').val())) {
-
+            console.log($('#tel_dl').val())
             $.ajax({
                 type: "post",
                 url: "../php/land.php",
@@ -49,9 +46,11 @@ $(function() {
                         if ($('.log-bg')) {
                             $('.log-bg').addClass('log-none');
                         }
-                        //订单登录页面成功后跳转订单页面
+                        //登陆成功后跳转
                         if ($('#order')) {
-                            window.location.href = 'http://10.31.157.78:8080/yanxuan/OurProject/src/html/message.html';
+                            console.log(data.tel);
+                            window.sessionStorage.setItem("name", $('#tel_dl').val())
+                            location.href = 'http://10.31.157.65:8080/OurProject/src/html/home-content.html';
                         }
                     }
                 }

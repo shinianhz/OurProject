@@ -392,6 +392,7 @@
 }
 .header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul {
   height: 200px !important;
+  overflow-y: auto;
 }
 .header .header-nav .nav-box .bgbox .ulbox > ul > li:last-child #H-cart ul li {
   height: 70px;

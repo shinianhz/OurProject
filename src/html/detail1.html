@@ -19,11 +19,11 @@
     <script src="../js/wentichild/wentichild.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/public.js"></script>
-    <script>
+    <!-- <script>
         $(function() {
             $('.amount').reg();
         })
-    </script>
+    </script> -->
     <script>
         $(function() {
             $('.topTab').tabs();
@@ -107,7 +107,7 @@
                                             // console.log($(data[0].g_img1));
                                             var $str = ` <li>
                                     <a href="#">
-                                        <img src=${data[0].g_img} alt="yanxuan">
+                                        <img  id="J-img" src=${data[0].g_img} alt="yanxuan">
                                     </a>
                                 </li>
                                 <li>
@@ -151,7 +151,7 @@
                                         dataType: 'json'
                                     }).done(function(data) {
                                         var $str = `<div class="r-name">
-                                <span>${data[0].g_title}</span>
+                                <span id='color'>${data[0].g_title}</span>
                                 <a href="#good-com" class="goodcomment">
 
                                     <a href="#good-com">
@@ -191,7 +191,7 @@
                                                 var $str = ` <span class="r-label label-1">价格</span>
                                                     <span class="r-money">
                                                     <span class="r-rmb">￥</span>
-                                                    <span class="r-num">${data[0].g_price}</span>
+                                                    <span id="J-price" class="r-num">${data[0].g_price}</span>
                                                     </span>
                                                     <span class="o-money">
                                                         <span class="o-rmb">￥</span>
@@ -282,7 +282,7 @@
                                     <div class="cont">
                                         <ul class="tabs">
                                             <li class="tab-con">
-                                                <a href="#" class="tab-txt tab-sel tab-nav" id="tab-txt">
+                                                <a href="javascript:;" class="tab-txt tab-sel tab-nav" id="tab-txt">
                                                     <script>
                                                         $(function() {
                                                             $.ajax({
@@ -293,7 +293,7 @@
                                                                 },
                                                                 dataType: 'json'
                                                             }).done(function(data) {
-                                                                var $str = `<span class="span-sel">${data[0].g_title}</span>
+                                                                var $str = `<span class="span-sel" id="J-name">${data[0].g_title}</span>
                                                                 <div></div>
                                                                 <i class="icon iconfont icon-in_gouxuan sel"></i>`;
                                                                 $('#tab-txt').html($str);
@@ -325,7 +325,7 @@
                                     <span>立即购买</span>
                                 </span>
                             </a>
-                            <a href="" class="btn r-button r-button-xl r-button-primary">
+                            <a href="javascript:;" class="btn r-button r-button-xl r-button-primary" id="addcart">
                                 <span>
                                     <i class="iconfont icon-gouwuche1"></i>
                                     <span>加入购物车</span>
@@ -1565,6 +1565,59 @@
             $("#right-fixed").load('home.html .right-fixed');
             $(".footer").load('home.html #footer');
         })
+    </script>
+    <script>
+        var goods = {},
+            elems = {};
+        $('#addcart').on('click', function() {
+            $('#H-cart .box-inner .box-inner-in>ul').empty(); //清空ul
+
+            goods.sum = Number($('#J_Amount').val()); //商品数量，并转换成number
+            goods.price = parseFloat($('#J-price').html()) //商品价格
+            goods.color = $('#color').html(); //商品颜色
+            goods.name = $('#J-name').html(); //商品名称
+            goods.img = $('#J-img').attr('src'); //商品图片地址
+
+
+            //设置价格小数点后的位数(默认为2位)
+            shopCart.init();
+            var items = new item(goods.color, goods.name, goods.img, goods.price, goods.sum) //将商品信息记录下来;
+                // 清空购物车
+                // shopCart.emptyCart();
+                //调用shopCart.updateCart()的方法将商品添加到购物车中，先判断购物车中是否存在要添加的商品
+                //，如果存在则将要添加的商品的数量加上去，否则调用shopCartaddCart()方法将item添加进去
+            shopCart.updatecart(items);
+            console.log(shopCart.findItem());
+            console.log(shopCart.getTotalCount());
+            //shopCart.getTotalPrice()传入那么，则计算名为name的商品的总价，不传参数则计算所有的商品的总价格
+            // console.log(shopCart.getTotalPrice());
+
+
+            var arr = shopCart.findItem(), //获取存储到cookie中的商品信息
+                goodsCount = shopCart.getTotalCount(), //购物车中的商品数量
+                TotalPrice = shopCart.getTotalPrice(); //商品总价格
+            for (var i = 0; i < arr.length; i++) {
+                //在购物车中动态显示
+                elems.a = $('<a/>').attr('href', 'http://you.163.com/item/detail?id=3385008').append($('<img/>').attr('src', arr[i].img));
+
+                elems.mdiv = $('<div/>').addClass('C-mid-box').append($('<a>').attr('href', 'http://you.163.com/item/detail?id=3385008').html(arr[i].name));
+                elems.p = $('<p/>').append($('<span/>').html(arr[i].color)).append($('<i/>').html('×' + arr[i].quantity));
+                elems.mdiv.append(elems.p);
+
+                elems.rdiv = $('<div/>').addClass('C-right-box').append($('<span/>').html("￥" + arr[i].price)).append($('<i/>').html('×'));
+
+
+                elems.Cul = $('<li/>').append(elems.a).append(elems.mdiv).append(elems.rdiv)
+
+                $('#H-cart .box-inner .box-inner-in>ul').append(elems.Cul);
+                console.log(arr[i])
+            };
+
+            $('.icon-gouwuche1>i').html(goodsCount);
+            $('.J-left>span').html('￥' + TotalPrice);
+
+
+        });
     </script>
 </body>
 

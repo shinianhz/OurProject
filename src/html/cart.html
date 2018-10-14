@@ -82,28 +82,7 @@
                                                     <a href="">去购物&gt;</a>
                                                 </div>
                                             </div>
-                                            <!-- <div class="shop" id="shop">
-                                                <div class="cart-checkbox shop-checkbox">
-                                                    <input type="checkbox" checked="" name="" id="" value="" />
-                                                </div>
-                                                <div class="shop-info">
-                                                    <img src="../images/home/001.png" alt="">
-                                                    <div class="shop-info-right">
-                                                        <div class="s-info-r-left">
-                                                            <p><a href="javascript:;">皮皮虾</a> </p>
-                                                            <a href="javascript:;">椒盐味</a>
-                                                        </div>
-                                                        <div class="s-info-r-mid">
-                                                            <span>￥13.5</span> <i>X10</i>
-                                                        </div>
-                                                        <div class="s-info-r-right">
-                                                            <p><a href="javascript:;">移入收藏夹</a></p>
-                                                            <a href="javascript:;">删除</a>
-                                                        </div>
-                                                    </div>
 
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +102,7 @@
                         <div class="toolbar-right">
                             <div class="price-sum">
                                 <div class="price-sum-l">
-                                    <p class="txt">商品合计 ：<i class="Countprice">￥0.00</i></p>
+                                    <p class="txt heji">商品合计 ：<i class="Countprice">￥0.00</i></p>
                                     <p class="txt">活动优惠 ： <i class="youhui">￥0.00</i></p>
                                 </div>
                                 <div class="price-sum-r">
@@ -165,10 +144,11 @@
                 newarr.push(inarr);
             }
             // console.log(newarr);
+            var totalprice = 0; //所有商品总价格
             for (var i = 0; i < newarr.length; i++) { //有几个商品
                 G.price = Number(newarr[i][newarr[i].length - 2]); //商品价格
                 G.sum = Number(newarr[i][newarr[i].length - 1]); //商品数量
-
+                var Countprice = 0; //单个商品总价格
                 // 在购物车中动态显示
                 var $str = `  
                             <div class="shop" >
@@ -193,9 +173,12 @@
                             </div>
                 `;
                 $('.shop-list').append($('<div/>').addClass('shopbox').html($str));
-
+                Countprice = G.price * G.sum;
+                totalprice += Countprice;
             };
-            //判断购物车中是否有商品
+            $('.totalprice>i').html('￥' + totalprice);
+            $('.heji>i').html('￥' + totalprice)
+                //判断购物车中是否有商品
 
             setTimeout(() => {
                 $('.icon-gouwuche1 i').text(newarr.length);

@@ -54,6 +54,7 @@
 }
 .g-bd-list .g-row .m-goodsArea .category .m-itemList .item .m-product .hd a {
   display: block;
+  height: 249px;
 }
 .g-bd-list .g-row .m-goodsArea .category .m-itemList .item .m-product .hd a img {
   transition: all 1s;

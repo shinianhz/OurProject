@@ -56,7 +56,7 @@ var shopCart = function(window) {
                         item.img = cItem[2] || '';
                         item.price = cItem[3] || '';
                         item.quantity = cItem[4] || '';
-                        // items.push(item);
+                        items.push(item);
                     };
                 };
 
@@ -117,7 +117,8 @@ var shopCart = function(window) {
             //更新一个商品
             var index = this.getItemIndex(item.name);
             if (index > -1) {
-                items[index].quantity += Number(item.quantity); //如果购物车中存在则，加数量
+                var a = Number(items[index].quantity);
+                a += Number(item.quantity); //如果购物车中存在则，加数量
                 saveCookie();
             } else {
                 this.addItem(item);

@@ -1,6 +1,7 @@
 $(function() {
     setTimeout(function() {
-        $('.txtScroll-top .box').slide();
+        $('.inner-right .box').slide();
+        // console.log($('.box'))
         // console.log($('.txtScroll-top .box'))
         $(window).scroll(function() {
             var h = $('.right-fixed').offset().top;
@@ -20,6 +21,11 @@ $(function() {
 
                 $('#last').addClass('hide')
             }
+        });
+        //
+        $('.ulbox>ul').on('click', 'li', function() {
+            $(this).addClass('chenge').siblings().removeClass('chenge');
+            console.log(this)
         });
         //搜索功能
         $('#search').on('click', function() {
@@ -84,7 +90,8 @@ $(function() {
             var arr = str.split('&');
             var inarr, newarr = [];
             var G = {},
-                elems = {};
+                elems = {},
+                conutprice = 0;
             for (var i = 0; i < arr.length; i++) {
                 var inarr = arr[i].split('|');
                 newarr.push(inarr);
@@ -92,8 +99,11 @@ $(function() {
             // console.log(newarr);
             for (var i = 0; i < newarr.length; i++) { //有几个商品
                 // 在购物车中动态显示
-                G.price = Number(newarr[i][newarr[i].length - 2]); //商品价格
+                var addprice = 0;
+                G.price = parseFloat(newarr[i][newarr[i].length - 2]); //商品价格
                 G.sum = Number(newarr[i][newarr[i].length - 1]); //商品数量
+                addprice = G.sum * G.price;
+                conutprice += addprice;
                 elems.a = $('<a/>').attr('href', 'http://you.163.com/item/detail?id=3385008').append($('<img/>').attr('src', newarr[i][2]));
 
                 elems.mdiv = $('<div/>').addClass('C-mid-box').append($('<a>').attr('href', 'http://you.163.com/item/detail?id=3385008').html(newarr[i][1]));
@@ -106,15 +116,21 @@ $(function() {
 
                 $('#H-cart .box-inner .box-inner-in>ul').append(elems.Cul);
 
-                // console.log(G.price)
-                // console.log(newarr[i][2])
             };
-            $('#H-cart .box-inner .box-inner-in>.jisuan').append()
-                // console.log(newarr.length)
             $('.icon-gouwuche1>i').html(newarr.length);
+            $('.J-left>span').html('￥' + conutprice.toFixed(2));
 
-
+        };
+        $('.jisuan .J-right').on('click', function() {
+            location.href = 'http://10.31.157.65:8080/OurProject/src/html/cart.html';
+        });
+        $('#land,#H-zhuce').on('click', function() {
+            $('body').append($('<div/>').attr('style', 'z-index:10000').load('login.html '));
+        });
+        if (window.sessionStorage.getItem('name')) {
+            var data = sessionStorage.getItem('name');
+            $('#land').html("hi !   " + data);
+            $('#H-zhuce').empty();
         }
-
     }, 1000);
-})
+});
