@@ -18,5 +18,5 @@ gulp.task('cssmin', function() {
 
 //压缩js代码
 gulp.task('uglify', function() {
-    return gulp.src(['src/js/*.js']).pipe(uglify()).pipe(rename({ suffix: '.min' })).pipe(gulp.dest('dist/js'))
+    return gulp.src(['src/js/*.js', 'src/js/home/*.js', 'src/js/Jk/*.js', 'src/js/!*min.js']).pipe(uglify()).pipe(rename({ suffix: '.min' })).pipe(gulp.dest('dist/js'))
 });

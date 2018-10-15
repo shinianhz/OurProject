@@ -91,7 +91,8 @@ $(function() {
             var inarr, newarr = [];
             var G = {},
                 elems = {},
-                conutprice = 0;
+                conutprice = 0,
+                sum = 0;
             for (var i = 0; i < arr.length; i++) {
                 var inarr = arr[i].split('|');
                 newarr.push(inarr);
@@ -115,15 +116,19 @@ $(function() {
                 elems.Cul = $('<li/>').append(elems.a).append(elems.mdiv).append(elems.rdiv)
 
                 $('#H-cart .box-inner .box-inner-in>ul').append(elems.Cul);
-
+                sum += G.sum;
             };
-            $('.icon-gouwuche1>i').html(newarr.length);
+            $('.icon-gouwuche1>i').html(sum);
             $('.J-left>span').html('￥' + conutprice.toFixed(2));
 
         };
+
+
         $('.jisuan .J-right').on('click', function() {
             location.href = 'http://10.31.157.65:8080/OurProject/src/html/cart.html';
         });
+
+
         $('#land,#H-zhuce').on('click', function() {
             $('body').append($('<div/>').attr('style', 'z-index:10000').load('login.html '));
         });
